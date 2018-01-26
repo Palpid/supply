@@ -740,3 +740,5 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.CoreCompileInputs.cach
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.DialogForms.AddReceiptItem.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.pkItemsBox_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.DelBoxNumInDocLine_01.resources

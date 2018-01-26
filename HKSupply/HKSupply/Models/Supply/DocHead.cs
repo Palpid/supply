@@ -59,6 +59,8 @@ namespace HKSupply.Models.Supply
         public virtual List<DocBox> Boxes { get; set; }
 
         public virtual List<PackingListItemBatch> PackingListItemBatches { get; set; }
+
+        public virtual List<PackingListItemBox> PackingListItemBoxes { get; set; }
         #endregion
 
         #region Foreign keys

@@ -58,6 +58,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
         bool _isLoadingPacking = false;
         bool _isCreatingPacking = false;
+        bool _isMarkingPoSelFromDeliveredGoods = false;
 
         Stream _gridviewPoLinesDefaultLayputStr = new MemoryStream();
         #endregion
@@ -630,6 +631,41 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                         gridViewLinesPoSelection.RefreshData();
                         DeleteDeliveredGood(line);
                         gridViewLinesPoSelection.UpdateSummary();
+                    }
+                    else if (e.Action == CollectionChangeAction.Refresh)
+                    {
+                        //**** si ha utilizado el marcar/desmarcar todo del header del grid ****//
+
+                        if (_isMarkingPoSelFromDeliveredGoods == true)
+                            return;
+
+                        view.BeginSelection();
+
+                        if (view.SelectedRowsCount == 0)
+                        {
+                            //quitamos todo lo del grid de Delivered goods relacionado con la PO seleccionada
+                            var po = gridViewPoSelection.GetRow(gridViewPoSelection.FocusedRowHandle) as DocHead;
+                            var listDG = _docLinesDeliveredGoodsList.Where(a => a.IdDocRelated.Equals(po.IdDoc)).ToList();
+                            foreach (var item in listDG)
+                                _docLinesDeliveredGoodsList.Remove(item);
+                        }
+
+
+                        for (Int32 i = view.SelectedRowsCount - 1; i >= 0; i--)
+                        {
+                            var currentRowIndex = view.GetSelectedRows()[i];
+
+                            DocLine selLine = view.GetRow(currentRowIndex) as DocLine;
+                            if (selLine.IdSupplyStatus == Constants.SUPPLY_STATUS_OPEN)
+                                CopyToDeliveredGood(selLine);
+                            else
+                                view.UnselectRow(currentRowIndex);
+                        }
+
+                        view.EndSelection();
+                        gridViewLinesPoSelection.UpdateSummary();
+
+
                     }
                 }
                 else
@@ -1744,6 +1780,8 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
         {
             try
             {
+                _isMarkingPoSelFromDeliveredGoods = true;
+
                 gridViewLinesPoSelection.BeginSelection();
 
                 for (int i = 0; i < gridViewLinesPoSelection.DataRowCount; i++)
@@ -1768,7 +1806,10 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             {
                 throw;
             }
-
+            finally
+            {
+                _isMarkingPoSelFromDeliveredGoods = false;
+            }
         }
 
         private bool ValidatePK()
@@ -1845,6 +1886,25 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     if (col.FieldName != nameof(DocLine.Remarks))
                         col.OptionsColumn.AllowEdit = false;
                 }
+
+                //activamos el seleccionar todo de la cabecera
+                gridViewLinesPoSelection.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DefaultBoolean.True;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetGridNotEditable()
+        {
+            try
+            {
+                //not allow grid editing
+                gridViewLinesPoSelection.OptionsBehavior.Editable = false;
+                gridViewLinesDeliveredGoods.OptionsBehavior.Editable = false;
+                //desactivamos el seleccionar todo de la cabecera
+                gridViewLinesPoSelection.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DefaultBoolean.False;
             }
             catch
             {
@@ -1866,8 +1926,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 SetObjectsReadOnly();
 
                 //not allow grid editing
-                gridViewLinesPoSelection.OptionsBehavior.Editable = false;
-                gridViewLinesDeliveredGoods.OptionsBehavior.Editable = false;
+                SetGridNotEditable();
 
                 if (idPk != null)
                 {
@@ -2159,9 +2218,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 //Reload Packing list
                 LoadPK();
                 //not allow grid editing
-                gridViewPoSelection.OptionsBehavior.Editable = false;
-                gridViewLinesPoSelection.OptionsBehavior.Editable = false;
-                gridViewLinesDeliveredGoods.OptionsBehavior.Editable = false;
+                SetGridNotEditable();
                 //Restore de ribbon to initial states
                 RestoreInitState();
 

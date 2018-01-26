@@ -114,6 +114,7 @@ namespace HKSupply.Services.Implementations
                         .Include(c => c.Customer)
                         .Include(b => b.Boxes)
                         .Include(ib => ib.PackingListItemBatches)
+                        .Include(ibox => ibox.PackingListItemBoxes)
                         .FirstOrDefault();
 
                     if (doc != null)
@@ -142,15 +143,21 @@ namespace HKSupply.Services.Implementations
                                     break;
                             }
 
-                            //aprovechamos y cargamos el item de los batches
+                            //aprovechamos y cargamos el item de los lotes y los cajas
                             var itemsBatches = doc
                                 .PackingListItemBatches
                                 .Where(a => a.IdItemBcn.Equals(line.IdItemBcn) && a.IdItemGroup.Equals(line.IdItemGroup))
                                 .ToList();
                             foreach (var itemBatch in itemsBatches)
-                            {
                                 itemBatch.Item = item;
-                            }
+
+                            var itemsBoxes = doc
+                                .PackingListItemBoxes
+                                .Where(a => a.IdItemBcn.Equals(line.IdItemBcn) && a.IdItemGroup.Equals(line.IdItemGroup))
+                                .ToList();
+                            foreach (var itemBox in itemsBoxes)
+                                itemBox.Item = item;
+
                         }
                     }
 
@@ -976,6 +983,14 @@ namespace HKSupply.Services.Implementations
                             foreach (var packingBatch in doc.PackingListItemBatches.EmptyIfNull())
                                 db.PackingListItemsBatch.Add(packingBatch);
 
+                            /********** MATERIAL BOXES (packing list)  **********/
+                            var packingBoxes = db.PackingListItemsBox.Where(a => a.IdDoc.Equals(doc.IdDoc));
+
+                            foreach (var packingBox in packingBoxes.EmptyIfNull())
+                                db.PackingListItemsBox.Remove(packingBox);
+
+                            foreach (var packingBox in doc.PackingListItemBoxes.EmptyIfNull())
+                                db.PackingListItemsBox.Add(packingBox);
 
                             //user
                             docToUpdate.User = GlobalSetting.LoggedUser.UserLogin.ToUpper();
@@ -2140,7 +2155,7 @@ namespace HKSupply.Services.Implementations
                         UnitPrice = line.UnitPrice,
                         UnitPriceBaseCurrency = line.UnitPriceBaseCurrency,
                         IdDocRelated = line.IdDocRelated,
-                        BoxNumber = null
+                        //BoxNumber = null
                     };
 
                     linesQualityControlPending.Add(docLine);
@@ -2282,7 +2297,7 @@ namespace HKSupply.Services.Implementations
                         UnitPrice = line.UnitPrice,
                         UnitPriceBaseCurrency = line.UnitPriceBaseCurrency,
                         IdDocRelated = line.IdDocRelated,
-                        BoxNumber = null
+                        //BoxNumber = null
                     };
 
                     linesReturnGoods.Add(docLine);

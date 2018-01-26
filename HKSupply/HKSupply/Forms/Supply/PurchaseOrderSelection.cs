@@ -57,6 +57,7 @@ namespace HKSupply.Forms.Supply
 
                 ConfigureRibbonActions();
                 LoadAuxList();
+                SetUpTabs();
                 SetUpLabels();
                 SetUpSearchLookUpEdit();
                 SetUpEvents();
@@ -350,6 +351,20 @@ namespace HKSupply.Forms.Supply
         #endregion
 
         #region SetUp Form objects
+
+        private void SetUpTabs()
+        {
+            try
+            {
+                xtpPOSection.AutoScroll = true;
+                xtpPOSection.AutoScrollMargin = new Size(20, 20);
+                xtpPOSection.AutoScrollMinSize = new Size(xtpPOSection.Width, xtpPOSection.Height);
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         private void SetUpLabels()
         {

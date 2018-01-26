@@ -64,6 +64,8 @@
             this.xgrdLinesSoSelection = new DevExpress.XtraGrid.GridControl();
             this.gridViewLinesSoSelection = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtpDeliveredGoods = new DevExpress.XtraTab.XtraTabPage();
+            this.xgrdItemsBox = new DevExpress.XtraGrid.GridControl();
+            this.gridViewItemsBox = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xgrdPackingBoxes = new DevExpress.XtraGrid.GridControl();
             this.gridViewPackingBoxes = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xgrdItemsBatch = new DevExpress.XtraGrid.GridControl();
@@ -111,6 +113,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLinesSoSelection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLinesSoSelection)).BeginInit();
             this.xtpDeliveredGoods.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdItemsBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewItemsBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdPackingBoxes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPackingBoxes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdItemsBatch)).BeginInit();
@@ -125,7 +129,7 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(1338, 125);
+            this.ribbonControl.Size = new System.Drawing.Size(1401, 125);
             // 
             // ribbonPage1
             // 
@@ -135,7 +139,7 @@
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 684);
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1401, 31);
             // 
             // xtcGeneral
             // 
@@ -143,7 +147,7 @@
             this.xtcGeneral.Location = new System.Drawing.Point(0, 125);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedTabPage = this.xtpPakingList;
-            this.xtcGeneral.Size = new System.Drawing.Size(1338, 559);
+            this.xtcGeneral.Size = new System.Drawing.Size(1401, 559);
             this.xtcGeneral.TabIndex = 6;
             this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpPakingList});
@@ -153,7 +157,7 @@
             this.xtpPakingList.Controls.Add(this.pcFilter);
             this.xtpPakingList.Controls.Add(this.xtcPK);
             this.xtpPakingList.Name = "xtpPakingList";
-            this.xtpPakingList.Size = new System.Drawing.Size(1332, 531);
+            this.xtpPakingList.Size = new System.Drawing.Size(1395, 531);
             this.xtpPakingList.Text = "PACKING LIST";
             // 
             // pcFilter
@@ -185,7 +189,7 @@
             this.pcFilter.Controls.Add(this.lblCustomer);
             this.pcFilter.Location = new System.Drawing.Point(11, 13);
             this.pcFilter.Name = "pcFilter";
-            this.pcFilter.Size = new System.Drawing.Size(1314, 142);
+            this.pcFilter.Size = new System.Drawing.Size(1377, 142);
             this.pcFilter.TabIndex = 5;
             // 
             // memoEditRemarks
@@ -431,7 +435,7 @@
             this.xtcPK.Location = new System.Drawing.Point(11, 161);
             this.xtcPK.Name = "xtcPK";
             this.xtcPK.SelectedTabPage = this.xtpSOSelection;
-            this.xtcPK.Size = new System.Drawing.Size(1314, 367);
+            this.xtcPK.Size = new System.Drawing.Size(1377, 367);
             this.xtcPK.TabIndex = 4;
             this.xtcPK.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpSOSelection,
@@ -483,21 +487,39 @@
             // 
             // xtpDeliveredGoods
             // 
+            this.xtpDeliveredGoods.Controls.Add(this.xgrdItemsBox);
             this.xtpDeliveredGoods.Controls.Add(this.xgrdPackingBoxes);
             this.xtpDeliveredGoods.Controls.Add(this.xgrdItemsBatch);
             this.xtpDeliveredGoods.Controls.Add(this.xgrdLinesDeliveredGoods);
             this.xtpDeliveredGoods.Name = "xtpDeliveredGoods";
-            this.xtpDeliveredGoods.Size = new System.Drawing.Size(1308, 339);
+            this.xtpDeliveredGoods.Size = new System.Drawing.Size(1371, 339);
             this.xtpDeliveredGoods.Text = "DELIVERED GOODS";
+            // 
+            // xgrdItemsBox
+            // 
+            this.xgrdItemsBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.xgrdItemsBox.Location = new System.Drawing.Point(405, 223);
+            this.xgrdItemsBox.MainView = this.gridViewItemsBox;
+            this.xgrdItemsBox.MenuManager = this.ribbonControl;
+            this.xgrdItemsBox.Name = "xgrdItemsBox";
+            this.xgrdItemsBox.Size = new System.Drawing.Size(466, 113);
+            this.xgrdItemsBox.TabIndex = 5;
+            this.xgrdItemsBox.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewItemsBox});
+            // 
+            // gridViewItemsBox
+            // 
+            this.gridViewItemsBox.GridControl = this.xgrdItemsBox;
+            this.gridViewItemsBox.Name = "gridViewItemsBox";
             // 
             // xgrdPackingBoxes
             // 
             this.xgrdPackingBoxes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.xgrdPackingBoxes.Location = new System.Drawing.Point(534, 223);
+            this.xgrdPackingBoxes.Location = new System.Drawing.Point(877, 223);
             this.xgrdPackingBoxes.MainView = this.gridViewPackingBoxes;
             this.xgrdPackingBoxes.MenuManager = this.ribbonControl;
             this.xgrdPackingBoxes.Name = "xgrdPackingBoxes";
-            this.xgrdPackingBoxes.Size = new System.Drawing.Size(461, 113);
+            this.xgrdPackingBoxes.Size = new System.Drawing.Size(491, 113);
             this.xgrdPackingBoxes.TabIndex = 4;
             this.xgrdPackingBoxes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPackingBoxes});
@@ -514,7 +536,7 @@
             this.xgrdItemsBatch.MainView = this.gridViewItemsBatch;
             this.xgrdItemsBatch.MenuManager = this.ribbonControl;
             this.xgrdItemsBatch.Name = "xgrdItemsBatch";
-            this.xgrdItemsBatch.Size = new System.Drawing.Size(500, 113);
+            this.xgrdItemsBatch.Size = new System.Drawing.Size(399, 113);
             this.xgrdItemsBatch.TabIndex = 3;
             this.xgrdItemsBatch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewItemsBatch});
@@ -533,7 +555,7 @@
             this.xgrdLinesDeliveredGoods.MainView = this.gridViewLinesDeliveredGoods;
             this.xgrdLinesDeliveredGoods.MenuManager = this.ribbonControl;
             this.xgrdLinesDeliveredGoods.Name = "xgrdLinesDeliveredGoods";
-            this.xgrdLinesDeliveredGoods.Size = new System.Drawing.Size(1308, 217);
+            this.xgrdLinesDeliveredGoods.Size = new System.Drawing.Size(1371, 217);
             this.xgrdLinesDeliveredGoods.TabIndex = 1;
             this.xgrdLinesDeliveredGoods.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLinesDeliveredGoods});
@@ -687,7 +709,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1338, 715);
+            this.ClientSize = new System.Drawing.Size(1401, 715);
             this.Controls.Add(this.xtcGeneral);
             this.Name = "PackingList_v2";
             this.Text = "PackingList_v2";
@@ -722,6 +744,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLinesSoSelection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLinesSoSelection)).EndInit();
             this.xtpDeliveredGoods.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdItemsBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewItemsBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdPackingBoxes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPackingBoxes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdItemsBatch)).EndInit();
@@ -794,5 +818,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewItemsBatch;
         private DevExpress.XtraGrid.GridControl xgrdPackingBoxes;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewPackingBoxes;
+        private DevExpress.XtraGrid.GridControl xgrdItemsBox;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewItemsBox;
     }
 }

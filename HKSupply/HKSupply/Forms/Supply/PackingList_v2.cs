@@ -69,6 +69,10 @@ namespace HKSupply.Forms.Supply
         //Test Item Batch INI
         BindingList<PackingListItemBatch> _auxItemsBatchList = new BindingList<PackingListItemBatch>(); 
         List<PackingListItemBatch> _itemsBatchList = new List<PackingListItemBatch>();
+
+        BindingList<PackingListItemBox> _auxItemsBoxList = new BindingList<PackingListItemBox>();
+        List<PackingListItemBox> _itemsBoxList = new List<PackingListItemBox>();
+
         List<Box> _boxList;
         BindingList<DocBox> _docBoxList = new BindingList<DocBox>();
         //Test Item Batch END
@@ -85,6 +89,7 @@ namespace HKSupply.Forms.Supply
 
         bool _isLoadingPacking = false;
         bool _isCreatingPacking = false;
+        bool _isMarkingSoSelFromDeliveredGoods = false;
         #endregion
 
         #region Constructor
@@ -98,6 +103,7 @@ namespace HKSupply.Forms.Supply
 
                 ConfigureRibbonActions();
                 LoadAuxList();
+                SetUpTabs();
                 SetUpLabels();
                 SetObjectsReadOnly();
                 SetUpButtons();
@@ -107,6 +113,7 @@ namespace HKSupply.Forms.Supply
                 SetUpGrdLinesSoSelection();
                 SetUpGrdLinesDeliveredGoods();
                 SetupGrdItemsBatch();//Test Item Batch
+                SetupGrdItemsBox();//Test Item Batch
                 SetupGrdPackingBoxes();//Test Item Batch
                 SetupPanelControl();
                 SetVisiblePropertyByState();
@@ -532,19 +539,38 @@ namespace HKSupply.Forms.Supply
                         gridViewLinesSoSelection.RefreshData();
                         DeleteDeliveredGood(line);
                         gridViewLinesSoSelection.UpdateSummary();
-                        DeleteFromItemsBatchList(line.IdDocRelated, line.IdItemBcn, line.IdItemGroup); //Test Item Batch
+                        DeleteFromItemsBatchList(line.IdDoc, line.IdItemBcn, line.IdItemGroup); //Test Item Batch
                     }
-                    //------------------------------ TEST INI ------------------------------//
                     else if (e.Action == CollectionChangeAction.Refresh)
                     {
+                        //**** si ha utilizado el marcar/desmarcar todo del header del grid ****//
+
+                        if (_isMarkingSoSelFromDeliveredGoods == true)
+                            return;
+
                         view.BeginSelection();
 
-                        //si ha utilizado el marcar/desmarcar todo
-                        List<int> selectedList = new List<int>();
+                        if (view.SelectedRowsCount == 0)
+                        {
+                            //quitamos todo lo del grid de Delivered goods y del grid de lotes de la SO seleccionada
+
+                            var so = gridViewSoSelection.GetRow(gridViewSoSelection.FocusedRowHandle) as DocHead;
+
+                            var listDG = _docLinesDeliveredGoodsList.Where(a => a.IdDocRelated.Equals(so.IdDoc)).ToList();
+                            foreach (var item in listDG)
+                                _docLinesDeliveredGoodsList.Remove(item);
+
+                            var listIB = _auxItemsBatchList.Where(a => a.IdDocRelated.Equals(so.IdDoc)).ToList();
+                            foreach (var item in listIB)
+                                _auxItemsBatchList.Remove(item);
+
+                            _itemsBatchList.RemoveAll(a => a.IdDocRelated.Equals(so.IdDoc));
+                        }
+
+                        //procesamos las marcadas
                         for (Int32 i = view.SelectedRowsCount - 1; i >= 0; i--)
                         {
                             var currentRowIndex = view.GetSelectedRows()[i];
-                            selectedList.Add(currentRowIndex);
 
                             DocLine selLine = view.GetRow(currentRowIndex) as DocLine;
                             if (selLine.IdSupplyStatus == Constants.SUPPLY_STATUS_OPEN)
@@ -553,11 +579,11 @@ namespace HKSupply.Forms.Supply
                                 view.UnselectRow(currentRowIndex);
 
                         }
+
                         view.EndSelection();
                         gridViewLinesSoSelection.UpdateSummary();
 
                     }
-                    //------------------------------ TEST FIN ------------------------------//
                 }
                 else
                 {
@@ -755,6 +781,43 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void GridViewLinesSoSelection_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+
+                if (e.Column.FieldName == nameof(DocLine.IdSupplyStatus))
+                {
+                    var status = view.GetRowCellValue(e.RowHandle, nameof(DocLine.IdSupplyStatus)) as string;
+
+                    switch (status)
+                    {
+                        case Constants.SUPPLY_STATUS_OPEN:
+                            e.Appearance.BackColor = AppStyles.SupplyStatusOpnBKGD1;
+                            e.Appearance.BackColor2 = AppStyles.SupplyStatusOpnBKGD2;
+                            break;
+
+                        case Constants.SUPPLY_STATUS_CLOSE:
+                            e.Appearance.BackColor = AppStyles.SupplyStatusClsBKGD1;
+                            e.Appearance.BackColor2 = AppStyles.SupplyStatusClsBKGD2;
+                            break;
+
+                        case Constants.SUPPLY_STATUS_CANCEL:
+                            e.Appearance.BackColor = AppStyles.SupplyStatusCnlBKGD1;
+                            e.Appearance.BackColor2 = AppStyles.SupplyStatusCnlBKGD2;
+                            break;
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void GridViewLinesDeliveredGoods_CustomSummaryCalculate(object sender, CustomSummaryEventArgs e)
         {
             try
@@ -927,6 +990,8 @@ namespace HKSupply.Forms.Supply
                 _docLinesDeliveredGoodsList = null;
                 _auxItemsBatchList = null; //Test Item Batch
                 _itemsBatchList = null; //Test Item Batch
+                _auxItemsBoxList = null; //Test Item Batch
+                _itemsBoxList = null; //Test Item Batch
                 _docBoxList = null; //Test Item Batch
             }
             catch
@@ -961,6 +1026,8 @@ namespace HKSupply.Forms.Supply
                 _docLinesDeliveredGoodsList = null;
                 _auxItemsBatchList = null; //Test Item Batch
                 _itemsBatchList = null; //Test Item Batch
+                _auxItemsBoxList = null; //Test Item Batch
+                _itemsBoxList = null; //Test Item Batch
                 _docBoxList = null; //Test Item Batch
 
                 xgrdLinesSoSelection.DataSource = null;
@@ -1066,7 +1133,12 @@ namespace HKSupply.Forms.Supply
                 //***** Grid Batches *****/
                 _auxItemsBatchList = new BindingList<PackingListItemBatch>();
                 _itemsBatchList = _docHeadPK.PackingListItemBatches;
-                //Remarks: Hacemos antes la carga de los lotes y después cargamos el grid de delivered goods, al cargar lanzará el evento de cambio de foco en la fila
+
+                //***** Grid Items Boxes *****/
+                _auxItemsBoxList = new BindingList<PackingListItemBox>();
+                _itemsBoxList = _docHeadPK.PackingListItemBoxes;
+
+                //Remarks: Hacemos antes la carga de los lotes y cajas y después cargamos el grid de delivered goods, al cargar lanzará el evento de cambio de foco en la fila
                 //y cargará los datos que corresponden a esa fila en el grid de lotes
 
                 //Test Item Batch END
@@ -1095,6 +1167,20 @@ namespace HKSupply.Forms.Supply
         #endregion
 
         #region Setup Form Objects
+
+        private void SetUpTabs()
+        {
+            try
+            {
+                xtpPakingList.AutoScroll = true;
+                xtpPakingList.AutoScrollMargin = new Size(20, 20);
+                xtpPakingList.AutoScrollMinSize = new Size(xtpPakingList.Width, xtpPakingList.Height);
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         private void SetUpLabels()
         {
@@ -1173,9 +1259,6 @@ namespace HKSupply.Forms.Supply
                 lblShipTo.Appearance.TextOptions.HAlignment = HorzAlignment.Far;
                 lblInvoiceTo.Appearance.TextOptions.HAlignment = HorzAlignment.Far;
                 lblTermPayment.Appearance.TextOptions.HAlignment = HorzAlignment.Far;
-
-                /********* ReadOnly **********/
-                //txtPKNumber.ReadOnly = true; //no es un label, lo sé
 
                 /********* BackColor **********/
                 txtPKNumber.Properties.Appearance.BackColor = Color.CadetBlue;
@@ -1428,7 +1511,7 @@ namespace HKSupply.Forms.Supply
                 //select with checbox
                 gridViewLinesSoSelection.OptionsSelection.MultiSelect = true;
                 gridViewLinesSoSelection.OptionsSelection.MultiSelectMode = GridMultiSelectMode.CheckBoxRowSelect;
-                //gridViewLinesSoSelection.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DefaultBoolean.False;
+                gridViewLinesSoSelection.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DefaultBoolean.False; //para desactivar el marcar/desmarcar todos del header
 
                 //Column Definition
                 GridColumn colIdItemBcn = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(DocLine.IdItemBcn), Width = 200 };
@@ -1515,6 +1598,7 @@ namespace HKSupply.Forms.Supply
                 gridViewLinesSoSelection.ValidatingEditor += GridViewLinesSoSelection_ValidatingEditor;
                 gridViewLinesSoSelection.ShowingEditor += GridViewLinesSoSelection_ShowingEditor;
                 gridViewLinesSoSelection.CustomUnboundColumnData += GridViewLinesSoSelection_CustomUnboundColumnData;
+                gridViewLinesSoSelection.RowCellStyle += GridViewLinesSoSelection_RowCellStyle;
             }
             catch
             {
@@ -1551,8 +1635,6 @@ namespace HKSupply.Forms.Supply
                 GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
                 GridColumn colTotalAmount = new GridColumn() { Caption = "Total Amount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
                 GridColumn colRemarks = new GridColumn() { Caption = "Notes", Visible = true, FieldName = nameof(DocLine.Remarks), Width = 300 };
-                //Test Item Batch
-                GridColumn colBoxNumber = new GridColumn() { Caption = "Box Number", Visible = true, FieldName = nameof(DocLine.BoxNumber), Width = 100 };
 
                 //Display Format
                 colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
@@ -1580,29 +1662,7 @@ namespace HKSupply.Forms.Supply
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0:n3} KG", eGridLinesDeliveredGoodsSummaries.totalQuantityMt),
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} PC", eGridLinesDeliveredGoodsSummaries.totalQuantityHw) });
 
-                //Test Item Batch INI
-                //Edit Repositories
-                //Es necesario crear una lista tonta donde hayan varias cajas, porque aunque se filtra después en el shownEditor, al salir tiene que mostrar el valor 
-                //del datasource original. Meto 50 cajas, no creo que se llegue a tanto
-                List<DocBox> tmpBoxesList = new List<DocBox>();
-                for (int i = 1; i <= 50; i++)
-                {
-                    tmpBoxesList.Add(new DocBox() { BoxNumber = i });
-                }
-
-                RepositoryItemLookUpEdit riPackingBoxes = new RepositoryItemLookUpEdit()
-                {
-                    DataSource = tmpBoxesList,
-                    //DataSource = _packingListBoxes,
-                    ValueMember = nameof(DocBox.BoxNumber),
-                    DisplayMember = nameof(DocBox.BoxNumber),
-                    NullText = "Select Box",
-                };
-                riPackingBoxes.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(DocBox.BoxNumber), "Box Number"));
-                colBoxNumber.ColumnEdit = riPackingBoxes;
-
-                //Test Item Batch END
-
+                
                 //Add columns to grid root view
                 gridViewLinesDeliveredGoods.Columns.Add(colIdDocRelated);
                 gridViewLinesDeliveredGoods.Columns.Add(colIdItemBcn);
@@ -1614,12 +1674,11 @@ namespace HKSupply.Forms.Supply
                 gridViewLinesDeliveredGoods.Columns.Add(colUnitPrice);
                 gridViewLinesDeliveredGoods.Columns.Add(colTotalAmount);
                 gridViewLinesDeliveredGoods.Columns.Add(colRemarks);
-                gridViewLinesDeliveredGoods.Columns.Add(colBoxNumber);//Test Item Batch
 
                 //Events
                 gridViewLinesDeliveredGoods.CustomSummaryCalculate += GridViewLinesDeliveredGoods_CustomSummaryCalculate;
                 gridViewLinesDeliveredGoods.FocusedRowChanged += GridViewLinesDeliveredGoods_FocusedRowChanged; //Test Item Batch
-                gridViewLinesDeliveredGoods.ShownEditor += GridViewLinesDeliveredGoods_ShownEditor; //Test Item Batch
+
             }
             catch
             {
@@ -1782,6 +1841,8 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                _isMarkingSoSelFromDeliveredGoods = true;
+
                 gridViewLinesSoSelection.BeginSelection();
 
                 for (int i = 0; i < gridViewLinesSoSelection.DataRowCount; i++)
@@ -1805,6 +1866,10 @@ namespace HKSupply.Forms.Supply
             catch
             {
                 throw;
+            }
+            finally
+            {
+                _isMarkingSoSelFromDeliveredGoods = false;
             }
 
         }
@@ -1855,6 +1920,9 @@ namespace HKSupply.Forms.Supply
 
                 if (ValidatePackingItemsBatch() == false)
                     return false;
+
+                if (ValidatePackingItemsBox() == false)
+                    return false;
                 //Test Item Batch END
 
                 return true;
@@ -1873,6 +1941,7 @@ namespace HKSupply.Forms.Supply
                 gridViewLinesSoSelection.OptionsBehavior.Editable = true;
                 gridViewLinesDeliveredGoods.OptionsBehavior.Editable = true;
                 gridViewItemsBatch.OptionsBehavior.Editable = true; //Test Item Batch INI
+                gridViewItemsBox.OptionsBehavior.Editable = true; //Test Item Batch INI
                 gridViewPackingBoxes.OptionsBehavior.Editable = true; //Test Item Batch INI
 
                 foreach (GridColumn col in gridViewLinesSoSelection.Columns)
@@ -1884,7 +1953,7 @@ namespace HKSupply.Forms.Supply
                 foreach (GridColumn col in gridViewLinesDeliveredGoods.Columns)
                 {
                     //if (col.FieldName != nameof(DocLine.Remarks))
-                    if (col.FieldName != nameof(DocLine.Remarks) && col.FieldName != nameof(DocLine.BoxNumber)) //Test Item Batch
+                    if (col.FieldName != nameof(DocLine.Remarks)) //Test Item Batch
                         col.OptionsColumn.AllowEdit = false;
                 }
 
@@ -1895,12 +1964,40 @@ namespace HKSupply.Forms.Supply
                         col.OptionsColumn.AllowEdit = false;
                 }
 
-                foreach(GridColumn col in gridViewPackingBoxes.Columns)
+                foreach (GridColumn col in gridViewItemsBox.Columns)
+                {
+                    if (col.FieldName == nameof(PackingListItemBox.IdItemBcn))
+                        col.OptionsColumn.AllowEdit = false;
+                }
+
+                foreach (GridColumn col in gridViewPackingBoxes.Columns)
                 {
                     if (col.FieldName == nameof(DocBox.BoxNumber))
                         col.OptionsColumn.AllowEdit = false;
                 }
                 //Test Item Batch END
+
+                //activamos el seleccionar todo de la cabecera
+                gridViewLinesSoSelection.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DefaultBoolean.True; 
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetGridNotEditable()
+        {
+            try
+            {
+                //not allow grid editing
+                gridViewSoSelection.OptionsBehavior.Editable = false;
+                gridViewLinesSoSelection.OptionsBehavior.Editable = false;
+                gridViewLinesDeliveredGoods.OptionsBehavior.Editable = false;
+                gridViewItemsBatch.OptionsBehavior.Editable = false; //Test Item Batch
+                gridViewPackingBoxes.OptionsBehavior.Editable = false; //Test Item Batch
+                //desactivamos el seleccionar todo de la cabecera
+                gridViewLinesSoSelection.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DefaultBoolean.False;
             }
             catch
             {
@@ -1918,7 +2015,7 @@ namespace HKSupply.Forms.Supply
                 string idPk = _docHeadPK?.IdDoc;
                 ResetPK();
                 ResetForm();
-                //txtPKNumber.Text = string.Empty;
+
                 SetObjectsReadOnly();
 
                 if (idPk != null)
@@ -1926,6 +2023,7 @@ namespace HKSupply.Forms.Supply
                     txtPKNumber.Text = idPk;
                     SearchPK();
                 }
+                SetGridNotEditable();
                 RestoreInitState();
                 SetVisiblePropertyByState();
             }
@@ -1999,7 +2097,13 @@ namespace HKSupply.Forms.Supply
                 _itemsBatchList = new List<PackingListItemBatch>(); 
                 _auxItemsBatchList = new BindingList<PackingListItemBatch>(); 
                 xgrdItemsBatch.DataSource = null; 
-                xgrdItemsBatch.DataSource = _auxItemsBatchList; 
+                xgrdItemsBatch.DataSource = _auxItemsBatchList;
+
+                _itemsBoxList = new List<PackingListItemBox>();
+                _auxItemsBoxList = new BindingList<PackingListItemBox>();
+                xgrdItemsBox.DataSource = null;
+                xgrdItemsBox.DataSource = _auxItemsBoxList;
+
                 _docBoxList = new BindingList<DocBox>();
                 _docBoxList.Add(new DocBox() { BoxNumber = 1, IdDoc = txtPKNumber.Text });
                 xgrdPackingBoxes.DataSource = null;
@@ -2111,8 +2215,16 @@ namespace HKSupply.Forms.Supply
 
                 if (exist.Count > 0)
                 {
-                    XtraMessageBox.Show($"Packing List Open ({exist.Select(a => a.IdDoc).FirstOrDefault()}). You cannot craeted new one.");
+                    //XtraMessageBox.Show($"Packing List Open ({exist.Select(a => a.IdDoc).FirstOrDefault()}). You cannot craeted new one.");
+
+                    var result = XtraMessageBox.Show($"Packing List Open ({exist.Select(a => a.IdDoc).FirstOrDefault()}). You cannot create new one. Load open Packing List?", "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        txtPKNumber.Text = exist.Select(a => a.IdDoc).FirstOrDefault();
+                        SearchPK();
+                    }
                     return false;
+
                 }
                 else
                 {
@@ -2190,7 +2302,8 @@ namespace HKSupply.Forms.Supply
                     Remarks = memoEditRemarks.EditValue as string,
                     Lines = sortedLines,
                     Boxes = boxes,
-                    PackingListItemBatches = _itemsBatchList
+                    PackingListItemBatches = _itemsBatchList.Where(a => a.Quantity > 0 && string.IsNullOrEmpty(a.Batch) == false).ToList(),
+                    PackingListItemBoxes = _itemsBoxList.Where(a => a.PcQuantity > 0 && a.BoxNumber > 0).ToList(),
                 };
 
                 DocHead createdDoc = GlobalSetting.SupplyDocsService.NewDoc(packingList);
@@ -2231,7 +2344,8 @@ namespace HKSupply.Forms.Supply
                     Remarks = memoEditRemarks.EditValue as string,
                     Lines = sortedLines,
                     Boxes = boxes,
-                    PackingListItemBatches = _itemsBatchList
+                    PackingListItemBatches = _itemsBatchList.Where(a => a.Quantity > 0 && string.IsNullOrEmpty(a.Batch) == false).ToList(),
+                    PackingListItemBoxes = _itemsBoxList.Where(a => a.PcQuantity > 0 && a.BoxNumber > 0).ToList(),
                 };
 
                 DocHead updatedDoc = GlobalSetting.SupplyDocsService.UpdateDoc(packingList, finishDoc: finishPK);
@@ -2264,11 +2378,7 @@ namespace HKSupply.Forms.Supply
                 //Reload Packing list
                 LoadPK();
                 //not allow grid editing
-                gridViewSoSelection.OptionsBehavior.Editable = false;
-                gridViewLinesSoSelection.OptionsBehavior.Editable = false;
-                gridViewLinesDeliveredGoods.OptionsBehavior.Editable = false;
-                gridViewItemsBatch.OptionsBehavior.Editable = false; //Test Item Batch
-                gridViewPackingBoxes.OptionsBehavior.Editable = false; //Test Item Batch
+                SetGridNotEditable();
 
                 SetVisiblePropertyByState();
             }
@@ -2292,14 +2402,6 @@ namespace HKSupply.Forms.Supply
 
                 switch (functionalityReport.Code)
                 {
-                    //case Constants.SUPPLY_DOCTYPE_IV:
-                    //    idDoc = _docInvoice.IdDoc;
-                    //    break;
-
-                    //case Constants.SUPPLY_DOCTYPE_DN:
-                    //    idDoc = _docInvoice.IdDocRelated;
-                    //    break;
-
                     case Constants.SUPPLY_DOCTYPE_PL:
                         idDoc = _docHeadPK.IdDoc;
                         break;
@@ -2400,11 +2502,196 @@ namespace HKSupply.Forms.Supply
                         break;
                 }
             }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SetupGrdItemsBox()
+        {
+            try
+            {
+                //Activar que se alternen los colores de las filas del grid
+                gridViewItemsBox.OptionsView.EnableAppearanceEvenRow = true;
+                gridViewItemsBox.OptionsView.EnableAppearanceOddRow = true;
+
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                gridViewItemsBox.OptionsView.ColumnAutoWidth = false;
+                gridViewItemsBox.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //Hacer todo el grid no editable
+                gridViewItemsBox.OptionsBehavior.Editable = false;
+
+                //Hide grouping panel
+                gridViewItemsBox.OptionsView.ShowGroupPanel = false;
+
+                //Column Definition
+                GridColumn colIdItemBcn = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(PackingListItemBox.IdItemBcn), Width = 200 };
+                GridColumn colBoxNumber = new GridColumn() { Caption = "Box", Visible = true, FieldName = nameof(PackingListItemBox.BoxNumber), Width = 50 };
+                GridColumn colPcQuantity = new GridColumn() { Caption = "Qty (PCS)", Visible = true, FieldName = nameof(PackingListItemBox.PcQuantity), Width = 70 };
+                GridColumn colNetWeight = new GridColumn() { Caption = "Net Weight (KG)", Visible = true, FieldName = nameof(PackingListItemBox.NetWeight), Width = 110 };
+                GridColumn colGrossWeight = new GridColumn() { Caption = "Gross Weight (KG)", Visible = true, FieldName = nameof(PackingListItemBox.GrossWeight), Width = 120 };
+
+                //Display Format
+                colPcQuantity.DisplayFormat.FormatType = FormatType.Numeric;
+                colPcQuantity.DisplayFormat.FormatString = "n0";
+
+                colNetWeight.DisplayFormat.FormatType = FormatType.Numeric;
+                colNetWeight.DisplayFormat.FormatString = "n2";
+
+                colGrossWeight.DisplayFormat.FormatType = FormatType.Numeric;
+                colGrossWeight.DisplayFormat.FormatString = "n2";
+
+                //Edit Repositories
+                RepositoryItemTextEdit ritxtInt = new RepositoryItemTextEdit();
+                ritxtInt.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxtInt.Mask.EditMask = "N";
+                ritxtInt.AllowNullInput = DefaultBoolean.True;
+                colPcQuantity.ColumnEdit = ritxtInt;
+
+                RepositoryItemTextEdit ritxt2Dec = new RepositoryItemTextEdit();
+                ritxt2Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxt2Dec.Mask.EditMask = "F2";
+                ritxt2Dec.AllowNullInput = DefaultBoolean.True;
+
+                colNetWeight.ColumnEdit = ritxt2Dec;
+                colGrossWeight.ColumnEdit = ritxt2Dec;
+
+                //Es necesario crear una lista tonta donde hayan varias cajas, porque aunque se filtra después en el shownEditor, al salir tiene que mostrar el valor 
+                //del datasource original. Meto 50 cajas, no creo que se llegue a tanto
+                List<DocBox> tmpBoxesList = new List<DocBox>();
+                for (int i = 1; i <= 50; i++)
+                {
+                    tmpBoxesList.Add(new DocBox() { BoxNumber = i });
+                }
+
+                RepositoryItemLookUpEdit riPackingBoxes = new RepositoryItemLookUpEdit()
+                {
+                    DataSource = tmpBoxesList,
+                    //DataSource = _packingListBoxes,
+                    ValueMember = nameof(DocBox.BoxNumber),
+                    DisplayMember = nameof(DocBox.BoxNumber),
+                    NullText = "Select Box",
+                };
+                riPackingBoxes.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(DocBox.BoxNumber), "Box Number"));
+                colBoxNumber.ColumnEdit = riPackingBoxes;
+
+                //Adding columns
+                gridViewItemsBox.Columns.Add(colIdItemBcn);
+                gridViewItemsBox.Columns.Add(colBoxNumber);
+                gridViewItemsBox.Columns.Add(colPcQuantity);
+                gridViewItemsBox.Columns.Add(colNetWeight);
+                gridViewItemsBox.Columns.Add(colGrossWeight);
+
+                //Disable sorting
+                foreach (GridColumn column in gridViewItemsBatch.Columns)
+                    column.OptionsColumn.AllowSort = DefaultBoolean.False;
+
+                //Events
+                xgrdItemsBox.ProcessGridKey += XgrdItemsBox_ProcessGridKey;
+                gridViewItemsBox.CellValueChanged += GridViewItemsBox_CellValueChanged;
+                gridViewItemsBox.ShownEditor += GridViewItemsBox_ShownEditor;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void XgrdItemsBox_ProcessGridKey(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (CurrentState != ActionsStates.Edit && CurrentState != ActionsStates.New)
+                    return;
+
+                GridView view = xgrdItemsBox.FocusedView as GridView;
+                PackingListItemBox itemBox = view.GetRow(view.FocusedRowHandle) as PackingListItemBox;
+
+                if (itemBox == null)
+                    return;
+
+                if (e.KeyCode == Keys.F4)
+                {
+                    DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (result != DialogResult.Yes)
+                        return;
+
+                    var boxTemp = _itemsBoxList
+                        .Where(a => a.IdItemBcn.Equals(itemBox.IdItemBcn) && a.BoxNumber.Equals(itemBox.BoxNumber) && a.IdDocRelated.Equals(itemBox.IdDocRelated))
+                        .FirstOrDefault();
+
+                    _auxItemsBoxList.Remove(itemBox);
+                    _itemsBoxList.Remove(boxTemp);
+                }
+                else if (e.KeyCode == Keys.Enter)
+                {
+                    if (view.FocusedRowHandle == view.RowCount - 1)
+                    {
+                        if(itemBox.BoxNumber > 0 && itemBox.PcQuantity > 0)
+                        {
+                            _auxItemsBoxList.Add(
+                                new PackingListItemBox()
+                                {
+                                    IdDoc = itemBox.IdDoc,
+                                    IdDocRelated = itemBox.IdDocRelated,
+                                    IdItemBcn = itemBox.IdItemBcn,
+                                    IdItemGroup = itemBox.IdItemGroup
+                                });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GridViewItemsBox_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            try
+            {
+                switch (e.Column.FieldName)
+                {
+                    case nameof(PackingListItemBox.BoxNumber):
+                        GridView view = sender as GridView;
+                        PackingListItemBox itemBox = view.GetRow(view.FocusedRowHandle) as PackingListItemBox;
+
+                        if (itemBox == null)
+                            return;
+                        CopyToItemBoxList(itemBox);
+                        break;
+                }
+            }
             catch(Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void GridViewItemsBox_ShownEditor(object sender, EventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+
+                switch (view.FocusedColumn.FieldName)
+                {
+                    case nameof(PackingListItemBox.BoxNumber):
+                        LookUpEdit riPackingBoxes = (LookUpEdit)view.ActiveEditor;
+                        riPackingBoxes.Properties.DataSource = _docBoxList.Where(a => string.IsNullOrEmpty(a.IdBox) == false).ToList();
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void SetupGrdPackingBoxes()
         {
@@ -2481,6 +2768,9 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                if (CurrentState != ActionsStates.Edit && CurrentState != ActionsStates.New)
+                    return;
+
                 GridView view = xgrdItemsBatch.FocusedView as GridView;
                 PackingListItemBatch itemBatch = view.GetRow(view.FocusedRowHandle) as PackingListItemBatch;
 
@@ -2527,6 +2817,9 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                if (CurrentState != ActionsStates.Edit && CurrentState != ActionsStates.New)
+                    return;
+
                 GridView view = xgrdPackingBoxes.FocusedView as GridView;
                 DocBox packingListBox = view.GetRow(view.FocusedRowHandle) as DocBox;
 
@@ -2541,7 +2834,7 @@ namespace HKSupply.Forms.Supply
 
                     _docBoxList.Remove(packingListBox);
                     UpdateBoxNumber();
-                    UpdateBoxNumberDeliveredGood(packingListBox.BoxNumber);
+                    UpdateBoxNumberItemsBox(packingListBox.BoxNumber);
                 }
 
                 if (e.KeyCode == Keys.Enter)
@@ -2580,10 +2873,28 @@ namespace HKSupply.Forms.Supply
                 xgrdItemsBatch.DataSource = null;
                 xgrdItemsBatch.DataSource = _auxItemsBatchList;
 
+                //Buscamos las cajas referentes a ese item
+                _auxItemsBoxList = new BindingList<PackingListItemBox>(
+                    _itemsBoxList
+                    .Where(a => a.IdItemBcn.Equals(lineDeliveredGoods.IdItemBcn) && a.IdItemGroup.Equals(lineDeliveredGoods.IdItemGroup))
+                    .ToList());
+
+                xgrdItemsBox.DataSource = null;
+                xgrdItemsBox.DataSource = _auxItemsBoxList;
+
                 if (CurrentState == ActionsStates.New || CurrentState == ActionsStates.Edit)
                 {
                     _auxItemsBatchList.Add(
                         new PackingListItemBatch()
+                        {
+                            IdDoc = lineDeliveredGoods.IdDoc,
+                            IdDocRelated = lineDeliveredGoods.IdDocRelated,
+                            IdItemBcn = lineDeliveredGoods.IdItemBcn,
+                            IdItemGroup = lineDeliveredGoods.IdItemGroup
+                        });
+
+                    _auxItemsBoxList.Add(
+                        new PackingListItemBox()
                         {
                             IdDoc = lineDeliveredGoods.IdDoc,
                             IdDocRelated = lineDeliveredGoods.IdDocRelated,
@@ -2595,33 +2906,6 @@ namespace HKSupply.Forms.Supply
             catch(Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void GridViewLinesDeliveredGoods_ShownEditor(object sender, EventArgs e)
-        {
-            try
-            {
-                Cursor = Cursors.WaitCursor;
-
-                GridView view = sender as GridView;
-
-                switch (view.FocusedColumn.FieldName)
-                {
-                    case nameof(DocLine.BoxNumber):
-                        //SearchLookUpEdit riPackingBoxes = (SearchLookUpEdit)view.ActiveEditor;
-                        LookUpEdit riPackingBoxes = (LookUpEdit)view.ActiveEditor;
-                        riPackingBoxes.Properties.DataSource = _docBoxList.Where(a => string.IsNullOrEmpty(a.IdBox) == false).ToList();
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                Cursor = Cursors.Default;
             }
         }
 
@@ -2643,7 +2927,7 @@ namespace HKSupply.Forms.Supply
                 throw;
             }
         }
-        //line.IdDocRelated, line.IdItemBcn, line.IdItemGroup
+        
         private void DeleteFromItemsBatchList(string idDocSO, string idItem, string idItemGroup)
         {
             try
@@ -2664,8 +2948,31 @@ namespace HKSupply.Forms.Supply
             }
         }
 
-        //Actualizar el número de caja cuando se borra una
-        private void UpdateBoxNumber()
+
+        private void CopyToItemBoxList(PackingListItemBox itemBox)
+        {
+            try
+            {
+                var reg = _itemsBoxList
+                    .Where( a => a.IdDocRelated.Equals(itemBox.IdDocRelated) && 
+                            a.IdItemBcn.Equals(itemBox.IdItemBcn) && 
+                            a.IdItemGroup.Equals(itemBox.IdItemGroup) && 
+                            a.BoxNumber.Equals(itemBox.BoxNumber))
+                    .FirstOrDefault();
+
+                if (reg == null)
+                    _itemsBoxList.Add(itemBox);
+                else
+                    reg.BoxNumber = itemBox.BoxNumber;
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
+            //Actualizar el número de caja cuando se borra una
+         private void UpdateBoxNumber()
         {
             try
             {
@@ -2681,14 +2988,28 @@ namespace HKSupply.Forms.Supply
             }
         }
 
-        private void UpdateBoxNumberDeliveredGood(int boxNumber)
+        private void UpdateBoxNumberItemsBox(int boxNumber)
         {
-            foreach(var line in _docLinesDeliveredGoodsList)
+            try
             {
-                if (line.BoxNumber >= boxNumber)
-                    line.BoxNumber = null;
+                foreach (var line in _auxItemsBoxList)
+                {
+                    if (line.BoxNumber >= boxNumber)
+                        line.BoxNumber = 0;
+                }
+
+                foreach (var line in _itemsBoxList)
+                {
+                    if (line.BoxNumber >= boxNumber)
+                        line.BoxNumber = 0;
+                }
+
+                gridViewItemsBox.RefreshData();
             }
-            gridViewLinesDeliveredGoods.RefreshData();
+            catch
+            {
+                throw;
+            }
         }
 
         private bool ValidatePackingBoxes()
@@ -2705,19 +3026,17 @@ namespace HKSupply.Forms.Supply
                             xgrdPackingBoxes.Focus();
                             return false;
                         }
+
+                        if (box.NetWeight >= box.GrossWeight)
+                        {
+                            MessageBox.Show($"Net Weight must be less than Gross Weight for box {box.BoxNumber.ToString()}" , "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            xgrdPackingBoxes.Focus();
+                            return false;
+                        }
                     }
                 }
 
-                foreach (var line in _docLinesDeliveredGoodsList)
-                {
-                    if (line.BoxNumber == null)
-                    {
-                        MessageBox.Show($"You must indicate box for item {line.IdItemBcn} ({line.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        xgrdLinesDeliveredGoods.Focus();
-                        return false;
-                    }
-                }
-                    return true;
+                return true;
             }
             catch
             {
@@ -2761,48 +3080,81 @@ namespace HKSupply.Forms.Supply
             }
         }
 
-       
+       private bool ValidatePackingItemsBox()
+        {
+            try
+            {
+                foreach (var itemBox in _itemsBoxList)
+                {
+
+                    if (itemBox.BoxNumber == 0 && itemBox.PcQuantity == 0) //Es una línea "en blanco", la ignoramos
+                        continue;
+
+                    if (itemBox.BoxNumber == 0)
+                    {
+                        MessageBox.Show($"You must indicate Box Number for {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBox.Focus();
+                        return false;
+                    }
+
+                    if (itemBox.PcQuantity == 0)
+                    {
+                        MessageBox.Show($"You must indicate pcs quantity for {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBox.Focus();
+                        return false;
+                    }
+
+                    if (itemBox.NetWeight == 0)
+                    {
+                        MessageBox.Show($"You must indicate Net Weight for {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBox.Focus();
+                        return false;
+                    }
+
+                    if (itemBox.GrossWeight == 0)
+                    {
+                        MessageBox.Show($"You must indicate Gross Weight for {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBox.Focus();
+                        return false;
+                    }
+
+                    if (itemBox.NetWeight >= itemBox.GrossWeight)
+                    {
+                        MessageBox.Show($"Net Weight must be less than Gross Weightfor {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBox.Focus();
+                        return false;
+                    }
+                }
+
+
+                foreach (var line in _docLinesDeliveredGoodsList)
+                {
+                    var itemBox = _itemsBoxList
+                        .Where(a => a.IdDocRelated.Equals(line.IdDocRelated) && a.IdItemBcn.Equals(line.IdItemBcn) && a.IdItemGroup.Equals(line.IdItemGroup))
+                        .FirstOrDefault();
+
+                    if (itemBox == null)
+                    {
+                        MessageBox.Show($"You must indicate Box Number for {line.IdItemBcn} ({line.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBox.Focus();
+                        return false;
+                    }
+                }
+
+                //no podemos validar las cantidades con el acetato tenemos las cantidades en kg, en cambio hay indicamos el número de piezas que se envían por caja
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         #endregion
 
         #endregion
     }
 
-    #region Test Class  Batch and Boxes
-
-    //class PackingListItemBatch
-    //{
-    //    public string IdDoc { get; set; }
-    //    public string IdItem { get; set; }
-    //    public string Batch { get; set; }
-    //    public decimal Quantity { get; set; }
-    //}
-
-    //class Box
-    //{
-    //    public int Id { get; set; }
-    //    public int Length { get; set; }
-    //    public int Width { get; set; }
-    //    public int Height { get; set; }
-
-    //    public string Name
-    //    {
-    //        get
-    //        {
-    //            return $"{Length.ToString()} X {Width.ToString()} X {Height.ToString()}";
-    //        }
-    //    }
-    //}
-
-    //class PackingListBoxes
-    //{
-    //    public string IdDocPL { get; set; }
-    //    public string IdBox { get; set; }
-    //    public Box Box { get; set; }
-    //    public int BoxNumber { get; set; }
-    //    public decimal NetWeight { get; set; }
-    //    public decimal GrossWeight { get; set; }
-    //}
-
-    #endregion
+   
 }

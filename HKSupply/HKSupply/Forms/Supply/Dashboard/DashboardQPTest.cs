@@ -26,7 +26,7 @@ namespace HKSupply.Forms.Supply.Dashboard
 
         #region Private Members
         List<AuxDashboardQPStored> _auxDboardQPStoredList;
-        List<AuxDashboardQPStored2> _auxDboardQPStoredList2;
+        //List<AuxDashboardQPStored2> _auxDboardQPStoredList2;
         #endregion
 
         #region Constructor

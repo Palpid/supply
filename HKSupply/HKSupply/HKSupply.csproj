@@ -966,6 +966,14 @@
     <Compile Include="Migrations\201801031553368_docLineRejectedQty_01.Designer.cs">
       <DependentUpon>201801031553368_docLineRejectedQty_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801251410554_pkItemsBox_01.cs" />
+    <Compile Include="Migrations\201801251410554_pkItemsBox_01.Designer.cs">
+      <DependentUpon>201801251410554_pkItemsBox_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801261105149_DelBoxNumInDocLine_01.cs" />
+    <Compile Include="Migrations\201801261105149_DelBoxNumInDocLine_01.Designer.cs">
+      <DependentUpon>201801261105149_DelBoxNumInDocLine_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Mocking\TestDb.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
@@ -1033,6 +1041,7 @@
     <Compile Include="Models\Supply\DocHeadAttachFile.cs" />
     <Compile Include="Models\Supply\DocLines.cs" />
     <Compile Include="Models\Supply\PackingListItemBatch.cs" />
+    <Compile Include="Models\Supply\PackingListItemBox.cs" />
     <Compile Include="Models\Supply\SupplyDocType.cs" />
     <Compile Include="Models\Supply\SupplyStatus.cs" />
     <Compile Include="Models\Unit.cs" />
@@ -1688,6 +1697,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801031553368_docLineRejectedQty_01.resx">
       <DependentUpon>201801031553368_docLineRejectedQty_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801251410554_pkItemsBox_01.resx">
+      <DependentUpon>201801251410554_pkItemsBox_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801261105149_DelBoxNumInDocLine_01.resx">
+      <DependentUpon>201801261105149_DelBoxNumInDocLine_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRJ_Stocks\Forms\StockManagement.resx">
       <DependentUpon>StockManagement.cs</DependentUpon>

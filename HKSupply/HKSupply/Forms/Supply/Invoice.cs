@@ -63,6 +63,7 @@ namespace HKSupply.Forms.Supply
 
                 ConfigureRibbonActions();
                 LoadAuxList();
+                SetUpTabs();
                 SetUpLabels();
                 SetUpButtons();
                 SetUpSearchLookUpEdit();
@@ -324,7 +325,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                _customersList = GlobalSetting.CustomerService.GetCustomers().Where(a => a.Factory == true).ToList();
+                _customersList = GlobalSetting.CustomerService.GetCustomers();
                 _currenciesList = GlobalSetting.CurrencyService.GetCurrencies();
                 _deliveryTermList = GlobalSetting.DeliveryTermsService.GetDeliveryTerms();
                 _paymentTermsList = GlobalSetting.PaymentTermsService.GetPaymentTerms();
@@ -353,6 +354,20 @@ namespace HKSupply.Forms.Supply
         #endregion
 
         #region Setup Form Objects
+
+        private void SetUpTabs()
+        {
+            try
+            {
+                xtpINV.AutoScroll = true;
+                xtpINV.AutoScrollMargin = new Size(20, 20);
+                xtpINV.AutoScrollMinSize = new Size(xtpINV.Width, xtpINV.Height);
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         private void SetUpLabels()
         {
@@ -500,7 +515,7 @@ namespace HKSupply.Forms.Supply
                 slueCustomer.Properties.DisplayMember = nameof(Customer.CustomerName);
                 slueCustomer.Properties.View.Columns.AddField(nameof(Customer.IdCustomer)).Visible = true;
                 slueCustomer.Properties.View.Columns.AddField(nameof(Customer.CustomerName)).Visible = true;
-                slueCustomer.Properties.NullText = "Select Customer...";
+                slueCustomer.Properties.NullText = string.Empty;
             }
             catch
             {

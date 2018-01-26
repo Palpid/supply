@@ -112,6 +112,7 @@ namespace HKSupply.DB
         public DbSet<Box> Boxes { get; set; }
         public DbSet<DocBox> DocBoxes { get; set; }
         public DbSet<PackingListItemBatch> PackingListItemsBatch { get; set; }
+        public DbSet<PackingListItemBox> PackingListItemsBox { get; set; }
 
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
@@ -200,6 +201,10 @@ namespace HKSupply.DB
             modelBuilder.Entity<DocBox>().Property(x => x.GrossWeight).HasPrecision(19, 6);
 
             modelBuilder.Entity<PackingListItemBatch>().Property(x => x.Quantity).HasPrecision(19, 6);
+
+            modelBuilder.Entity<PackingListItemBox>().Property(x => x.PcQuantity).HasPrecision(19, 6);
+            modelBuilder.Entity<PackingListItemBox>().Property(x => x.NetWeight).HasPrecision(19, 6);
+            modelBuilder.Entity<PackingListItemBox>().Property(x => x.GrossWeight).HasPrecision(19, 6);
 
             base.OnModelCreating(modelBuilder);
         }

@@ -1111,7 +1111,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
                 foreach (var itemBatch in _itemsBatchList)
                 {
-                    if (string.IsNullOrEmpty(itemBatch.Batch))
+                    if (string.IsNullOrEmpty(itemBatch.Batch) && itemBatch.Quantity > 0)
                     {
                         MessageBox.Show($"You must indicate a bath for {itemBatch.IdItemBcn} ({itemBatch.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         xgrdItemsBatch.Focus();
@@ -1220,8 +1220,8 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     Remarks = _docHeadPK.Remarks,
                     Lines = sortedLines,
                     Boxes = _docHeadPK.Boxes,
-                    PackingListItemBatches = _itemsBatchList
-                };
+                    PackingListItemBatches = _itemsBatchList.Where(a => a.Quantity > 0 && string.IsNullOrEmpty(a.Batch) == false).ToList()
+            };
 
                 DocHead updatedDoc = GlobalSetting.SupplyDocsService.UpdateDocSupplyMaterials(packingList, finishDoc: finishPK);
 
