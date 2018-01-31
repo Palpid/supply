@@ -470,7 +470,9 @@ namespace HKSupply.Forms.Supply
             }
         }
 
-        private void GridViewSoSelection_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        #region Grids events
+
+        private void GridViewSoSelection_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
             {
@@ -484,8 +486,7 @@ namespace HKSupply.Forms.Supply
                     view.SelectRow(view.FocusedRowHandle);
                     view.EndSelection();
 
-                    DocHead doc = view.GetRow(view.FocusedRowHandle) as DocHead;
-                    if (doc != null)
+                    if (view.GetRow(view.FocusedRowHandle) is DocHead doc)
                     {
                         _docLinesSoSelectionList = new BindingList<DocLine>(doc.Lines);
                         //cambiamos la cantidad Dummy (aquí la cantida da incluir en el packing) por la cantidad pendiente para facilitar al usuario
@@ -496,6 +497,12 @@ namespace HKSupply.Forms.Supply
                         xgrdLinesSoSelection.DataSource = _docLinesSoSelectionList;
                         MarkSoSelectionFromDeliveredGoods();
                     }
+                }
+                else if (e.Action == CollectionChangeAction.Remove)
+                {
+                    _docLinesSoSelectionList = new BindingList<DocLine>();
+                    xgrdLinesSoSelection.DataSource = null;
+                    xgrdLinesSoSelection.DataSource = _docLinesSoSelectionList;
                 }
 
             }
@@ -540,6 +547,7 @@ namespace HKSupply.Forms.Supply
                         DeleteDeliveredGood(line);
                         gridViewLinesSoSelection.UpdateSummary();
                         DeleteFromItemsBatchList(line.IdDoc, line.IdItemBcn, line.IdItemGroup); //Test Item Batch
+                        DeleteFromItemsBoxList(line.IdDoc, line.IdItemBcn, line.IdItemGroup); //Test Item Batch
                     }
                     else if (e.Action == CollectionChangeAction.Refresh)
                     {
@@ -618,8 +626,7 @@ namespace HKSupply.Forms.Supply
             try
             {
                 GridView view = sender as GridView;
-                DocLine line = view.GetRow(view.FocusedRowHandle) as DocLine;
-                if (line != null)
+                if(view.GetRow(view.FocusedRowHandle) is DocLine line)
                     CopyToDeliveredGood(line);
             }
             catch (Exception ex)
@@ -895,6 +902,271 @@ namespace HKSupply.Forms.Supply
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        //Test Item Batch INI
+
+        private void GridViewItemsBatch_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            try
+            {
+                switch (e.Column.FieldName)
+                {
+                    case nameof(PackingListItemBatch.Batch):
+                        GridView view = sender as GridView;
+                        PackingListItemBatch itemBatch = view.GetRow(view.FocusedRowHandle) as PackingListItemBatch;
+
+                        if (itemBatch == null)
+                            return;
+                        CopyToItemBatchList(itemBatch);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void XgrdItemsBox_ProcessGridKey(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (CurrentState != ActionsStates.Edit && CurrentState != ActionsStates.New)
+                    return;
+
+                GridView view = xgrdItemsBox.FocusedView as GridView;
+                PackingListItemBox itemBox = view.GetRow(view.FocusedRowHandle) as PackingListItemBox;
+
+                if (itemBox == null)
+                    return;
+
+                if (e.KeyCode == Keys.F4)
+                {
+                    DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (result != DialogResult.Yes)
+                        return;
+
+                    var boxTemp = _itemsBoxList
+                        .Where(a => a.IdItemBcn.Equals(itemBox.IdItemBcn) && a.BoxNumber.Equals(itemBox.BoxNumber) && a.IdDocRelated.Equals(itemBox.IdDocRelated))
+                        .FirstOrDefault();
+
+                    _auxItemsBoxList.Remove(itemBox);
+                    _itemsBoxList.Remove(boxTemp);
+                }
+                else if (e.KeyCode == Keys.Enter)
+                {
+                    if (view.FocusedRowHandle == view.RowCount - 1)
+                    {
+                        if (itemBox.BoxNumber > 0 && itemBox.PcQuantity > 0)
+                        {
+                            _auxItemsBoxList.Add(
+                                new PackingListItemBox()
+                                {
+                                    IdDoc = itemBox.IdDoc,
+                                    IdDocRelated = itemBox.IdDocRelated,
+                                    IdItemBcn = itemBox.IdItemBcn,
+                                    IdItemGroup = itemBox.IdItemGroup
+                                });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GridViewItemsBox_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            try
+            {
+                switch (e.Column.FieldName)
+                {
+                    case nameof(PackingListItemBox.BoxNumber):
+                        GridView view = sender as GridView;
+                        PackingListItemBox itemBox = view.GetRow(view.FocusedRowHandle) as PackingListItemBox;
+
+                        if (itemBox == null)
+                            return;
+                        CopyToItemBoxList(itemBox);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GridViewItemsBox_ShownEditor(object sender, EventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+
+                switch (view.FocusedColumn.FieldName)
+                {
+                    case nameof(PackingListItemBox.BoxNumber):
+                        LookUpEdit riPackingBoxes = (LookUpEdit)view.ActiveEditor;
+                        riPackingBoxes.Properties.DataSource = _docBoxList.Where(a => string.IsNullOrEmpty(a.IdBox) == false).ToList();
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void XgrdItemsBatch_ProcessGridKey(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (CurrentState != ActionsStates.Edit && CurrentState != ActionsStates.New)
+                    return;
+
+                GridView view = xgrdItemsBatch.FocusedView as GridView;
+                PackingListItemBatch itemBatch = view.GetRow(view.FocusedRowHandle) as PackingListItemBatch;
+
+                if (itemBatch == null)
+                    return;
+
+                if (e.KeyCode == Keys.F4)
+                {
+                    DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (result != DialogResult.Yes)
+                        return;
+
+                    var batchTmp = _itemsBatchList.Where(a => a.IdItemBcn.Equals(itemBatch.IdItemBcn) && a.Batch.Equals(itemBatch.Batch)).FirstOrDefault();
+
+                    _auxItemsBatchList.Remove(itemBatch);
+                    _itemsBatchList.Remove(batchTmp);
+                }
+
+                if (e.KeyCode == Keys.Enter)
+                {
+                    if (view.FocusedRowHandle == view.RowCount - 1)
+                    {
+                        if (String.IsNullOrEmpty(itemBatch.Batch) == false && itemBatch.Quantity > 0)
+                        {
+                            _auxItemsBatchList.Add(
+                                new PackingListItemBatch()
+                                {
+                                    IdDoc = itemBatch.IdDoc,
+                                    IdDocRelated = itemBatch.IdDocRelated,
+                                    IdItemBcn = itemBatch.IdItemBcn,
+                                    IdItemGroup = itemBatch.IdItemGroup
+                                });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void XgrdPackingBoxes_ProcessGridKey(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (CurrentState != ActionsStates.Edit && CurrentState != ActionsStates.New)
+                    return;
+
+                GridView view = xgrdPackingBoxes.FocusedView as GridView;
+                DocBox packingListBox = view.GetRow(view.FocusedRowHandle) as DocBox;
+
+                if (packingListBox == null)
+                    return;
+
+                if (e.KeyCode == Keys.F4)
+                {
+                    DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (result != DialogResult.Yes)
+                        return;
+
+                    _docBoxList.Remove(packingListBox);
+                    UpdateBoxNumber();
+                    UpdateBoxNumberItemsBox(packingListBox.BoxNumber);
+                }
+
+                if (e.KeyCode == Keys.Enter)
+                {
+                    if (view.FocusedRowHandle == view.RowCount - 1)
+                    {
+                        if (string.IsNullOrEmpty(packingListBox.IdBox) == false)
+                        {
+                            _docBoxList.Add(new DocBox() { BoxNumber = view.RowCount + 1, IdDoc = txtPKNumber.Text });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GridViewLinesDeliveredGoods_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                DocLine lineDeliveredGoods = view.GetRow(view.FocusedRowHandle) as DocLine;
+
+                if (lineDeliveredGoods == null || _auxItemsBatchList == null)
+                    return;
+
+                //Buscamos los lotes referentes a ese item
+                _auxItemsBatchList = new BindingList<PackingListItemBatch>(
+                    _itemsBatchList
+                    .Where(a => a.IdItemBcn.Equals(lineDeliveredGoods.IdItemBcn) && a.IdItemGroup.Equals(lineDeliveredGoods.IdItemGroup))
+                    .ToList());
+
+                xgrdItemsBatch.DataSource = null;
+                xgrdItemsBatch.DataSource = _auxItemsBatchList;
+
+                //Buscamos las cajas referentes a ese item
+                _auxItemsBoxList = new BindingList<PackingListItemBox>(
+                    _itemsBoxList
+                    .Where(a => a.IdItemBcn.Equals(lineDeliveredGoods.IdItemBcn) && a.IdItemGroup.Equals(lineDeliveredGoods.IdItemGroup))
+                    .ToList());
+
+                xgrdItemsBox.DataSource = null;
+                xgrdItemsBox.DataSource = _auxItemsBoxList;
+
+                if (CurrentState == ActionsStates.New || CurrentState == ActionsStates.Edit)
+                {
+                    _auxItemsBatchList.Add(
+                        new PackingListItemBatch()
+                        {
+                            IdDoc = lineDeliveredGoods.IdDoc,
+                            IdDocRelated = lineDeliveredGoods.IdDocRelated,
+                            IdItemBcn = lineDeliveredGoods.IdItemBcn,
+                            IdItemGroup = lineDeliveredGoods.IdItemGroup
+                        });
+
+                    _auxItemsBoxList.Add(
+                        new PackingListItemBox()
+                        {
+                            IdDoc = lineDeliveredGoods.IdDoc,
+                            IdDocRelated = lineDeliveredGoods.IdDocRelated,
+                            IdItemBcn = lineDeliveredGoods.IdItemBcn,
+                            IdItemGroup = lineDeliveredGoods.IdItemGroup
+                        });
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //Test Item Batch END
+
+        #endregion
 
         private void DateEditPKCreation_EditValueChanged(object sender, EventArgs e)
         {
@@ -1686,6 +1958,226 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        //Test Item Batch INI
+        private void SetupGrdItemsBatch()
+        {
+            try
+            {
+                //Activar que se alternen los colores de las filas del grid
+                gridViewItemsBatch.OptionsView.EnableAppearanceEvenRow = true;
+                gridViewItemsBatch.OptionsView.EnableAppearanceOddRow = true;
+
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                gridViewItemsBatch.OptionsView.ColumnAutoWidth = false;
+                gridViewItemsBatch.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //Hacer todo el grid no editable
+                gridViewItemsBatch.OptionsBehavior.Editable = false;
+
+                //Hide grouping panel
+                gridViewItemsBatch.OptionsView.ShowGroupPanel = false;
+
+                //Column Definition
+                GridColumn colIdItemBcn = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(PackingListItemBatch.IdItemBcn), Width = 200 };
+                GridColumn colBatch = new GridColumn() { Caption = "Batch", Visible = true, FieldName = nameof(PackingListItemBatch.Batch), Width = 200 };
+                GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(PackingListItemBatch.Quantity), Width = 85 };
+
+                //Display Format
+                colQuantity.DisplayFormat.FormatType = FormatType.Numeric;
+                colQuantity.DisplayFormat.FormatString = "n3";
+
+                //Edit Repositories
+                RepositoryItemTextEdit ritxt3Dec = new RepositoryItemTextEdit();
+                ritxt3Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxt3Dec.Mask.EditMask = "F3";
+                ritxt3Dec.AllowNullInput = DefaultBoolean.True;
+
+                colQuantity.ColumnEdit = ritxt3Dec;
+
+                //Adding columns
+                gridViewItemsBatch.Columns.Add(colIdItemBcn);
+                gridViewItemsBatch.Columns.Add(colBatch);
+                gridViewItemsBatch.Columns.Add(colQuantity);
+
+
+                //Disable sorting
+                foreach (GridColumn column in gridViewItemsBatch.Columns)
+                    column.OptionsColumn.AllowSort = DefaultBoolean.False;
+
+                //Events
+                xgrdItemsBatch.ProcessGridKey += XgrdItemsBatch_ProcessGridKey;
+                gridViewItemsBatch.CellValueChanged += GridViewItemsBatch_CellValueChanged;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetupGrdItemsBox()
+        {
+            try
+            {
+                //Activar que se alternen los colores de las filas del grid
+                gridViewItemsBox.OptionsView.EnableAppearanceEvenRow = true;
+                gridViewItemsBox.OptionsView.EnableAppearanceOddRow = true;
+
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                gridViewItemsBox.OptionsView.ColumnAutoWidth = false;
+                gridViewItemsBox.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //Hacer todo el grid no editable
+                gridViewItemsBox.OptionsBehavior.Editable = false;
+
+                //Hide grouping panel
+                gridViewItemsBox.OptionsView.ShowGroupPanel = false;
+
+                //Column Definition
+                GridColumn colIdItemBcn = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(PackingListItemBox.IdItemBcn), Width = 200 };
+                GridColumn colBoxNumber = new GridColumn() { Caption = "Box", Visible = true, FieldName = nameof(PackingListItemBox.BoxNumber), Width = 50 };
+                GridColumn colPcQuantity = new GridColumn() { Caption = "Qty (PCS)", Visible = true, FieldName = nameof(PackingListItemBox.PcQuantity), Width = 70 };
+                GridColumn colNetWeight = new GridColumn() { Caption = "Net Weight (KG)", Visible = true, FieldName = nameof(PackingListItemBox.NetWeight), Width = 110 };
+                GridColumn colGrossWeight = new GridColumn() { Caption = "Gross Weight (KG)", Visible = true, FieldName = nameof(PackingListItemBox.GrossWeight), Width = 120 };
+
+                //Display Format
+                colPcQuantity.DisplayFormat.FormatType = FormatType.Numeric;
+                colPcQuantity.DisplayFormat.FormatString = "n0";
+
+                colNetWeight.DisplayFormat.FormatType = FormatType.Numeric;
+                colNetWeight.DisplayFormat.FormatString = "n2";
+
+                colGrossWeight.DisplayFormat.FormatType = FormatType.Numeric;
+                colGrossWeight.DisplayFormat.FormatString = "n2";
+
+                //Edit Repositories
+                RepositoryItemTextEdit ritxtInt = new RepositoryItemTextEdit();
+                ritxtInt.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxtInt.Mask.EditMask = "N";
+                ritxtInt.AllowNullInput = DefaultBoolean.True;
+                colPcQuantity.ColumnEdit = ritxtInt;
+
+                RepositoryItemTextEdit ritxt2Dec = new RepositoryItemTextEdit();
+                ritxt2Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxt2Dec.Mask.EditMask = "F2";
+                ritxt2Dec.AllowNullInput = DefaultBoolean.True;
+
+                colNetWeight.ColumnEdit = ritxt2Dec;
+                colGrossWeight.ColumnEdit = ritxt2Dec;
+
+                //Es necesario crear una lista tonta donde hayan varias cajas, porque aunque se filtra después en el shownEditor, al salir tiene que mostrar el valor 
+                //del datasource original. Meto 50 cajas, no creo que se llegue a tanto
+                List<DocBox> tmpBoxesList = new List<DocBox>();
+                for (int i = 1; i <= 50; i++)
+                {
+                    tmpBoxesList.Add(new DocBox() { BoxNumber = i });
+                }
+
+                RepositoryItemLookUpEdit riPackingBoxes = new RepositoryItemLookUpEdit()
+                {
+                    DataSource = tmpBoxesList,
+                    //DataSource = _packingListBoxes,
+                    ValueMember = nameof(DocBox.BoxNumber),
+                    DisplayMember = nameof(DocBox.BoxNumber),
+                    NullText = "Select Box",
+                };
+                riPackingBoxes.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(DocBox.BoxNumber), "Box Number"));
+                colBoxNumber.ColumnEdit = riPackingBoxes;
+
+                //Adding columns
+                gridViewItemsBox.Columns.Add(colIdItemBcn);
+                gridViewItemsBox.Columns.Add(colBoxNumber);
+                gridViewItemsBox.Columns.Add(colPcQuantity);
+                gridViewItemsBox.Columns.Add(colNetWeight);
+                gridViewItemsBox.Columns.Add(colGrossWeight);
+
+                //Disable sorting
+                foreach (GridColumn column in gridViewItemsBatch.Columns)
+                    column.OptionsColumn.AllowSort = DefaultBoolean.False;
+
+                //Events
+                xgrdItemsBox.ProcessGridKey += XgrdItemsBox_ProcessGridKey;
+                gridViewItemsBox.CellValueChanged += GridViewItemsBox_CellValueChanged;
+                gridViewItemsBox.ShownEditor += GridViewItemsBox_ShownEditor;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetupGrdPackingBoxes()
+        {
+            try
+            {
+                //Activar que se alternen los colores de las filas del grid
+                gridViewPackingBoxes.OptionsView.EnableAppearanceEvenRow = true;
+                gridViewPackingBoxes.OptionsView.EnableAppearanceOddRow = true;
+
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                gridViewPackingBoxes.OptionsView.ColumnAutoWidth = false;
+                gridViewPackingBoxes.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //Hacer todo el grid no editable
+                gridViewPackingBoxes.OptionsBehavior.Editable = false;
+
+                //Hide grouping panel
+                gridViewPackingBoxes.OptionsView.ShowGroupPanel = false;
+
+                //Column Definition
+                GridColumn colBoxNumber = new GridColumn() { Caption = "Box Number", Visible = true, FieldName = nameof(DocBox.BoxNumber), Width = 100 };
+                GridColumn colIdBox = new GridColumn() { Caption = "Box", Visible = true, FieldName = nameof(DocBox.IdBox), Width = 250 };
+                GridColumn colNetWeight = new GridColumn() { Caption = "Net Weight (KG)", Visible = true, FieldName = nameof(DocBox.NetWeight), Width = 120 };
+                GridColumn colGrossWeight = new GridColumn() { Caption = "Gross Weight (KG)", Visible = true, FieldName = nameof(DocBox.GrossWeight), Width = 120 };
+
+                //Display Format
+                colNetWeight.DisplayFormat.FormatType = FormatType.Numeric;
+                colNetWeight.DisplayFormat.FormatString = "n2";
+
+                colGrossWeight.DisplayFormat.FormatType = FormatType.Numeric;
+                colGrossWeight.DisplayFormat.FormatString = "n2";
+
+                //Edit Repositories
+                RepositoryItemTextEdit ritxt2Dec = new RepositoryItemTextEdit();
+                ritxt2Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxt2Dec.Mask.EditMask = "F2";
+                ritxt2Dec.AllowNullInput = DefaultBoolean.True;
+
+                colNetWeight.ColumnEdit = ritxt2Dec;
+                colGrossWeight.ColumnEdit = ritxt2Dec;
+
+                RepositoryItemSearchLookUpEdit riBoxes = new RepositoryItemSearchLookUpEdit()
+                {
+                    DataSource = _boxList,
+                    ValueMember = nameof(Box.IdBox),
+                    DisplayMember = nameof(Box.Name),
+                    NullText = "Select Item",
+                    ShowClearButton = false,
+                };
+                riBoxes.View.Columns.AddField(nameof(Box.Name)).Visible = true;
+
+                colIdBox.ColumnEdit = riBoxes;
+
+                //Adding columns
+                gridViewPackingBoxes.Columns.Add(colBoxNumber);
+                gridViewPackingBoxes.Columns.Add(colIdBox);
+                gridViewPackingBoxes.Columns.Add(colNetWeight);
+                gridViewPackingBoxes.Columns.Add(colGrossWeight);
+
+                //Disable sorting
+                foreach (GridColumn column in gridViewPackingBoxes.Columns)
+                    column.OptionsColumn.AllowSort = DefaultBoolean.False;
+
+                //Events
+                xgrdPackingBoxes.ProcessGridKey += XgrdPackingBoxes_ProcessGridKey;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        //Test Item Batch END
+
         private void SetupPanelControl()
         {
             try
@@ -1874,6 +2366,131 @@ namespace HKSupply.Forms.Supply
 
         }
 
+        //Test Item Batch INI
+        private void CopyToItemBatchList(PackingListItemBatch itemBatch)
+        {
+            try
+            {
+                var reg = _itemsBatchList
+                    .Where(a => a.IdDocRelated.Equals(itemBatch.IdDocRelated) && a.IdItemBcn.Equals(itemBatch.IdItemBcn) && a.IdItemGroup.Equals(itemBatch.IdItemGroup) && a.Batch.Equals(itemBatch.Batch))
+                    .FirstOrDefault();
+
+                if (reg == null)
+                    _itemsBatchList.Add(itemBatch);
+                else
+                    reg.Batch = itemBatch.Batch;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void DeleteFromItemsBatchList(string idDocSO, string idItem, string idItemGroup)
+        {
+            try
+            {
+                var tmpList = _itemsBatchList
+                    .Where(a => a.IdDocRelated.Equals(idDocSO) && a.IdItemBcn.Equals(idItem) && a.IdItemGroup.Equals(idItemGroup))
+                    .ToList();
+
+                foreach (var itemBatch in tmpList)
+                    _itemsBatchList.Remove(itemBatch);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void CopyToItemBoxList(PackingListItemBox itemBox)
+        {
+            try
+            {
+                var reg = _itemsBoxList
+                    .Where(a => a.IdDocRelated.Equals(itemBox.IdDocRelated) &&
+                           a.IdItemBcn.Equals(itemBox.IdItemBcn) &&
+                           a.IdItemGroup.Equals(itemBox.IdItemGroup) &&
+                           a.BoxNumber.Equals(itemBox.BoxNumber))
+                    .FirstOrDefault();
+
+                if (reg == null)
+                    _itemsBoxList.Add(itemBox);
+                else
+                    reg.BoxNumber = itemBox.BoxNumber;
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
+
+        private void DeleteFromItemsBoxList(string idDocSO, string idItem, string idItemGroup)
+        {
+            try
+            {
+                var tmpList = _itemsBoxList
+                    .Where(a => a.IdDocRelated.Equals(idDocSO) && a.IdItemBcn.Equals(idItem) && a.IdItemGroup.Equals(idItemGroup))
+                    .ToList();
+
+                foreach (var itemBox in tmpList)
+                    _itemsBoxList.Remove(itemBox);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Actualizar el número de caja cuando se borra una
+        /// </summary>
+        private void UpdateBoxNumber()
+        {
+            try
+            {
+                int boxNumber = 1;
+                foreach (var box in _docBoxList)
+                {
+                    box.BoxNumber = boxNumber++;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void UpdateBoxNumberItemsBox(int boxNumber)
+        {
+            try
+            {
+                foreach (var line in _auxItemsBoxList)
+                {
+                    if (line.BoxNumber >= boxNumber)
+                        line.BoxNumber = 0;
+                }
+
+                foreach (var line in _itemsBoxList)
+                {
+                    if (line.BoxNumber >= boxNumber)
+                        line.BoxNumber = 0;
+                }
+
+                gridViewItemsBox.RefreshData();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        //Test Item Batch END
+
+        #region Validates
+
         private bool ValidatePK()
         {
             try
@@ -1932,6 +2549,150 @@ namespace HKSupply.Forms.Supply
                 throw;
             }
         }
+
+        //Test Item Batch INI
+        private bool ValidatePackingBoxes()
+        {
+            try
+            {
+                foreach (var box in _docBoxList)
+                {
+                    if (string.IsNullOrEmpty(box.IdBox) == false)
+                    {
+                        if (box.NetWeight == 0 || box.GrossWeight == 0)
+                        {
+                            MessageBox.Show("You must indicate Net Weight and Gross Weight for all boxes", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            xgrdPackingBoxes.Focus();
+                            return false;
+                        }
+
+                        if (box.NetWeight >= box.GrossWeight)
+                        {
+                            MessageBox.Show($"Net Weight must be less than Gross Weight for box {box.BoxNumber.ToString()}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            xgrdPackingBoxes.Focus();
+                            return false;
+                        }
+                    }
+                }
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private bool ValidatePackingItemsBatch()
+        {
+            try
+            {
+                //Validamos que siempre 
+                foreach (var itemBatch in _itemsBatchList)
+                {
+                    if (string.IsNullOrEmpty(itemBatch.Batch))
+                    {
+                        MessageBox.Show($"You must indicate a bath for {itemBatch.IdItemBcn} ({itemBatch.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBatch.Focus();
+                        return false;
+                    }
+                }
+
+                foreach (var line in _docLinesDeliveredGoodsList)
+                {
+                    decimal qtyItemBatch = _itemsBatchList
+                        .Where(a => a.IdDocRelated.Equals(line.IdDocRelated) && a.IdItemBcn.Equals(line.IdItemBcn) && a.IdItemGroup.Equals(line.IdItemGroup))
+                        .Sum(b => b.Quantity);
+                    if (line.Quantity != qtyItemBatch)
+                    {
+                        MessageBox.Show($"{line.IdItemBcn} ({line.IdDocRelated}): Batch quantity error", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdLinesDeliveredGoods.Focus();
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private bool ValidatePackingItemsBox()
+        {
+            try
+            {
+                foreach (var itemBox in _itemsBoxList)
+                {
+
+                    if (itemBox.BoxNumber == 0 && itemBox.PcQuantity == 0) //Es una línea "en blanco", la ignoramos
+                        continue;
+
+                    if (itemBox.BoxNumber == 0)
+                    {
+                        MessageBox.Show($"You must indicate Box Number for {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBox.Focus();
+                        return false;
+                    }
+
+                    if (itemBox.PcQuantity == 0)
+                    {
+                        MessageBox.Show($"You must indicate pcs quantity for {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBox.Focus();
+                        return false;
+                    }
+
+                    if (itemBox.NetWeight == 0)
+                    {
+                        MessageBox.Show($"You must indicate Net Weight for {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBox.Focus();
+                        return false;
+                    }
+
+                    if (itemBox.GrossWeight == 0)
+                    {
+                        MessageBox.Show($"You must indicate Gross Weight for {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBox.Focus();
+                        return false;
+                    }
+
+                    if (itemBox.NetWeight >= itemBox.GrossWeight)
+                    {
+                        MessageBox.Show($"Net Weight must be less than Gross Weightfor {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBox.Focus();
+                        return false;
+                    }
+                }
+
+
+                foreach (var line in _docLinesDeliveredGoodsList)
+                {
+                    var itemBox = _itemsBoxList
+                        .Where(a => a.IdDocRelated.Equals(line.IdDocRelated) && a.IdItemBcn.Equals(line.IdItemBcn) && a.IdItemGroup.Equals(line.IdItemGroup))
+                        .FirstOrDefault();
+
+                    if (itemBox == null)
+                    {
+                        MessageBox.Show($"You must indicate Box Number for {line.IdItemBcn} ({line.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBox.Focus();
+                        return false;
+                    }
+                }
+
+                //no podemos validar las cantidades con el acetato tenemos las cantidades en kg, en cambio hay indicamos el número de piezas que se envían por caja
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        //Test Item Batch END
+
+        #endregion
 
         private void SetGridsEnabled()
         {
@@ -2245,21 +3006,6 @@ namespace HKSupply.Forms.Supply
             {
                 Cursor = Cursors.WaitCursor;
 
-                //string strCont;
-                //string pkNumber = string.Empty;
-
-                //var pakingsDocs = GlobalSetting.SupplyDocsService.GetDocs(
-                //    idSupplier: null, 
-                //    idCustomer: (string)slueCustomer.EditValue, 
-                //    docDate: dateEditPKDocDate.DateTime, 
-                //    IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PL, 
-                //    idSupplyStatus: null);
-
-                //strCont = $"{(pakingsDocs.Count + 1).ToString().PadLeft(3, '0')}";
-
-                //pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{slueCustomer.EditValue}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
-
-                //string pkNumber = GlobalSetting.SupplyDocsService.GetPackingListNumber(idCustomer: (string)slueCustomer.EditValue, idSupplier:string.Empty, date: DateTime.Now);
                 string pkNumber = GlobalSetting.SupplyDocsService.GetGenericDocHeadNumber(
                     idSupplyDocType: Constants.SUPPLY_DOCTYPE_PL,
                     idCustomer: (string)slueCustomer.EditValue, 
@@ -2291,7 +3037,7 @@ namespace HKSupply.Forms.Supply
                     IdSupplyDocType = Constants.SUPPLY_DOCTYPE_PL,
                     CreationDate = DateTime.Now,
                     DeliveryDate = dateEditPKDelivery.DateTime,
-                    DocDate = dateEditPKDocDate.DateTime, //DateTime.Now,
+                    DocDate = dateEditPKDocDate.DateTime, 
                     IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN,
                     IdSupplier = Constants.ETNIA_HK_COMPANY_CODE,
                     IdCustomer = slueCustomer.EditValue as string,
@@ -2367,10 +3113,8 @@ namespace HKSupply.Forms.Supply
             {
                 txtPKNumber.ReadOnly = false;
                 SetObjectsReadOnly();
-
                 //Restore de ribbon to initial states
                 RestoreInitState();
-
                 //Clear grids
                 xgrdSoSelection.DataSource = null;
                 xgrdLinesSoSelection.DataSource = null;
@@ -2428,732 +3172,6 @@ namespace HKSupply.Forms.Supply
 
         #endregion
 
-        #region Test Batch and Boxes
-
-        #region Items Batch
-        private void SetupGrdItemsBatch()
-        {
-            try
-            {
-                //Activar que se alternen los colores de las filas del grid
-                gridViewItemsBatch.OptionsView.EnableAppearanceEvenRow = true;
-                gridViewItemsBatch.OptionsView.EnableAppearanceOddRow = true;
-
-                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
-                gridViewItemsBatch.OptionsView.ColumnAutoWidth = false;
-                gridViewItemsBatch.HorzScrollVisibility = ScrollVisibility.Auto;
-
-                //Hacer todo el grid no editable
-                gridViewItemsBatch.OptionsBehavior.Editable = false;
-
-                //Hide grouping panel
-                gridViewItemsBatch.OptionsView.ShowGroupPanel = false;
-
-                //Column Definition
-                GridColumn colIdItemBcn = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(PackingListItemBatch.IdItemBcn), Width = 200 };
-                GridColumn colBatch = new GridColumn() { Caption = "Batch", Visible = true, FieldName = nameof(PackingListItemBatch.Batch), Width = 200 };
-                GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(PackingListItemBatch.Quantity), Width = 85 };
-
-                //Display Format
-                colQuantity.DisplayFormat.FormatType = FormatType.Numeric;
-                colQuantity.DisplayFormat.FormatString = "n3";
-
-                //Edit Repositories
-                RepositoryItemTextEdit ritxt3Dec = new RepositoryItemTextEdit();
-                ritxt3Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-                ritxt3Dec.Mask.EditMask = "F3";
-                ritxt3Dec.AllowNullInput = DefaultBoolean.True;
-
-                colQuantity.ColumnEdit = ritxt3Dec;
-
-                //Adding columns
-                gridViewItemsBatch.Columns.Add(colIdItemBcn);
-                gridViewItemsBatch.Columns.Add(colBatch);
-                gridViewItemsBatch.Columns.Add(colQuantity);
-
-
-                //Disable sorting
-                foreach (GridColumn column in gridViewItemsBatch.Columns)
-                    column.OptionsColumn.AllowSort = DefaultBoolean.False;
-
-                //Events
-                xgrdItemsBatch.ProcessGridKey += XgrdItemsBatch_ProcessGridKey;
-                gridViewItemsBatch.CellValueChanged += GridViewItemsBatch_CellValueChanged;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private void GridViewItemsBatch_CellValueChanged(object sender, CellValueChangedEventArgs e)
-        {
-            try
-            {
-                switch (e.Column.FieldName)
-                {
-                    case nameof(PackingListItemBatch.Batch):
-                        GridView view = sender as GridView;
-                        PackingListItemBatch itemBatch = view.GetRow(view.FocusedRowHandle) as PackingListItemBatch;
-
-                        if (itemBatch == null)
-                            return;
-                        CopyToItemBatchList(itemBatch);
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void SetupGrdItemsBox()
-        {
-            try
-            {
-                //Activar que se alternen los colores de las filas del grid
-                gridViewItemsBox.OptionsView.EnableAppearanceEvenRow = true;
-                gridViewItemsBox.OptionsView.EnableAppearanceOddRow = true;
-
-                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
-                gridViewItemsBox.OptionsView.ColumnAutoWidth = false;
-                gridViewItemsBox.HorzScrollVisibility = ScrollVisibility.Auto;
-
-                //Hacer todo el grid no editable
-                gridViewItemsBox.OptionsBehavior.Editable = false;
-
-                //Hide grouping panel
-                gridViewItemsBox.OptionsView.ShowGroupPanel = false;
-
-                //Column Definition
-                GridColumn colIdItemBcn = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(PackingListItemBox.IdItemBcn), Width = 200 };
-                GridColumn colBoxNumber = new GridColumn() { Caption = "Box", Visible = true, FieldName = nameof(PackingListItemBox.BoxNumber), Width = 50 };
-                GridColumn colPcQuantity = new GridColumn() { Caption = "Qty (PCS)", Visible = true, FieldName = nameof(PackingListItemBox.PcQuantity), Width = 70 };
-                GridColumn colNetWeight = new GridColumn() { Caption = "Net Weight (KG)", Visible = true, FieldName = nameof(PackingListItemBox.NetWeight), Width = 110 };
-                GridColumn colGrossWeight = new GridColumn() { Caption = "Gross Weight (KG)", Visible = true, FieldName = nameof(PackingListItemBox.GrossWeight), Width = 120 };
-
-                //Display Format
-                colPcQuantity.DisplayFormat.FormatType = FormatType.Numeric;
-                colPcQuantity.DisplayFormat.FormatString = "n0";
-
-                colNetWeight.DisplayFormat.FormatType = FormatType.Numeric;
-                colNetWeight.DisplayFormat.FormatString = "n2";
-
-                colGrossWeight.DisplayFormat.FormatType = FormatType.Numeric;
-                colGrossWeight.DisplayFormat.FormatString = "n2";
-
-                //Edit Repositories
-                RepositoryItemTextEdit ritxtInt = new RepositoryItemTextEdit();
-                ritxtInt.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-                ritxtInt.Mask.EditMask = "N";
-                ritxtInt.AllowNullInput = DefaultBoolean.True;
-                colPcQuantity.ColumnEdit = ritxtInt;
-
-                RepositoryItemTextEdit ritxt2Dec = new RepositoryItemTextEdit();
-                ritxt2Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-                ritxt2Dec.Mask.EditMask = "F2";
-                ritxt2Dec.AllowNullInput = DefaultBoolean.True;
-
-                colNetWeight.ColumnEdit = ritxt2Dec;
-                colGrossWeight.ColumnEdit = ritxt2Dec;
-
-                //Es necesario crear una lista tonta donde hayan varias cajas, porque aunque se filtra después en el shownEditor, al salir tiene que mostrar el valor 
-                //del datasource original. Meto 50 cajas, no creo que se llegue a tanto
-                List<DocBox> tmpBoxesList = new List<DocBox>();
-                for (int i = 1; i <= 50; i++)
-                {
-                    tmpBoxesList.Add(new DocBox() { BoxNumber = i });
-                }
-
-                RepositoryItemLookUpEdit riPackingBoxes = new RepositoryItemLookUpEdit()
-                {
-                    DataSource = tmpBoxesList,
-                    //DataSource = _packingListBoxes,
-                    ValueMember = nameof(DocBox.BoxNumber),
-                    DisplayMember = nameof(DocBox.BoxNumber),
-                    NullText = "Select Box",
-                };
-                riPackingBoxes.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(DocBox.BoxNumber), "Box Number"));
-                colBoxNumber.ColumnEdit = riPackingBoxes;
-
-                //Adding columns
-                gridViewItemsBox.Columns.Add(colIdItemBcn);
-                gridViewItemsBox.Columns.Add(colBoxNumber);
-                gridViewItemsBox.Columns.Add(colPcQuantity);
-                gridViewItemsBox.Columns.Add(colNetWeight);
-                gridViewItemsBox.Columns.Add(colGrossWeight);
-
-                //Disable sorting
-                foreach (GridColumn column in gridViewItemsBatch.Columns)
-                    column.OptionsColumn.AllowSort = DefaultBoolean.False;
-
-                //Events
-                xgrdItemsBox.ProcessGridKey += XgrdItemsBox_ProcessGridKey;
-                gridViewItemsBox.CellValueChanged += GridViewItemsBox_CellValueChanged;
-                gridViewItemsBox.ShownEditor += GridViewItemsBox_ShownEditor;
-
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private void XgrdItemsBox_ProcessGridKey(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (CurrentState != ActionsStates.Edit && CurrentState != ActionsStates.New)
-                    return;
-
-                GridView view = xgrdItemsBox.FocusedView as GridView;
-                PackingListItemBox itemBox = view.GetRow(view.FocusedRowHandle) as PackingListItemBox;
-
-                if (itemBox == null)
-                    return;
-
-                if (e.KeyCode == Keys.F4)
-                {
-                    DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
-                    if (result != DialogResult.Yes)
-                        return;
-
-                    var boxTemp = _itemsBoxList
-                        .Where(a => a.IdItemBcn.Equals(itemBox.IdItemBcn) && a.BoxNumber.Equals(itemBox.BoxNumber) && a.IdDocRelated.Equals(itemBox.IdDocRelated))
-                        .FirstOrDefault();
-
-                    _auxItemsBoxList.Remove(itemBox);
-                    _itemsBoxList.Remove(boxTemp);
-                }
-                else if (e.KeyCode == Keys.Enter)
-                {
-                    if (view.FocusedRowHandle == view.RowCount - 1)
-                    {
-                        if(itemBox.BoxNumber > 0 && itemBox.PcQuantity > 0)
-                        {
-                            _auxItemsBoxList.Add(
-                                new PackingListItemBox()
-                                {
-                                    IdDoc = itemBox.IdDoc,
-                                    IdDocRelated = itemBox.IdDocRelated,
-                                    IdItemBcn = itemBox.IdItemBcn,
-                                    IdItemGroup = itemBox.IdItemGroup
-                                });
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void GridViewItemsBox_CellValueChanged(object sender, CellValueChangedEventArgs e)
-        {
-            try
-            {
-                switch (e.Column.FieldName)
-                {
-                    case nameof(PackingListItemBox.BoxNumber):
-                        GridView view = sender as GridView;
-                        PackingListItemBox itemBox = view.GetRow(view.FocusedRowHandle) as PackingListItemBox;
-
-                        if (itemBox == null)
-                            return;
-                        CopyToItemBoxList(itemBox);
-                        break;
-                }
-            }
-            catch(Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void GridViewItemsBox_ShownEditor(object sender, EventArgs e)
-        {
-            try
-            {
-                GridView view = sender as GridView;
-
-                switch (view.FocusedColumn.FieldName)
-                {
-                    case nameof(PackingListItemBox.BoxNumber):
-                        LookUpEdit riPackingBoxes = (LookUpEdit)view.ActiveEditor;
-                        riPackingBoxes.Properties.DataSource = _docBoxList.Where(a => string.IsNullOrEmpty(a.IdBox) == false).ToList();
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-        private void SetupGrdPackingBoxes()
-        {
-            try
-            {
-                //Activar que se alternen los colores de las filas del grid
-                gridViewPackingBoxes.OptionsView.EnableAppearanceEvenRow = true;
-                gridViewPackingBoxes.OptionsView.EnableAppearanceOddRow = true;
-
-                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
-                gridViewPackingBoxes.OptionsView.ColumnAutoWidth = false;
-                gridViewPackingBoxes.HorzScrollVisibility = ScrollVisibility.Auto;
-
-                //Hacer todo el grid no editable
-                gridViewPackingBoxes.OptionsBehavior.Editable = false;
-
-                //Hide grouping panel
-                gridViewPackingBoxes.OptionsView.ShowGroupPanel = false;
-
-                //Column Definition
-                GridColumn colBoxNumber = new GridColumn() { Caption = "Box Number", Visible = true, FieldName = nameof(DocBox.BoxNumber), Width = 100 };
-                GridColumn colIdBox = new GridColumn() { Caption = "Box", Visible = true, FieldName = nameof(DocBox.IdBox), Width = 250 };
-                GridColumn colNetWeight = new GridColumn() { Caption = "Net Weight (KG)", Visible = true, FieldName = nameof(DocBox.NetWeight), Width = 120 };
-                GridColumn colGrossWeight = new GridColumn() { Caption = "Gross Weight (KG)", Visible = true, FieldName = nameof(DocBox.GrossWeight), Width = 120 };
-
-                //Display Format
-                colNetWeight.DisplayFormat.FormatType = FormatType.Numeric;
-                colNetWeight.DisplayFormat.FormatString = "n2";
-
-                colGrossWeight.DisplayFormat.FormatType = FormatType.Numeric;
-                colGrossWeight.DisplayFormat.FormatString = "n2";
-
-                //Edit Repositories
-                RepositoryItemTextEdit ritxt2Dec = new RepositoryItemTextEdit();
-                ritxt2Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-                ritxt2Dec.Mask.EditMask = "F2";
-                ritxt2Dec.AllowNullInput = DefaultBoolean.True;
-
-                colNetWeight.ColumnEdit = ritxt2Dec;
-                colGrossWeight.ColumnEdit = ritxt2Dec;
-
-                RepositoryItemSearchLookUpEdit riBoxes = new RepositoryItemSearchLookUpEdit()
-                {
-                    DataSource = _boxList,
-                    ValueMember = nameof(Box.IdBox),
-                    DisplayMember = nameof(Box.Name),
-                    NullText = "Select Item",
-                    ShowClearButton = false,
-                };
-                riBoxes.View.Columns.AddField(nameof(Box.Name)).Visible = true;
-
-                colIdBox.ColumnEdit = riBoxes;
-
-                //Adding columns
-                gridViewPackingBoxes.Columns.Add(colBoxNumber);
-                gridViewPackingBoxes.Columns.Add(colIdBox);
-                gridViewPackingBoxes.Columns.Add(colNetWeight);
-                gridViewPackingBoxes.Columns.Add(colGrossWeight);
-
-                //Disable sorting
-                foreach (GridColumn column in gridViewPackingBoxes.Columns)
-                    column.OptionsColumn.AllowSort = DefaultBoolean.False;
-
-                //Events
-                xgrdPackingBoxes.ProcessGridKey += XgrdPackingBoxes_ProcessGridKey;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private void XgrdItemsBatch_ProcessGridKey(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (CurrentState != ActionsStates.Edit && CurrentState != ActionsStates.New)
-                    return;
-
-                GridView view = xgrdItemsBatch.FocusedView as GridView;
-                PackingListItemBatch itemBatch = view.GetRow(view.FocusedRowHandle) as PackingListItemBatch;
-
-                if (itemBatch == null)
-                    return;
-
-                if (e.KeyCode == Keys.F4)
-                {
-                    DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
-                    if (result != DialogResult.Yes)
-                        return;
-
-                    var batchTmp = _itemsBatchList.Where(a => a.IdItemBcn.Equals(itemBatch.IdItemBcn) && a.Batch.Equals(itemBatch.Batch)).FirstOrDefault();
-
-                    _auxItemsBatchList.Remove(itemBatch);
-                    _itemsBatchList.Remove(batchTmp);
-                }
-
-                if (e.KeyCode == Keys.Enter)
-                {
-                    if (view.FocusedRowHandle == view.RowCount - 1)
-                    {
-                        if (String.IsNullOrEmpty(itemBatch.Batch) == false && itemBatch.Quantity > 0)
-                        {
-                            _auxItemsBatchList.Add(
-                                new PackingListItemBatch()
-                                {
-                                    IdDoc = itemBatch.IdDoc,
-                                    IdDocRelated = itemBatch.IdDocRelated,
-                                    IdItemBcn = itemBatch.IdItemBcn,
-                                    IdItemGroup = itemBatch.IdItemGroup
-                                });
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void XgrdPackingBoxes_ProcessGridKey(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (CurrentState != ActionsStates.Edit && CurrentState != ActionsStates.New)
-                    return;
-
-                GridView view = xgrdPackingBoxes.FocusedView as GridView;
-                DocBox packingListBox = view.GetRow(view.FocusedRowHandle) as DocBox;
-
-                if (packingListBox == null)
-                    return;
-
-                if (e.KeyCode == Keys.F4)
-                {
-                    DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
-                    if (result != DialogResult.Yes)
-                        return;
-
-                    _docBoxList.Remove(packingListBox);
-                    UpdateBoxNumber();
-                    UpdateBoxNumberItemsBox(packingListBox.BoxNumber);
-                }
-
-                if (e.KeyCode == Keys.Enter)
-                {
-                    if (view.FocusedRowHandle == view.RowCount - 1)
-                    {
-                        if (string.IsNullOrEmpty(packingListBox.IdBox) == false)
-                        {
-                            _docBoxList.Add(new DocBox() { BoxNumber = view.RowCount + 1, IdDoc = txtPKNumber.Text});
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void GridViewLinesDeliveredGoods_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
-        {
-            try
-            {
-                GridView view = sender as GridView;
-                DocLine lineDeliveredGoods = view.GetRow(view.FocusedRowHandle) as DocLine;
-
-                if (lineDeliveredGoods == null || _auxItemsBatchList == null)
-                    return;
-
-                //Buscamos los lotes referentes a ese item
-                _auxItemsBatchList = new BindingList<PackingListItemBatch>(
-                    _itemsBatchList
-                    .Where(a => a.IdItemBcn.Equals(lineDeliveredGoods.IdItemBcn) && a.IdItemGroup.Equals(lineDeliveredGoods.IdItemGroup))
-                    .ToList());
-
-                xgrdItemsBatch.DataSource = null;
-                xgrdItemsBatch.DataSource = _auxItemsBatchList;
-
-                //Buscamos las cajas referentes a ese item
-                _auxItemsBoxList = new BindingList<PackingListItemBox>(
-                    _itemsBoxList
-                    .Where(a => a.IdItemBcn.Equals(lineDeliveredGoods.IdItemBcn) && a.IdItemGroup.Equals(lineDeliveredGoods.IdItemGroup))
-                    .ToList());
-
-                xgrdItemsBox.DataSource = null;
-                xgrdItemsBox.DataSource = _auxItemsBoxList;
-
-                if (CurrentState == ActionsStates.New || CurrentState == ActionsStates.Edit)
-                {
-                    _auxItemsBatchList.Add(
-                        new PackingListItemBatch()
-                        {
-                            IdDoc = lineDeliveredGoods.IdDoc,
-                            IdDocRelated = lineDeliveredGoods.IdDocRelated,
-                            IdItemBcn = lineDeliveredGoods.IdItemBcn,
-                            IdItemGroup = lineDeliveredGoods.IdItemGroup
-                        });
-
-                    _auxItemsBoxList.Add(
-                        new PackingListItemBox()
-                        {
-                            IdDoc = lineDeliveredGoods.IdDoc,
-                            IdDocRelated = lineDeliveredGoods.IdDocRelated,
-                            IdItemBcn = lineDeliveredGoods.IdItemBcn,
-                            IdItemGroup = lineDeliveredGoods.IdItemGroup
-                        });
-                }
-            }
-            catch(Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void CopyToItemBatchList(PackingListItemBatch itemBatch)
-        {
-            try
-            {
-                var reg = _itemsBatchList
-                    .Where(a => a.IdDocRelated.Equals(itemBatch.IdDocRelated) && a.IdItemBcn.Equals(itemBatch.IdItemBcn) && a.IdItemGroup.Equals(itemBatch.IdItemGroup) && a.Batch.Equals(itemBatch.Batch))
-                    .FirstOrDefault();
-
-                if (reg == null)
-                    _itemsBatchList.Add(itemBatch);
-                else
-                    reg.Batch = itemBatch.Batch;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-        
-        private void DeleteFromItemsBatchList(string idDocSO, string idItem, string idItemGroup)
-        {
-            try
-            {
-                var tmpList = _itemsBatchList
-                    .Where(a => a.IdDocRelated.Equals(idDocSO) && a.IdItemBcn.Equals(idItem) && a.IdItemGroup.Equals(idItemGroup))
-                    .ToList();
-
-                foreach (var itemBatch in tmpList)
-                {
-                    _itemsBatchList.Remove(itemBatch);
-                }
-
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-
-        private void CopyToItemBoxList(PackingListItemBox itemBox)
-        {
-            try
-            {
-                var reg = _itemsBoxList
-                    .Where( a => a.IdDocRelated.Equals(itemBox.IdDocRelated) && 
-                            a.IdItemBcn.Equals(itemBox.IdItemBcn) && 
-                            a.IdItemGroup.Equals(itemBox.IdItemGroup) && 
-                            a.BoxNumber.Equals(itemBox.BoxNumber))
-                    .FirstOrDefault();
-
-                if (reg == null)
-                    _itemsBoxList.Add(itemBox);
-                else
-                    reg.BoxNumber = itemBox.BoxNumber;
-            }
-            catch
-            {
-                throw;
-            }
-
-        }
-            //Actualizar el número de caja cuando se borra una
-         private void UpdateBoxNumber()
-        {
-            try
-            {
-                int boxNumber = 1;
-                foreach(var box in _docBoxList)
-                {
-                    box.BoxNumber = boxNumber++;
-                }
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private void UpdateBoxNumberItemsBox(int boxNumber)
-        {
-            try
-            {
-                foreach (var line in _auxItemsBoxList)
-                {
-                    if (line.BoxNumber >= boxNumber)
-                        line.BoxNumber = 0;
-                }
-
-                foreach (var line in _itemsBoxList)
-                {
-                    if (line.BoxNumber >= boxNumber)
-                        line.BoxNumber = 0;
-                }
-
-                gridViewItemsBox.RefreshData();
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private bool ValidatePackingBoxes()
-        {
-            try
-            {
-                foreach (var box in _docBoxList)
-                {
-                    if (string.IsNullOrEmpty(box.IdBox) == false)
-                    {
-                        if (box.NetWeight == 0 || box.GrossWeight == 0)
-                        {
-                            MessageBox.Show("You must indicate Net Weight and Gross Weight for all boxes", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            xgrdPackingBoxes.Focus();
-                            return false;
-                        }
-
-                        if (box.NetWeight >= box.GrossWeight)
-                        {
-                            MessageBox.Show($"Net Weight must be less than Gross Weight for box {box.BoxNumber.ToString()}" , "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            xgrdPackingBoxes.Focus();
-                            return false;
-                        }
-                    }
-                }
-
-                return true;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private bool ValidatePackingItemsBatch()
-        {
-            try
-            {
-                //Validamos que siempre 
-                foreach(var itemBatch in _itemsBatchList)
-                {
-                    if (string.IsNullOrEmpty(itemBatch.Batch))
-                    {
-                        MessageBox.Show($"You must indicate a bath for {itemBatch.IdItemBcn} ({itemBatch.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        xgrdItemsBatch.Focus();
-                        return false;
-                    }
-                }
-
-                foreach (var line in _docLinesDeliveredGoodsList)
-                {
-                    decimal qtyItemBatch = _itemsBatchList
-                        .Where(a => a.IdDocRelated.Equals(line.IdDocRelated) && a.IdItemBcn.Equals(line.IdItemBcn) && a.IdItemGroup.Equals(line.IdItemGroup))
-                        .Sum(b => b.Quantity);
-                    if (line.Quantity != qtyItemBatch)
-                    {
-                        MessageBox.Show($"{line.IdItemBcn} ({line.IdDocRelated}): Batch quantity error", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        xgrdLinesDeliveredGoods.Focus();
-                        return false;
-                    }
-                }
-
-                return true;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-       private bool ValidatePackingItemsBox()
-        {
-            try
-            {
-                foreach (var itemBox in _itemsBoxList)
-                {
-
-                    if (itemBox.BoxNumber == 0 && itemBox.PcQuantity == 0) //Es una línea "en blanco", la ignoramos
-                        continue;
-
-                    if (itemBox.BoxNumber == 0)
-                    {
-                        MessageBox.Show($"You must indicate Box Number for {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        xgrdItemsBox.Focus();
-                        return false;
-                    }
-
-                    if (itemBox.PcQuantity == 0)
-                    {
-                        MessageBox.Show($"You must indicate pcs quantity for {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        xgrdItemsBox.Focus();
-                        return false;
-                    }
-
-                    if (itemBox.NetWeight == 0)
-                    {
-                        MessageBox.Show($"You must indicate Net Weight for {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        xgrdItemsBox.Focus();
-                        return false;
-                    }
-
-                    if (itemBox.GrossWeight == 0)
-                    {
-                        MessageBox.Show($"You must indicate Gross Weight for {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        xgrdItemsBox.Focus();
-                        return false;
-                    }
-
-                    if (itemBox.NetWeight >= itemBox.GrossWeight)
-                    {
-                        MessageBox.Show($"Net Weight must be less than Gross Weightfor {itemBox.IdItemBcn} ({itemBox.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        xgrdItemsBox.Focus();
-                        return false;
-                    }
-                }
-
-
-                foreach (var line in _docLinesDeliveredGoodsList)
-                {
-                    var itemBox = _itemsBoxList
-                        .Where(a => a.IdDocRelated.Equals(line.IdDocRelated) && a.IdItemBcn.Equals(line.IdItemBcn) && a.IdItemGroup.Equals(line.IdItemGroup))
-                        .FirstOrDefault();
-
-                    if (itemBox == null)
-                    {
-                        MessageBox.Show($"You must indicate Box Number for {line.IdItemBcn} ({line.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        xgrdItemsBox.Focus();
-                        return false;
-                    }
-                }
-
-                //no podemos validar las cantidades con el acetato tenemos las cantidades en kg, en cambio hay indicamos el número de piezas que se envían por caja
-
-                return true;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        #endregion
-
-        #endregion
     }
 
    

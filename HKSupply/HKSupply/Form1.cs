@@ -378,13 +378,56 @@ namespace HKSupply
         {
             MessageBox.Show("Save Button");
         }
+
         private void stackView1_CancelButtonClick(object sender, EventArgs e)
         {
             MessageBox.Show("Cancel Button");
         }
 
 
-        
+        // ***** Nuevas features C# *****//
+
+        // definiciones inline
+
+        //private class ClassTest
+        //{
+        //    public int MyProperty { get; set; }
+
+        //    public ClassTest(int prop) => MyProperty = prop;
+
+        //}
+
+        //private void Test(object o)
+        //{
+
+        //    int d = 1_4520_458; //se pueden separa dígitos con "_" y no altera su valor => 1_4520_458 == 14520458
+
+        //    try
+        //    {
+        //        //Pattern matching. 
+        //        switch (o)
+        //        {
+        //            case Currency curr:
+        //                MessageBox.Show(curr.IdCurrency);
+        //                break;
+
+        //            case Customer cust when (cust.IdCustomer != string.Empty):
+        //                MessageBox.Show(cust.IdCustomer);
+        //                break;
+
+        //            case null:
+        //                throw new ArgumentNullException(nameof(o));
+
+        //            default:
+        //                MessageBox.Show("Invalid type");
+        //                break;
+        //        }
+        //    }
+        //    catch
+        //    {
+        //        throw;
+        //    }
+        //}
     }
 
 
