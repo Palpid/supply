@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>etnia_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
@@ -39,14 +42,30 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Program Files (x86)\DevExpress 17.2\Components\Bin\Framework\DevExpress.BonusSkins.v17.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.2.UI, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Docs.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 17.2\Components\Bin\Framework\DevExpress.Docs.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2.UI, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
@@ -74,16 +93,48 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BomImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BomImport.Designer.cs">
+      <DependentUpon>BomImport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BomManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\BomManagement.Designer.cs">
       <DependentUpon>BomManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DialogForms\SelectFactories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DialogForms\SelectFactories.Designer.cs">
+      <DependentUpon>SelectFactories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSelector.Designer.cs">
+      <DependentUpon>FrmSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MassiveUpdateChangeItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MassiveUpdateChangeItem.Designer.cs">
+      <DependentUpon>MassiveUpdateChangeItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\GlobalSetting.cs" />
+    <Compile Include="Helpers\CustomExtensions.cs" />
     <Compile Include="Helpers\DeepCopyByExpressionTrees.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\BomHead.cs" />
+    <Compile Include="Models\BomImportTmp.cs" />
     <Compile Include="Models\BomLine.cs" />
     <Compile Include="Models\BomLineLog.cs" />
     <Compile Include="Models\Model.cs" />
@@ -97,8 +148,23 @@
     <Compile Include="Services\Interfaces\IBomService.cs" />
     <Compile Include="Services\Interfaces\IOcrdService.cs" />
     <Compile Include="Services\Interfaces\IOitmService.cs" />
+    <EmbeddedResource Include="Forms\BomImport.resx">
+      <DependentUpon>BomImport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\BomManagement.resx">
       <DependentUpon>BomManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DialogForms\SelectFactories.resx">
+      <DependentUpon>SelectFactories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSelector.resx">
+      <DependentUpon>FrmSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MassiveUpdateChangeItem.resx">
+      <DependentUpon>MassiveUpdateChangeItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -125,16 +191,27 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="etnia_icon.ico" />
+    <Content Include="Resources\Images\bill_of_materials.png" />
+    <Content Include="Resources\Images\etnia_icon.ico" />
+    <None Include="Resources\Images\excel_import.png" />
+    <Content Include="Resources\Images\update.png" />
+    <Content Include="Sql\DeleteBomLines.sql" />
+    <Content Include="Sql\ExecBomImport.sql" />
+    <Content Include="Sql\InsertBomHead.sql" />
+    <Content Include="Sql\InsertBomImportTmp.sql" />
+    <Content Include="Sql\InsertBomLines.sql" />
+    <Content Include="Sql\InsertBomLog.sql" />
     <Content Include="Sql\QueryBomBreakdown.sql" />
     <Content Include="Sql\QueryDetailItemsInBom.sql" />
     <Content Include="Sql\QueryFactories.sql" />
+    <Content Include="Sql\QueryImportBomTmp.sql" />
     <Content Include="Sql\QueryItemBom.sql" />
     <Content Include="Sql\QueryItems.sql" />
     <Content Include="Sql\QueryPossibleItemsForBom.sql" />
+    <Content Include="Sql\UpdateBomHead.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

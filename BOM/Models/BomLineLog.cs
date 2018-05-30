@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BOM.Models
 {
@@ -11,5 +7,6 @@ namespace BOM.Models
         public int Version { get; set; }
         public int Subversion { get; set; }
         public DateTime VersionDate { get; set; }
+        public string User { get; set; }
     }
 }

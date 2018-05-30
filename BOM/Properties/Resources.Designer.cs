@@ -61,6 +61,201 @@ namespace BOM.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bill_of_materials {
+            get {
+                object obj = ResourceManager.GetObject("bill_of_materials", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a DELETE  [dbo].[ETN_BOM_LINES]
+        ///WHERE [CodeBom] = @codeBom.
+        /// </summary>
+        internal static string DeleteBomLines {
+            get {
+                return ResourceManager.GetString("DeleteBomLines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon etnia_icon {
+            get {
+                object obj = ResourceManager.GetObject("etnia_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap excel_import {
+            get {
+                object obj = ResourceManager.GetObject("excel_import", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a EXECUTE [dbo].[ETN_sp_BOM_IMPORT] 
+        ///   @guid
+        ///  ,@user
+        ///
+        ///
+        ///.
+        /// </summary>
+        internal static string ExecBomImport {
+            get {
+                return ResourceManager.GetString("ExecBomImport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a INSERT INTO [dbo].[ETN_BOM_HEAD]
+        ///	([Version]
+        ///	,[Subversion]
+        ///	,[VersionDate]
+        ///	,[ItemCode]
+        ///	,[Factory]
+        ///	,[CreateDate])
+        ///VALUES(
+        ///	1
+        ///	,0
+        ///	,GETDATE()
+        ///	,@itemCode
+        ///	,@factory
+        ///	,GETDATE()
+        ///	);
+        ///SELECT @@IDENTITY.
+        /// </summary>
+        internal static string InsertBomHead {
+            get {
+                return ResourceManager.GetString("InsertBomHead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a INSERT INTO [dbo].[ETN_BOM_IMPORT_TMP]
+        ///	([ImportGUID]
+        ///	,[InsertDate]
+        ///	,[Factory]
+        ///	,[ItemCode]
+        ///	,[ComponentCode]
+        ///	,[BomBreakdown]
+        ///	,[Length]
+        ///	,[Width]
+        ///	,[Height]
+        ///	,[Density]
+        ///	,[NumberOfParts]
+        ///	,[Coefficient1]
+        ///	,[Coefficient2]
+        ///	,[Scrap]
+        ///	,[Quantity]
+        ///	,[Imported]
+        ///	,[ImportDate]
+        ///	,[ErrorMsg])
+        ///SELECT
+        ///	@importGUID
+        ///	,GETDATE()  AS InsertDate
+        ///	,@factory
+        ///	,@itemCode
+        ///	,@componentCode
+        ///	,@bomBreakdown
+        ///	,@length
+        ///	,@width
+        ///	,@height
+        ///	,@density
+        ///	,@numberOfParts
+        ///	,@coefficient1
+        ///	,@coefficient [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string InsertBomImportTmp {
+            get {
+                return ResourceManager.GetString("InsertBomImportTmp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a INSERT INTO [dbo].[ETN_BOM_LINES]
+        ///	([CodeBom]
+        ///	,[ItemCode]
+        ///	,[BomBreakdown]
+        ///	,[Length]
+        ///	,[Width]
+        ///	,[Height]
+        ///	,[Density]
+        ///	,[NumberOfParts]
+        ///	,[Coefficient1]
+        ///	,[Coefficient2]
+        ///	,[Scrap]
+        ///	,[Quantity])
+        ///SELECT
+        ///	@codeBom
+        ///	,@itemCode
+        ///	,@bomBreakdown
+        ///	,@length
+        ///	,@width
+        ///	,@height
+        ///	,@density
+        ///	,@numberOfParts
+        ///	,@coefficient1
+        ///	,@coefficient2
+        ///	,@scrap
+        ///	,@quantity.
+        /// </summary>
+        internal static string InsertBomLines {
+            get {
+                return ResourceManager.GetString("InsertBomLines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a 
+        ///
+        ///INSERT INTO ETN_BOM_LINES_LOG
+        ///	([CodeBom]
+        ///	,[Version]
+        ///	,[Subversion]
+        ///	,[VersionDate]
+        ///	,[ItemCode]
+        ///	,[BomBreakdown]
+        ///	,[Length]
+        ///	,[Width]
+        ///	,[Height]
+        ///	,[Density]
+        ///	,[NumberOfParts]
+        ///	,[Coefficient1]
+        ///	,[Coefficient2]
+        ///	,[Scrap]
+        ///	,[Quantity]
+        ///	,[User])
+        ///SELECT
+        ///	T1.[CodeBom]
+        ///	,T0.[Version]
+        ///	,T0.[Subversion]
+        ///	,T0.[VersionDate]
+        ///	,T1.[ItemCode]
+        ///	,T1.[BomBreakdown]
+        ///	,T1.[Length]
+        ///	,T1.[Width]
+        ///	,T1.[Height]
+        ///	,T1.[Density]
+        ///	,T1.[NumberOfParts]
+        ///	,T1.[Coefficient1]
+        ///	,T1.[Coefficient2]
+        ///	,T1.[S [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string InsertBomLog {
+            get {
+                return ResourceManager.GetString("InsertBomLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a SELECT IdBomBreakdown, Description, SubGroup
         ///FROM ETN_BOM_BREAKDOWN.
         /// </summary>
@@ -81,10 +276,10 @@ namespace BOM.Properties {
         ///	,T3.[Name] as TipArtDesc
         ///	,T2.U_ETN_ETN_SUBTIPART
         ///	,T2.U_OPN_CAT
-        ///FROM ETN_BOM_HEAD AS T0 
-        ///INNER JOIN ETN_BOM_LINES AS T1 ON T1.CodeBom = T0.Code
-        ///INNER JOIN OITM T2 ON T2.ItemCode = T1.ItemCode
-        ///LEFT JOIN [@ETN_TIPART] T3 ON T3.Code = T2.U_ETN_TIPART
+        ///FROM ETN_BOM_HEAD AS T0 WITH (NOLOCK)
+        ///INNER JOIN ETN_BOM_LINES AS T1 WITH (NOLOCK) ON T1.CodeBom = T0.Code
+        ///INNER JOIN OITM T2 WITH (NOLOCK) ON T2.ItemCode = T1.ItemCode
+        ///LEFT JOIN [@ETN_TIPART] T3 WITH (NOLOCK) ON T3.Code = T2.U_ETN_TIPART
         ///WHERE        
         ///	T0.ItemCode = @item
         ///.
@@ -102,6 +297,36 @@ namespace BOM.Properties {
         internal static string QueryFactories {
             get {
                 return ResourceManager.GetString("QueryFactories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a SELECT        
+        ///	Id
+        ///	, ImportGUID
+        ///	, InsertDate
+        ///	, Factory
+        ///	, ItemCode
+        ///	, ComponentCode
+        ///	, BomBreakdown
+        ///	, [Length]
+        ///	, Width
+        ///	, Height
+        ///	, Density
+        ///	, NumberOfParts
+        ///	, Coefficient1
+        ///	, Coefficient2
+        ///	, Scrap
+        ///	, Quantity
+        ///	, Imported
+        ///	, ImportDate
+        ///	, ErrorMsg
+        ///FROM ETN_BOM_IMPORT_TMP
+        ///WHERE ImportGUID = @importGUID.
+        /// </summary>
+        internal static string QueryImportBomTmp {
+            get {
+                return ResourceManager.GetString("QueryImportBomTmp", resourceCulture);
             }
         }
         
@@ -126,8 +351,8 @@ namespace BOM.Properties {
         ///	, T1.Coefficient2
         ///	, T1.Scrap
         ///	, T1.Quantity
-        ///FROM ETN_BOM_HEAD AS T0 
-        ///INNER JOIN ETN_BOM_LINES AS T1 ON T1.CodeBom = T0.Code
+        ///FROM ETN_BOM_HEAD AS T0 WITH (NOLOCK)
+        ///INNER JOIN ETN_BOM_LINES AS T1 WITH (NOLOCK) ON T1.CodeBom = T0.Code
         ///WHERE        
         ///	T0.ItemCode = @item --&apos;4 BORN BLSL&apos;.
         /// </summary>
@@ -149,11 +374,12 @@ namespace BOM.Properties {
         ///	,T0.U_OPN_CAT
         ///	,T1.Code
         ///	,T1.[Name] 
-        ///FROM OITM T0 
-        ///LEFT JOIN [@ETN_MODELS] T1 ON T1.Code = T0.U_ETN_MODEL	
+        ///FROM OITM T0 WITH (NOLOCK)
+        ///LEFT JOIN [@ETN_MODELS] T1 WITH (NOLOCK) ON T1.Code = T0.U_ETN_MODEL	
         ///WHERE 
         ///	U_OPN_CATSUP = &apos;01&apos;AND 
-        ///	(ItemCode like &apos;%4 BORN%&apos; OR ItemCode like &apos;%MARAIS SUN%&apos;)
+        ///	(ItemCode like &apos;%4 BORN%&apos; OR ItemCode like &apos;%MARAIS SUN%&apos; or ItemCode = &apos;5 KYOTO BKRD&apos;)
+        ///ORDER BY T0.ItemName
         ///.
         /// </summary>
         internal static string QueryItems {
@@ -163,11 +389,45 @@ namespace BOM.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a .
+        ///   Busca una cadena traducida similar a SELECT DISTINCT        
+        ///	T0.ItemCode
+        ///	,T0.ItemName
+        ///	,T0.U_ETN_MODEL
+        ///	,T0.U_OPN_CATSUP
+        ///	,T0.ItmsGrpCod
+        ///	,T0.U_ETN_TIPART
+        ///	,T1.[Name] as TipArtDesc
+        ///	,T0.U_ETN_ETN_SUBTIPART
+        ///	,T0.U_OPN_CAT
+        ///FROM  OITM T0 WITH (NOLOCK)
+        ///LEFT JOIN [@ETN_TIPART] T1 WITH (NOLOCK) ON T1.Code = T0.U_ETN_TIPART
+        ///WHERE  T0.ItmsGrpCod in (131,132,133,134)
+        ///ORDER BY T0.ItmsGrpCod, ItemCode.
         /// </summary>
         internal static string QueryPossibleItemsForBom {
             get {
                 return ResourceManager.GetString("QueryPossibleItemsForBom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap update {
+            get {
+                object obj = ResourceManager.GetObject("update", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a UPDATE [ETN_BOM_HEAD]
+        ///SET [Subversion] = [Subversion] + 1, [VersionDate] = GETDATE()
+        ///WHERE Code = @codeBom.
+        /// </summary>
+        internal static string UpdateBomHead {
+            get {
+                return ResourceManager.GetString("UpdateBomHead", resourceCulture);
             }
         }
     }

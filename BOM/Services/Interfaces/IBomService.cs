@@ -12,5 +12,8 @@ namespace BOM.Services.Interfaces
     {
         List<Bom> GetItemBom(string itemCode);
         List<BomBreakdown> GetBromBreakdown();
+        bool EditBom(List<Bom> itemBoms);
+        bool ImportBom(List<BomImportTmp> bomImportRows);
+        List<BomImportTmp> GetImportBomByGuid(string guid);
     }
 }

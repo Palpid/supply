@@ -44,27 +44,6 @@ namespace BOM.Services.Implementations
                 {
                     connection.Open();
 
-                    //    var bomDictionary = new Dictionary<Int64, Bom>();
-
-                    //itemBom = connection.Query<Bom, BomDetail, Bom>(
-                    //        Properties.Resources.QueryItemBom,
-                    //        (head, line) =>
-                    //        {
-                    //            Bom bomEntry;
-
-                    //            if (!bomDictionary.TryGetValue(head.Code, out bomEntry))
-                    //            {
-                    //                bomEntry = head;
-                    //                head.Lines = new List<BomDetail>();
-                    //                bomDictionary.Add(head.Code, bomEntry);
-                    //            }
-
-                    //            bomEntry.Lines.Add(line);
-                    //            return bomEntry;
-                    //        }, splitOn: nameof(BomLine.CodeBom))
-                    //        .Distinct()
-                    //        .ToList();
-
                     string sql = $"{Properties.Resources.QueryBomBreakdown};{Properties.Resources.QueryDetailItemsInBom};{Properties.Resources.QueryItemBom}";
 
                     //IEnumerable<Bom> bom = null;
@@ -104,5 +83,189 @@ namespace BOM.Services.Implementations
                 throw;
             }
         }
+
+        public bool EditBom(List<Bom> itemBoms)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
+                {
+                    connection.Open();
+
+                    using (var transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            foreach(Bom bom in itemBoms)
+                            {
+                                if (bom.Code == 0)
+                                    InsertItemBom(connection, transaction, bom);
+                                else
+                                    UpdateBom(connection, transaction, bom);
+                            }
+
+                            transaction.Commit();
+                        }
+                        catch
+                        {
+                            transaction.Rollback();
+                            throw;
+                        }
+                    }
+                }
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool ImportBom(List<BomImportTmp> bomImportRows)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
+                {
+                    connection.Open();
+
+                    using (var transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            foreach(BomImportTmp row in bomImportRows)
+                            {
+                                //Insertamos toda la lectura del fichero en la tabla temporal
+
+                                connection.Execute(Properties.Resources.InsertBomImportTmp, new
+                                {
+                                    importGUID = row.ImportGUID,
+                                    factory = row.Factory,
+                                    itemCode = row.ItemCode,
+                                    componentCode = row.ComponentCode,
+                                    bomBreakdown = row.BomBreakdown,
+                                    length = row.Length,
+                                    width = row.Width,
+                                    height = row.Height,
+                                    density = row.Density,
+                                    numberOfParts = row.NumberOfParts,
+                                    coefficient1 = row.Coefficient1,
+                                    coefficient2 = row.Coefficient2,
+                                    scrap = row.Scrap,
+                                    quantity = row.Quantity
+                                }, transaction: transaction);
+                            }
+
+                            transaction.Commit();
+                        }
+                        catch
+                        {
+                            transaction.Rollback();
+                            throw;
+                        }
+                    }
+
+                    //Una vez insertados los registros, llamamos al stored procedure para procesarlos (el sp ya tiene su propia transacción)
+                    string sp = "ETN_sp_BOM_IMPORT";
+                    string imporGuid = bomImportRows.Select(a => a.ImportGUID).FirstOrDefault();
+
+                    connection.Execute(sql: sp,
+                        param: new { guid = imporGuid, user = GlobalSetting.UserLogged},
+                        commandType: System.Data.CommandType.StoredProcedure);
+
+                }
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public List<BomImportTmp> GetImportBomByGuid(string guid)
+        {
+            try
+            {
+                List<BomImportTmp> importTmp;
+
+                using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
+                {
+                    connection.Open();
+                    importTmp = connection.Query<BomImportTmp>(Properties.Resources.QueryImportBomTmp, new { importGUID = guid }).ToList();
+                }
+
+                    return importTmp;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #region Private Methods
+
+        private void InsertItemBom(SqlConnection connection, SqlTransaction transaction, Bom bom)
+        {
+            try
+            {
+                Int64 code = connection.Query<Int64>(Properties.Resources.InsertBomHead, new { itemCode = bom.ItemCode, factory = bom.Factory }, transaction: transaction).First();
+                bom.Code = code;
+                InsertBomLines(connection, transaction, bom);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void UpdateBom(SqlConnection connection, SqlTransaction transaction, Bom bom)
+        {
+            try
+            {
+                connection.Execute(Properties.Resources.UpdateBomHead, new { codeBom = bom.Code}, transaction: transaction);
+                connection.Execute(Properties.Resources.DeleteBomLines, new { codeBom = bom.Code }, transaction: transaction);
+                InsertBomLines(connection, transaction, bom);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void InsertBomLines(SqlConnection connection, SqlTransaction transaction, Bom bom)
+        {
+            try
+            {
+                foreach (BomDetail line in bom.Lines)
+                {
+                    connection.Execute(Properties.Resources.InsertBomLines, new
+                    {
+                        codeBom = bom.Code,
+                        itemCode = line.ItemCode,
+                        bomBreakdown = line.BomBreakdown,
+                        length = line.Length,
+                        width = line.Width,
+                        height = line.Height,
+                        density = line.Density,
+                        numberOfParts = line.NumberOfParts,
+                        coefficient1 = line.Coefficient1,
+                        coefficient2 = line.Coefficient2,
+                        scrap = line.Scrap,
+                        quantity = line.Quantity
+                    }, transaction: transaction);
+                }
+
+                //Log
+                connection.Execute(Properties.Resources.InsertBomLog, new { codeBom = bom.Code, user = GlobalSetting.UserLogged }, transaction: transaction);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #endregion
     }
 }

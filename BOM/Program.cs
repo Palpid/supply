@@ -26,7 +26,10 @@ namespace BOM
 
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Forms.BomManagement());
+            Application.Run(new Forms.FrmSelector());
+            //Application.Run(new Forms.BomManagement());
+            //Application.Run(new Forms.MassiveUpdateChangeItem());
+            //Application.Run(new Forms.BomImport());
         }
     }
 }

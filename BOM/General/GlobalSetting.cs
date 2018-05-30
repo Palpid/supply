@@ -33,6 +33,8 @@ namespace BOM.General
 
         public static string DbSapName { get { return ConfigurationManager.AppSettings["DbSapName"].ToString(); } }
 
+        public static string UserLogged { get { return Environment.UserName.ToLower(); } }
+
         public static string ConnectionString
         {
             get { return GetConnectionString(); }

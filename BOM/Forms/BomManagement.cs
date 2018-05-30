@@ -25,7 +25,6 @@ namespace BOM.Forms
 {
     public partial class BomManagement : Form
     {
-        #region Private Enums
 
         #region Enums
         public enum ActionsStates
@@ -33,8 +32,6 @@ namespace BOM.Forms
             Read,
             Edit,
         }
-        #endregion
-
         #endregion
 
         #region Private Members
@@ -47,6 +44,8 @@ namespace BOM.Forms
         BindingList<OitmExt> _itemsforBomList;
         BindingList<OitmExt> _itemsList;
         BindingList<Bom> _itemBoms;
+
+        OitmExt _currentSelectedItem;
 
         #endregion
 
@@ -65,6 +64,7 @@ namespace BOM.Forms
                 SetUpSlueFactories();
                 SetUpGrids();
                 LoadGridItems();
+                ShowAddBomFactoryAndCopyBom(false);
             }
             catch (Exception ex)
             {
@@ -111,7 +111,22 @@ namespace BOM.Forms
                 }
                 else if (currentState == ActionsStates.Edit)
                 {
-                    currentState = ActionsStates.Read;
+                    if (IsValidBom())
+                    {
+                        DialogResult result = XtraMessageBox.Show("Save Changes", "", MessageBoxButtons.YesNo);
+
+                        if (result != DialogResult.Yes)
+                            return;
+
+                        if (SaveBom())
+                        {
+                            MessageBox.Show("Save Successfully");
+                            InitForm();
+                            //currentState = ActionsStates.Read;
+                        }
+                    }
+
+                    
                 }
 
                 ConfigureActionButtonbyState();
@@ -139,6 +154,20 @@ namespace BOM.Forms
             }
         }
 
+        private void BtnCopyBom_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_itemBoms != null && _itemBoms.Count() > 0)
+                    OpenSelectSuppliersForm2Copy();
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void GridViewItems_DoubleClick(object sender, EventArgs e)
         {
@@ -150,10 +179,10 @@ namespace BOM.Forms
                 GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
                 if (hitInfo.InRowCell)
                 {
-                    Oitm item = view.GetRow(view.FocusedRowHandle) as Oitm;
+                    OitmExt item = view.GetRow(view.FocusedRowHandle) as OitmExt;
                     if (item != null)
                     {
-                        //_currentItem = item;
+                        _currentSelectedItem = item.DeepCopyByExpressionTree();
                         LoadItemGridBom(item);
                     }
                 }
@@ -266,9 +295,14 @@ namespace BOM.Forms
                         //Events
                         view.ValidatingEditor += DetailBomView_ValidatingEditor;
                         view.CellValueChanged += DetailBomView_CellValueChanged;
+                        view.ShowingEditor += View_ShowingEditor;
 
                         //Ajustamos las columnas
                         view.BestFitColumns();
+
+                        //Si estamos en modo edición el grid tiene que ser editable cuando lo pinte
+                        if (currentState == ActionsStates.Edit)
+                            ConfigFormToEdit();
 
                         break;
                 }
@@ -346,6 +380,8 @@ namespace BOM.Forms
 
                 BomDetail exist = null;
 
+                decimal qty = 0;
+
                 switch (view.FocusedColumn.FieldName)
                 {
                     case nameof(BomDetail.ItemCode):
@@ -378,6 +414,7 @@ namespace BOM.Forms
 
                         break;
 
+
                     case nameof(BomDetail.BomBreakdown):
                         //No se pueden repetir materiales/breakdown
                         var idBomBreakdown = e.Value.ToString();
@@ -392,6 +429,166 @@ namespace BOM.Forms
                         }
 
                         break;
+
+
+                    case nameof(BomDetail.Quantity):
+                        //Si se indica una cantidad que es diferente al cálculo del resto de elementos, ésta tiene prioridad y se limpían el resto
+                        qty = (row.Length ?? 0) *
+                            (row.Width ?? 0) *
+                            (row.Height ?? 0) *
+                            (row.Density ?? 0) *
+                            ((decimal)1 / (decimal)(row.NumberOfParts ?? 1)) *
+                            (row.Coefficient1 ?? 0) *
+                            (row.Coefficient2 ?? 0) *
+                            (row.Scrap ?? 0);
+
+                        if (qty != (e.Value == null ? 0 : (decimal)e.Value))
+                        {
+                            row.Length = null;
+                            row.Width = null;
+                            row.Height = null;
+                            row.Density = null;
+                            row.NumberOfParts = null;
+                            row.Scrap = null;
+                            row.Coefficient1 = null;
+                            row.Coefficient2 = null;
+                            row.Scrap = null;
+                        }
+
+                        break;
+
+                    case nameof(BomDetail.Length):
+
+                        qty = (e.Value == null ? 0 : (decimal)e.Value) *
+                            (row.Width ?? 0) *
+                            (row.Height ?? 0) *
+                            (row.Density ?? 0) *
+                            ((decimal)1 / (decimal)(row.NumberOfParts ?? 1)) *
+                            (row.Coefficient1 ?? 0) *
+                            (row.Coefficient2 ?? 0) *
+                            (row.Scrap ?? 0);
+
+                        row.Quantity = qty;
+                        break;
+
+                    case nameof(BomDetail.Width):
+
+                        qty = (row.Length ?? 0) *
+                            (e.Value == null ? 0 : (decimal)e.Value) *
+                            (row.Height ?? 0) *
+                            (row.Density ?? 0) *
+                            ((decimal)1 / (decimal)(row.NumberOfParts ?? 1)) *
+                            (row.Coefficient1 ?? 0) *
+                            (row.Coefficient2 ?? 0) *
+                            (row.Scrap ?? 0);
+
+                        row.Quantity = qty;
+
+                        break;
+
+                    case nameof(BomDetail.Height):
+
+                        qty = (row.Length ?? 0) *
+                            (row.Width ?? 0) *
+                            (e.Value == null ? 0 : (decimal)e.Value) *
+                            (row.Density ?? 0) *
+                            ((decimal)1 / (decimal)(row.NumberOfParts ?? 1)) *
+                            (row.Coefficient1 ?? 0) *
+                            (row.Coefficient2 ?? 0) *
+                            (row.Scrap ?? 0);
+
+                        row.Quantity = qty;
+
+                        break;
+
+                    case nameof(BomDetail.Density):
+
+                        qty = (row.Length ?? 0) *
+                            (row.Width ?? 0) *
+                            (row.Height ?? 0) *
+                            (e.Value == null ? 0 : (decimal)e.Value) *
+                            ((decimal)1 / (decimal)(row.NumberOfParts ?? 1)) *
+                            (row.Coefficient1 ?? 0) *
+                            (row.Coefficient2 ?? 0) *
+                            (row.Scrap ?? 0);
+
+                        row.Quantity = qty;
+
+                        break;
+
+                    case nameof(BomDetail.NumberOfParts):
+
+                        //Me hace cosas raras en el parse + validación y tengo que controlarlo a mano
+                        int numParts;
+                        if (int.TryParse(e.Value.ToString(), out numParts) == false)
+                        {
+                            e.Valid = false;
+                        }
+                        else if (numParts == 0)
+                        {
+                            e.Valid = false;
+                        }
+                        else
+                        {
+                            qty = (row.Length ?? 0) *
+                            (row.Width ?? 0) *
+                            (row.Height ?? 0) *
+                            (row.Density ?? 0) *
+                            ((decimal)1 / (decimal)numParts) *
+                            (row.Coefficient1 ?? 0) *
+                            (row.Coefficient2 ?? 0) *
+                            (row.Scrap ?? 0);
+                        }
+
+                        row.Quantity = qty;
+
+                        break;
+
+                    case nameof(BomDetail.Coefficient1):
+
+                        qty = (row.Length ?? 0) *
+                            (row.Width ?? 0) *
+                            (row.Height ?? 0) *
+                            (row.Density ?? 0) *
+                            ((decimal)1 / (decimal)(row.NumberOfParts ?? 1)) *
+                            (e.Value == null ? 0 : (decimal)e.Value) *
+                            (row.Coefficient2 ?? 0) *
+                            (row.Scrap ?? 0);
+
+                        row.Quantity = qty;
+
+                        break;
+
+                    case nameof(BomDetail.Coefficient2):
+
+                        qty = (row.Length ?? 0) *
+                            (row.Width ?? 0) *
+                            (row.Height ?? 0) *
+                            (row.Density ?? 0) *
+                            ((decimal)1 / (decimal)(row.NumberOfParts ?? 1)) *
+                            (row.Coefficient1 ?? 0) *
+                            (e.Value == null ? 0 : (decimal)e.Value) *
+                            (row.Scrap ?? 0);
+
+                        row.Quantity = qty;
+
+                        break;
+
+                    case nameof(BomDetail.Scrap):
+
+                        qty = (row.Length ?? 0) *
+                            (row.Width ?? 0) *
+                            (row.Height ?? 0) *
+                            (row.Density ?? 0) *
+                            ((decimal)1 / (decimal)(row.NumberOfParts ?? 1)) *
+                            (row.Coefficient1 ?? 0) *
+                            (row.Coefficient2 ?? 0) *
+                            (e.Value == null ? 0 : (decimal)e.Value);
+
+                        row.Quantity = qty;
+
+                        break;
+
                 }
 
             }
@@ -406,7 +603,73 @@ namespace BOM.Forms
         {
             try
             {
-                (sender as GridView).BestFitColumns();
+                GridView view = sender as GridView;
+                BaseView parent = view.ParentView;
+                var rowParent = parent.GetRow(view.SourceRowHandle) as Bom;
+
+                if (e.Column.FieldName == nameof(BomDetail.ItemCode))
+                {
+                    BomDetail row = view.GetRow(e.RowHandle) as BomDetail;
+                    row.Coefficient1 = null;
+                    row.Coefficient2 = null;
+                    row.Density = null;
+                    row.Height = null;
+                    row.Length = null;
+                    row.NumberOfParts = null;
+                    row.Scrap = null;
+                    row.Width = null;
+                }
+
+                view.BestFitColumns();
+                rowParent.Edited = true;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void View_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            try
+            {
+
+                GridView view = sender as GridView;
+                BomDetail row = view.GetRow(view.FocusedRowHandle) as BomDetail;
+
+                BaseView parent = view.ParentView;
+                var rowParent = parent.GetRow(view.SourceRowHandle);
+
+                switch (view.FocusedColumn.FieldName)
+                {
+                    case nameof(BomDetail.Coefficient1):
+                    case nameof(BomDetail.Coefficient2):
+                    case nameof(BomDetail.Density):
+                    case nameof(BomDetail.Height):
+                    case nameof(BomDetail.Length):
+                    case nameof(BomDetail.NumberOfParts):
+                    case nameof(BomDetail.Scrap):
+                    case nameof(BomDetail.Width):
+
+                        if (string.IsNullOrEmpty(row.ItemCode))
+                        {
+                            XtraMessageBox.Show("Select item first");
+                            e.Cancel = true;
+                        }
+                        else
+                        {
+
+                            if (row.Item.ItmsGrpCod != Constants.TIPART_RAWMATERIAL_HK)
+                            {
+                                e.Cancel = true;
+                            }
+                        }
+
+                        break;
+                }
+
+
             }
             catch (Exception ex)
             {
@@ -430,6 +693,7 @@ namespace BOM.Forms
                 Load += BomManagement_Load;
                 btnAcciones.Click += BtnAcciones_Click;
                 btnAddBomFactory.Click += BtnAddBomFactory_Click;
+                btnCopyBom.Click += BtnCopyBom_Click;
             }
             catch
             {
@@ -571,6 +835,21 @@ namespace BOM.Forms
             }
         }
 
+
+        private bool SaveBom()
+        {
+            try
+            {
+                var boms = _itemBoms.Where(a => a.Edited == true).ToList();
+                GlobalSetting.BomService.EditBom(boms);
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #region Loads
@@ -621,6 +900,20 @@ namespace BOM.Forms
                     btnAcciones.Text = "Edit";
                 else if(currentState == ActionsStates.Edit)
                     btnAcciones.Text = "Save";
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void InitForm()
+        {
+            try
+            {
+                currentState = ActionsStates.Read;
+                LoadItemGridBom(_currentSelectedItem);
+
             }
             catch
             {
@@ -692,6 +985,8 @@ namespace BOM.Forms
         {
             try
             {
+                ShowAddBomFactoryAndCopyBom(true);
+
                 foreach (GridView view in grdItemBom.ViewCollection)
                 {
                     switch (view.LevelName)
@@ -723,7 +1018,17 @@ namespace BOM.Forms
                 if (exist == null)
                 {
                     Bom itemBom = new Bom();
+                    itemBom.Code = 0;
+                    itemBom.Factory = idFactory;
+                    itemBom.ItemCode = _currentSelectedItem.ItemCode;
+                    itemBom.Lines.Add(new BomDetail() { CodeBom = 0 });
 
+                    _itemBoms.Add(itemBom);
+
+                }
+                else
+                {
+                    XtraMessageBox.Show("Supplier already exist in BOM");
                 }
 
             }
@@ -733,10 +1038,127 @@ namespace BOM.Forms
             }
         }
 
+        private void OpenSelectSuppliersForm2Copy()
+        {
+            try
+            {
+                List<string> factories = _itemBoms.Select(a => a.Factory).ToList();
+                List<string> selectedFactoriesSource = new List<string>();
+                List<string> selectedFactoriesDestination = new List<string>();
+
+                using (DialogForms.SelectFactories form = new DialogForms.SelectFactories())
+                {
+                    form.InitData(factories);
+
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        selectedFactoriesSource = form.SelectedFactoriesSource;
+                        selectedFactoriesDestination = form.SelectedFactoriesDestination;
+
+                        CopySupplierBom2SupplierBom(selectedFactoriesSource.Single(), selectedFactoriesDestination);
+                       
+                    }
+
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void CopySupplierBom2SupplierBom(string selectedFactorySource, List<string> selectedFactoriesDestination)
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+
+                var bomSource = _itemBoms.Where(a => a.Factory.Equals(selectedFactorySource)).Single();
+
+                foreach (var factoryDestination in selectedFactoriesDestination)
+                {
+                    var bomDestination = _itemBoms.Where(a => a.Factory.Equals(factoryDestination)).Single();
+                    bomDestination.Lines = new List<BomDetail>();
+
+                    foreach(var line in bomSource.Lines)
+                    {
+                        var tmp = line.DeepCopyByExpressionTree();
+                        tmp.CodeBom = bomDestination.Code;
+                        bomDestination.Lines.Add(tmp);
+                    }
+                }
+
+                grdItemBom.RefreshDataSource();
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+
+        //private decimal GetQuantityCalc(decimal length, decimal width, decimal height, decimal density, int numberOfParts, decimal coefficient1, decimal coefficient2, decimal scrap)
+        //{
+        //    try
+        //    {
+        //        decimal qty = length * width * height * density * (1 / numberOfParts) * coefficient1 * coefficient2 * scrap;
+        //        return qty;
+        //    }
+        //    catch
+        //    {
+        //        throw;
+        //    }
+        //}
+
+        private void ShowAddBomFactoryAndCopyBom(bool show)
+        {
+            try
+            {
+                lblFactory.Visible = slueFactory.Visible = btnAddBomFactory.Visible = lblCopyBom.Visible = btnCopyBom.Visible = show;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
+        #endregion
 
+        #region Validates
+        private bool IsValidBom()
+        {
+            try
+            {
+                foreach(Bom bom in _itemBoms)
+                {
+                    foreach(BomDetail line in bom.Lines)
+                    {
+                        if (string.IsNullOrEmpty(line.ItemCode) == false && line.Quantity <= 0)
+                        {
+                            XtraMessageBox.Show($"Quantity must be greater than Zero ({line.ItemCode})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
 
+                        if (string.IsNullOrEmpty(line.ItemCode) == false && string.IsNullOrEmpty(line.BomBreakdown))
+                        {
+                            XtraMessageBox.Show($"Select breakdown ({line.ItemCode})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                    }
+                }
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
         #endregion
 
         #endregion

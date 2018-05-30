@@ -13,4 +13,5 @@ FROM OITM T0 WITH (NOLOCK)
 LEFT JOIN [@ETN_MODELS] T1 WITH (NOLOCK) ON T1.Code = T0.U_ETN_MODEL	
 WHERE 
 	U_OPN_CATSUP = '01'AND 
-	(ItemCode like '%4 BORN%' OR ItemCode like '%MARAIS SUN%')
+	(ItemCode like '%4 BORN%' OR ItemCode like '%MARAIS SUN%' or ItemCode = '5 KYOTO BKRD')
+ORDER BY T0.ItemName

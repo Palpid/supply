@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.dockManagerItemBom = new DevExpress.XtraBars.Docking.DockManager(this.components);
@@ -38,7 +38,7 @@
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.btnAcciones = new DevExpress.XtraEditors.SimpleButton();
             this.lblCopyBom = new DevExpress.XtraEditors.LabelControl();
-            this.sbCopyBom = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCopyBom = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddBomFactory = new DevExpress.XtraEditors.SimpleButton();
             this.lblFactory = new DevExpress.XtraEditors.LabelControl();
             this.slueFactory = new DevExpress.XtraEditors.SearchLookUpEdit();
@@ -129,7 +129,7 @@
             this.controlContainer1.Controls.Add(this.btnCancelar);
             this.controlContainer1.Controls.Add(this.btnAcciones);
             this.controlContainer1.Controls.Add(this.lblCopyBom);
-            this.controlContainer1.Controls.Add(this.sbCopyBom);
+            this.controlContainer1.Controls.Add(this.btnCopyBom);
             this.controlContainer1.Controls.Add(this.btnAddBomFactory);
             this.controlContainer1.Controls.Add(this.lblFactory);
             this.controlContainer1.Controls.Add(this.slueFactory);
@@ -165,14 +165,14 @@
             this.lblCopyBom.TabIndex = 11;
             this.lblCopyBom.Text = "Copy BOM to";
             // 
-            // sbCopyBom
+            // btnCopyBom
             // 
-            this.sbCopyBom.ImageOptions.ImageUri.Uri = "Replace;Size16x16";
-            this.sbCopyBom.Location = new System.Drawing.Point(378, 9);
-            this.sbCopyBom.Name = "sbCopyBom";
-            this.sbCopyBom.Size = new System.Drawing.Size(25, 25);
-            this.sbCopyBom.TabIndex = 10;
-            this.sbCopyBom.Text = "simpleButton1";
+            this.btnCopyBom.ImageOptions.ImageUri.Uri = "Replace;Size16x16";
+            this.btnCopyBom.Location = new System.Drawing.Point(378, 9);
+            this.btnCopyBom.Name = "btnCopyBom";
+            this.btnCopyBom.Size = new System.Drawing.Size(25, 25);
+            this.btnCopyBom.TabIndex = 10;
+            this.btnCopyBom.Text = "simpleButton1";
             // 
             // btnAddBomFactory
             // 
@@ -274,9 +274,9 @@
             this.documentGroup1});
             this.tabbedView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.document1});
-            dockingContainer2.Element = this.documentGroup1;
+            dockingContainer1.Element = this.documentGroup1;
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
-            dockingContainer2});
+            dockingContainer1});
             // 
             // gridControl2
             // 
@@ -360,7 +360,7 @@
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document1;
         private DevExpress.XtraEditors.LabelControl lblCopyBom;
-        private DevExpress.XtraEditors.SimpleButton sbCopyBom;
+        private DevExpress.XtraEditors.SimpleButton btnCopyBom;
         private DevExpress.XtraEditors.SimpleButton btnAddBomFactory;
         private DevExpress.XtraEditors.LabelControl lblFactory;
         private DevExpress.XtraEditors.SearchLookUpEdit slueFactory;

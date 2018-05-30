@@ -9,7 +9,13 @@ namespace BOM.Classes
 {
     public class Bom : BomHead
     {
-        //public List<BomLine> RawMaterial { get; set; }
         public List<BomDetail> Lines { get; set; }
+        public bool Edited { get; set; }
+
+        public Bom()
+        {
+            Lines = new List<BomDetail>();
+            Edited = false;
+        }
     }
 }
