@@ -1459,8 +1459,8 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                         var supplierPrice = _selectedSupplierPriceList.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
                         if (supplierPrice != null)
                         {
-                            line.UnitPrice = (short)supplierPrice.Price;
-                            line.UnitPriceBaseCurrency = (short)supplierPrice.PriceBaseCurrency;
+                            line.UnitPrice = supplierPrice.Price;
+                            line.UnitPriceBaseCurrency = supplierPrice.PriceBaseCurrency;
                         }
                         else
                         {
@@ -1679,8 +1679,8 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     var supplierPrice = _selectedSupplierPriceList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
                     if (supplierPrice != null)
                     {
-                        line.UnitPrice = (short)supplierPrice.Price;
-                        line.UnitPriceBaseCurrency = (short)supplierPrice.PriceBaseCurrency;
+                        line.UnitPrice = supplierPrice.Price;
+                        line.UnitPriceBaseCurrency = supplierPrice.PriceBaseCurrency;
                     }
                     else
                     {

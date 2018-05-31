@@ -1,5 +1,0 @@
-﻿2018-01-24 13:50:39,991 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc - Batch quantity to move (3) is greather than existing quantity (0) in batch (KKKKKKKK)
-System.InvalidOperationException: Batch quantity to move (3) is greather than existing quantity (0) in batch (KKKKKKKK)
-   at HKSupply.PRJ_Stocks.Classes.Stocks.MoveSockItem(StockMovementsType MoveType, Warehouse WareORIG, Warehouse WareDEST, Decimal Qtt, String idItem, String idOwner, String idlot, String remarks, List`1 LstidDoc, String IdUser) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\Classes\Stocks.cs:line 753
-   at HKSupply.Services.Implementations.EFSupplyDocs.MoveStockForDoc(HKSupplyContext db, DocHead docHead) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 2733
-   at HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc(DocHead doc, Boolean finishDoc) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 1099

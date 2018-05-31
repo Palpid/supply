@@ -1379,8 +1379,8 @@ namespace HKSupply.Forms.Supply
                         var supplierPrice = _selectedSupplierPriceList.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
                         if (supplierPrice != null)
                         {
-                            line.UnitPrice = (short)supplierPrice.Price;
-                            line.UnitPriceBaseCurrency = (short)supplierPrice.PriceBaseCurrency;
+                            line.UnitPrice = supplierPrice.Price;
+                            line.UnitPriceBaseCurrency = supplierPrice.PriceBaseCurrency;
                         }
                         else
                         {
@@ -1599,8 +1599,8 @@ namespace HKSupply.Forms.Supply
                     var supplierPrice = _selectedSupplierPriceList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
                     if (supplierPrice != null)
                     {
-                        line.UnitPrice = (short)supplierPrice.Price;
-                        line.UnitPriceBaseCurrency = (short)supplierPrice.PriceBaseCurrency;
+                        line.UnitPrice = supplierPrice.Price;
+                        line.UnitPriceBaseCurrency = supplierPrice.PriceBaseCurrency;
                     }
                     else
                     {
@@ -1940,14 +1940,15 @@ namespace HKSupply.Forms.Supply
                 }
 
                 //Validamos que no haya ningún item sin precio
-                foreach(DocLine line in _docLinesList)
-                {
-                    if(string.IsNullOrEmpty(line.IdItemBcn) == false && line.TotalAmount == 0)
-                    {
-                        MessageBox.Show($"Item [{line.IdItemBcn}]. Total Amount cannot be 0", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return false;
-                    }
-                }
+                //TODO: Comentado para pruebas mail Mercedes.
+                //foreach(DocLine line in _docLinesList)
+                //{
+                //    if(string.IsNullOrEmpty(line.IdItemBcn) == false && line.TotalAmount == 0)
+                //    {
+                //        MessageBox.Show($"Item [{line.IdItemBcn}]. Total Amount cannot be 0", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //        return false;
+                //    }
+                //}
 
                 //validamos que exista un BOM para cada item y supplier indicado
                 List<string> itemWithouBom;

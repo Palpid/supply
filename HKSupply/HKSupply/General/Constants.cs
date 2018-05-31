@@ -12,7 +12,7 @@ namespace HKSupply.General
         public const string SQL_EXPRESS_CONN = "name=SqlExpressConn";
         public const string SQL_DEV_SERVER_CONN = "name=SqlDevServerConn";
         public const string SQL_DEV_EF_SERVER_CONN = "name=SqlDevEFServerConn";
-        public const string SQL_PROD_SERVER_CONN = "";
+        public const string SQL_PROD_SERVER_CONN = "name=SqlProdServerConn";
 
         //** ITEM_GROUP **//
         public const string ITEM_GROUP_EY = "EY";
@@ -22,10 +22,14 @@ namespace HKSupply.General
         public const string ITEM_GROUP_PROTO = "PROTO";
 
         //** DOCS/FILES FOLDERS **//
-        public const string ITEMS_DOCS_PATH = "C:\\Temp\\ITEM_DOCS\\";
-        public const string PROTO_DOCS_PATH = "C:\\Temp\\PROTO_DOCS\\";
-        public const string ITEMS_PHOTOSWEB_PATH = "C:\\Temp\\ITEM_WEB_PHOTOS\\";
-        public const string SUPPLY_ATTACH_FILES_PATH = "C:\\Temp\\SUPPLY_ATTACH_FILES\\";
+        //public const string ITEMS_DOCS_PATH = "C:\\Temp\\ITEM_DOCS\\";
+        //public const string PROTO_DOCS_PATH = "C:\\Temp\\PROTO_DOCS\\";
+        //public const string ITEMS_PHOTOSWEB_PATH = "C:\\Temp\\ITEM_WEB_PHOTOS\\";
+        //public const string SUPPLY_ATTACH_FILES_PATH = "C:\\Temp\\SUPPLY_ATTACH_FILES\\";
+        public const string ITEMS_DOCS_PATH = "\\\\srvapps\\SupplyToolData\\ITEM_DOCS\\";
+        public const string PROTO_DOCS_PATH = "\\\\srvapps\\SupplyToolData\\PROTO_DOCS\\";
+        public const string ITEMS_PHOTOSWEB_PATH = "\\\\srvapps\\SupplyToolData\\ITEM_WEB_PHOTOS\\";
+        public const string SUPPLY_ATTACH_FILES_PATH = "\\\\srvapps\\SupplyToolData\\SUPPLY_ATTACH_FILES\\";
 
         public const string COLOR_PDF_FOLDER = "PDFCOLOR\\";
         public const string DRAWING_PDF_FOLDER = "PDFDRAWING\\";

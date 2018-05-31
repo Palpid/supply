@@ -435,7 +435,8 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.Diagram.v17.1.Co
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.Diagram.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.Diagram.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.Diagram.v17.1.Core.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.csprojResolveAssemblyReference.cache
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.csprojAssemblyReference.cache
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.csproj.CoreCompileInputs.cache
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.csproj.CopyComplete
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.pdb

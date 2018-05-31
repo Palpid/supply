@@ -22,7 +22,7 @@ namespace HKSupply
                 throw new Exception("log4net no ha sido configurado.");
 
             //Encriptar las connection strings
-            ToggleConfigEncryption(AppDomain.CurrentDomain.FriendlyName);
+            //ToggleConfigEncryption(AppDomain.CurrentDomain.FriendlyName);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

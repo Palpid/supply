@@ -774,6 +774,10 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             try
             {
                 GridView view = sender as GridView;
+
+                if (view.GetRow(e.ListSourceRowIndex) == null)
+                    return;
+
                 if (e.Column.FieldName == COL_PENDING_QTY && e.IsGetData)
                     e.Value = (
                         (decimal)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.Quantity)) -

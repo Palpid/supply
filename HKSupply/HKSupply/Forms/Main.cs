@@ -49,7 +49,7 @@ namespace HKSupply.Forms
             {
                 this.SetBevel(false);//quitar el border 3d del mdi container
 
-                this.Icon = _gIcon;
+                Icon = _gIcon;
                 SetBackgroundColor();
                 SetMenuStyle();
                 InitializeMainMenu();
@@ -255,15 +255,18 @@ namespace HKSupply.Forms
             {
                 //Pintar de blanco el fondo del mdi parent
                 MdiClient chld;
-                foreach (Control ctrl in this.Controls)
+                foreach (Control ctrl in Controls)
                 {
                     try
                     {
-                        chld = (MdiClient)ctrl;
-                        chld.BackColor = Color.White;
-                        BackgroundImageLayout = ImageLayout.Center;
-                        //chld.BackgroundImage = Image.FromFile(@"Resources\Images\etnia_logo.jpg");
-                        chld.BackgroundImage = Image.FromFile(@"Resources\Images\logo_SupplyHongKong.png");
+                        if(ctrl is MdiClient)
+                        {
+                            chld = (MdiClient)ctrl;
+                            chld.BackColor = Color.White;
+                            BackgroundImageLayout = ImageLayout.Center;
+                            //chld.BackgroundImage = Image.FromFile(@"Resources\Images\etnia_logo.jpg");
+                            chld.BackgroundImage = Image.FromFile(@"Resources\Images\logo_SupplyHongKong.png");
+                        }
                     }
                     catch (InvalidCastException)
                     {

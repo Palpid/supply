@@ -61,8 +61,8 @@ namespace HKSupply.General
         #region Private Members
         //static string _dbEnvironment = Constants.SQL_EXPRESS_CONN; //SQL Express local
         //static string _dbEnvironment = Constants.SQL_DEV_SERVER_CONN; //SQL Server (Desarrollo)
-        static string _dbEnvironment = Constants.SQL_DEV_EF_SERVER_CONN; //SQL Server (Desarrollo pruebas Entity Framework. Tiene la tabla de registro de migraciones)
-        //static string _dbEnvironment = Constants.SQL_PROD_SERVER_CONN; //SQL Server (Producción)
+        //static string _dbEnvironment = Constants.SQL_DEV_EF_SERVER_CONN; //SQL Server (Desarrollo pruebas Entity Framework. Tiene la tabla de registro de migraciones)
+        static string _dbEnvironment = Constants.SQL_PROD_SERVER_CONN; //SQL Server (Producción)
 
         static EFRole _roleEF = new EFRole();
         static EFUser _userEF = new EFUser();

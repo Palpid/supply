@@ -1,3 +1,0 @@
-﻿2017-09-07 11:06:43,226 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.GetSalesOrderFromPackingList - Object reference not set to an instance of an object.
-System.NullReferenceException: Object reference not set to an instance of an object.
-   at HKSupply.Services.Implementations.EFSupplyDocs.GetSalesOrderFromPackingList(String idDocPK)

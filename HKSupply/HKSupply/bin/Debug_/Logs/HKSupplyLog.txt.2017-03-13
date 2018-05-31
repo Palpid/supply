@@ -1,6 +1,0 @@
-﻿2017-03-13 12:43:57,678 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
-HKSupply.Exceptions.InvalidPasswordException: Invalid Password
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 139
-2017-03-13 13:26:59,707 ERROR [9] HKSupply.Services.Implementations.EFCustomer.NewCustomer - Customer already exist
-System.Exception: Customer already exist
-   en HKSupply.Services.Implementations.EFCustomer.NewCustomer(Customer newCustomer) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFCustomer.cs:línea 40
