@@ -204,6 +204,34 @@ namespace BOM.Services.Implementations
             }
         }
 
+        public int MassiveItemChange(string originalItemCode, string changeItemcode)
+        {
+            try
+            {
+                int bomsModified = 0;
+
+                using(var connection = new SqlConnection(GlobalSetting.ConnectionString))
+                {
+                    connection.Open();
+
+                    //string sp = "EXECUTE [ETN_sp_BOM_MASSIVE_UPDATE] @originalItem,@changeTo,@user";
+                    bomsModified = connection
+                        .Query<int>(sql: Properties.Resources.ExecBomMassiveUpdate
+                        , param: new {
+                            originalItem = originalItemCode,
+                            changeTo = changeItemcode,
+                            user = GlobalSetting.UserLogged })
+                        .FirstOrDefault();
+                }
+
+                return bomsModified;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #region Private Methods
 
         private void InsertItemBom(SqlConnection connection, SqlTransaction transaction, Bom bom)

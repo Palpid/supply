@@ -200,6 +200,7 @@
     <Content Include="Resources\Images\update.png" />
     <Content Include="Sql\DeleteBomLines.sql" />
     <Content Include="Sql\ExecBomImport.sql" />
+    <Content Include="Sql\ExecBomMassiveUpdate.sql" />
     <Content Include="Sql\InsertBomHead.sql" />
     <Content Include="Sql\InsertBomImportTmp.sql" />
     <Content Include="Sql\InsertBomLines.sql" />

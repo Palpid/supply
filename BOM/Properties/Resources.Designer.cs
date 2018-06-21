@@ -115,6 +115,21 @@ namespace BOM.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a EXECUTE [ETN_sp_BOM_MASSIVE_UPDATE] 
+        ///	@originalItem,
+        ///	@changeTo,
+        ///	@user
+        ///
+        ///
+        ///.
+        /// </summary>
+        internal static string ExecBomMassiveUpdate {
+            get {
+                return ResourceManager.GetString("ExecBomMassiveUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a INSERT INTO [dbo].[ETN_BOM_HEAD]
         ///	([Version]
         ///	,[Subversion]
@@ -372,6 +387,7 @@ namespace BOM.Properties {
         ///	,T0.U_ETN_TIPART
         ///	,T0.U_ETN_ETN_SUBTIPART
         ///	,T0.U_OPN_CAT
+        ///	,T0.CardCode
         ///	,T1.Code
         ///	,T1.[Name] 
         ///FROM OITM T0 WITH (NOLOCK)
@@ -396,6 +412,7 @@ namespace BOM.Properties {
         ///	,T0.U_OPN_CATSUP
         ///	,T0.ItmsGrpCod
         ///	,T0.U_ETN_TIPART
+        ///	,T0.CardCode
         ///	,T1.[Name] as TipArtDesc
         ///	,T0.U_ETN_ETN_SUBTIPART
         ///	,T0.U_OPN_CAT

@@ -507,6 +507,8 @@ namespace BOM.Forms
         {
             try
             {
+                bool isExcelOk = true;
+
                 //Validamos que no haya duplicados para Factory, itemCode, ComponentCode, Breakdown
                 var duplicates = _bomImportTmp.GroupBy(a => new { a.Factory, a.ItemCode, a.ComponentCode, a.BomBreakdown })
                     .Where(g => g.Count() > 1)
@@ -515,20 +517,40 @@ namespace BOM.Forms
 
                 if (duplicates.Count > 0)
                 {
-                    XtraMessageBox.Show("Existen líneas duplicadas");
+
                     
                     foreach(var dup in duplicates)
                     {
                         _bomImportTmp
                             .Where(a => a.Factory == dup.Factory && a.ItemCode == dup.ItemCode && a.ComponentCode == dup.ComponentCode && a.BomBreakdown == dup.BomBreakdown)
-                            .Select(a => { a.ErrorMsg = "Duplicada"; return a; })
+                            .Select(a => { a.ErrorMsg = "Línea duplicada"; return a; })
                             .ToList();
                     }
 
-                    return false;
+                    isExcelOk = false;
                 }
 
-                return true;
+                //Validamosq que si se han indicado los campos de length, width, etc hay que comprobar que el cálculo coincida con el cantidad indicada
+                foreach(BomImportTmp row in _bomImportTmp)
+                {
+                    if(row.Length > 0 || row.Width > 0 || row.Height > 0 || row.Density > 0 || row.NumberOfParts > 0 || row.Coefficient1 > 0 || row.Coefficient2 > 0 || row.Scrap > 0)
+                    {
+                        decimal calcQty = row.Length * row.Width * row.Height * row.Density * row.NumberOfParts * row.Coefficient1 * row.Coefficient2 * row.Scrap;
+
+                        if (calcQty != row.Quantity)
+                        {
+                            row.ErrorMsg += "|Cantidad errónea. No coincide con el cálculo";
+                            isExcelOk = false;
+                        }
+                    }
+                }
+
+                if(isExcelOk == false)
+                {
+                    XtraMessageBox.Show("Existen líneas con errores");
+                    gridViewImport.BestFitColumns();
+                }
+                return isExcelOk;
             }
             catch
             {

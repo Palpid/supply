@@ -35,10 +35,14 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.slueChangeItem = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtOriginalItemName = new DevExpress.XtraEditors.TextEdit();
+            this.txtChangeItemName = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.slueOriginalItem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueChangeItem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOriginalItemName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChangeItemName.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // slueOriginalItem
@@ -48,7 +52,7 @@
             this.slueOriginalItem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.slueOriginalItem.Properties.PopupView = this.searchLookUpEdit1View;
-            this.slueOriginalItem.Size = new System.Drawing.Size(166, 20);
+            this.slueOriginalItem.Size = new System.Drawing.Size(207, 20);
             this.slueOriginalItem.TabIndex = 0;
             // 
             // searchLookUpEdit1View
@@ -76,7 +80,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(156, 92);
+            this.btnSave.Location = new System.Drawing.Point(197, 92);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(121, 24);
             this.btnSave.TabIndex = 4;
@@ -89,7 +93,7 @@
             this.slueChangeItem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.slueChangeItem.Properties.PopupView = this.gridView1;
-            this.slueChangeItem.Size = new System.Drawing.Size(166, 20);
+            this.slueChangeItem.Size = new System.Drawing.Size(207, 20);
             this.slueChangeItem.TabIndex = 5;
             // 
             // gridView1
@@ -99,11 +103,31 @@
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
+            // txtOriginalItemName
+            // 
+            this.txtOriginalItemName.Location = new System.Drawing.Point(324, 9);
+            this.txtOriginalItemName.Name = "txtOriginalItemName";
+            this.txtOriginalItemName.Properties.ReadOnly = true;
+            this.txtOriginalItemName.Properties.UseReadOnlyAppearance = false;
+            this.txtOriginalItemName.Size = new System.Drawing.Size(425, 20);
+            this.txtOriginalItemName.TabIndex = 6;
+            // 
+            // txtChangeItemName
+            // 
+            this.txtChangeItemName.Location = new System.Drawing.Point(324, 51);
+            this.txtChangeItemName.Name = "txtChangeItemName";
+            this.txtChangeItemName.Properties.ReadOnly = true;
+            this.txtChangeItemName.Properties.UseReadOnlyAppearance = false;
+            this.txtChangeItemName.Size = new System.Drawing.Size(425, 20);
+            this.txtChangeItemName.TabIndex = 7;
+            // 
             // MassiveUpdateChangeItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 132);
+            this.ClientSize = new System.Drawing.Size(762, 132);
+            this.Controls.Add(this.txtChangeItemName);
+            this.Controls.Add(this.txtOriginalItemName);
             this.Controls.Add(this.slueChangeItem);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblChangeTo);
@@ -115,6 +139,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueChangeItem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOriginalItemName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChangeItemName.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +155,7 @@
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SearchLookUpEdit slueChangeItem;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.TextEdit txtOriginalItemName;
+        private DevExpress.XtraEditors.TextEdit txtChangeItemName;
     }
 }

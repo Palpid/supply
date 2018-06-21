@@ -65,6 +65,7 @@ namespace BOM.Forms
                 SetUpGrids();
                 LoadGridItems();
                 ShowAddBomFactoryAndCopyBom(false);
+
             }
             catch (Exception ex)
             {
@@ -122,7 +123,6 @@ namespace BOM.Forms
                         {
                             MessageBox.Show("Save Successfully");
                             InitForm();
-                            //currentState = ActionsStates.Read;
                         }
                     }
 
@@ -876,6 +876,8 @@ namespace BOM.Forms
 
                 grdItemBom.DataSource = null;
                 grdItemBom.DataSource = _itemBoms;
+
+                ExpandBomDefaultFactory();
             }
             catch
             {
@@ -1122,6 +1124,36 @@ namespace BOM.Forms
             catch
             {
                 throw;
+            }
+        }
+
+        #endregion
+
+        #region Grid Aux Methods
+
+        private void ExpandBomDefaultFactory()
+        {
+            try
+            {
+                gridViewItemBom.BeginUpdate();
+                string defaultFactory = _currentSelectedItem.CardCode;
+
+                gridViewItemBom.ExpandAllGroups();
+
+                for (int rHandle = 0; rHandle < gridViewItemBom.DataRowCount; rHandle++)
+                {
+                    object factory = gridViewItemBom.GetRowCellValue(rHandle, nameof(Bom.Factory));
+                    if (factory != null && factory.ToString() == defaultFactory)
+                        gridViewItemBom.SetMasterRowExpanded(rHandle, true);
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                gridViewItemBom.EndUpdate();
             }
         }
 

@@ -16,7 +16,7 @@ namespace BOM.Models
         public string U_ETN_TIPART { get; set; }
         public string U_ETN_ETN_SUBTIPART { get; set; }
         public string U_OPN_CAT { get; set; }
+        public string CardCode { get; set; }
 
-//        public Model Model { get; set; }
     }
 }

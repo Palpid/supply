@@ -5,6 +5,7 @@ SELECT DISTINCT
 	,T0.U_OPN_CATSUP
 	,T0.ItmsGrpCod
 	,T0.U_ETN_TIPART
+	,T0.CardCode
 	,T1.[Name] as TipArtDesc
 	,T0.U_ETN_ETN_SUBTIPART
 	,T0.U_OPN_CAT
