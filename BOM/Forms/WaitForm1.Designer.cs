@@ -47,7 +47,7 @@
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 14, 0, 14);
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(246, 73);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(369, 73);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // progressPanel1
@@ -66,7 +66,7 @@
             this.progressPanel1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.progressPanel1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.progressPanel1.Name = "progressPanel1";
-            this.progressPanel1.Size = new System.Drawing.Size(246, 39);
+            this.progressPanel1.Size = new System.Drawing.Size(369, 39);
             this.progressPanel1.TabIndex = 0;
             this.progressPanel1.Text = "progressPanel1";
             // 
@@ -74,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(246, 73);
+            this.ClientSize = new System.Drawing.Size(369, 73);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "WaitForm1";
             this.Text = "WaitForm1";

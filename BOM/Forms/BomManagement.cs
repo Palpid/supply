@@ -179,8 +179,7 @@ namespace BOM.Forms
                 GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
                 if (hitInfo.InRowCell)
                 {
-                    OitmExt item = view.GetRow(view.FocusedRowHandle) as OitmExt;
-                    if (item != null)
+                    if(view.GetRow(view.FocusedRowHandle) is OitmExt item)
                     {
                         _currentSelectedItem = item.DeepCopyByExpressionTree();
                         LoadItemGridBom(item);
@@ -878,6 +877,9 @@ namespace BOM.Forms
                 grdItemBom.DataSource = _itemBoms;
 
                 ExpandBomDefaultFactory();
+
+                if (_itemBoms.Count == 0)
+                    XtraMessageBox.Show("SKU without BOM ");
             }
             catch
             {
@@ -1019,10 +1021,12 @@ namespace BOM.Forms
 
                 if (exist == null)
                 {
-                    Bom itemBom = new Bom();
-                    itemBom.Code = 0;
-                    itemBom.Factory = idFactory;
-                    itemBom.ItemCode = _currentSelectedItem.ItemCode;
+                    Bom itemBom = new Bom()
+                    {
+                        Code = 0,
+                        Factory = idFactory,
+                        ItemCode = _currentSelectedItem.ItemCode,
+                    };
                     itemBom.Lines.Add(new BomDetail() { CodeBom = 0 });
 
                     _itemBoms.Add(itemBom);

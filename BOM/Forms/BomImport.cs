@@ -16,9 +16,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BOM.Forms
@@ -103,9 +103,9 @@ namespace BOM.Forms
                 {
                     if (string.IsNullOrEmpty(txtPathExcelFile.Text)) return;
 
-                    if (System.IO.File.Exists(txtPathExcelFile.Text))
+                    if (File.Exists(txtPathExcelFile.Text))
                     {
-                        string extension = System.IO.Path.GetExtension(txtPathExcelFile.Text);
+                        string extension = Path.GetExtension(txtPathExcelFile.Text);
                         switch (extension.ToUpper())
                         {
                             case ".XLSX":
@@ -155,6 +155,19 @@ namespace BOM.Forms
             }
         }
 
+        private void BtnOpenTemplate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenTemplate();
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void GridViewImport_RowCellStyle(object sender, RowCellStyleEventArgs e)
         {
             try
@@ -179,8 +192,11 @@ namespace BOM.Forms
         {
             try
             {
-                DateTime dateZero = new DateTime(1, 1, 1);
+                if (e.Value is null)
+                    return;
 
+                DateTime dateZero = new DateTime(1, 1, 1);
+                
                 switch (e.Column.FieldName)
                 {
                     case nameof(BomImportTmp.ImportDate):
@@ -226,6 +242,7 @@ namespace BOM.Forms
                 btnViewFile.Click += BtnViewFile_Click;
                 btnCargar.Click += BtnCargar_Click;
                 btnProcesar.Click += BtnProcesar_Click;
+                btnOpenTemplate.Click += BtnOpenTemplate_Click;
             }
             catch
             {
@@ -300,7 +317,7 @@ namespace BOM.Forms
         private void LoadExcelFile()
         {
 
-            if (System.IO.File.Exists(txtPathExcelFile.Text))
+            if (File.Exists(txtPathExcelFile.Text))
             {
 
                 try
@@ -337,6 +354,7 @@ namespace BOM.Forms
                         // Create the exporter that obtains data from the specified range, 
                         // skips the header row (if required) and populates the previously created data table. 
                         DataTableExporter exporter = worksheet.CreateDataTableExporter(range, dataTable, rangeHasHeaders);
+
                         // Handle value conversion errors.
                         exporter.CellValueConversionError += Exporter_CellValueConversionError;
 
@@ -380,10 +398,10 @@ namespace BOM.Forms
                     //bomimportRow.Id 
                     bomimportRow.ImportGUID = guid;
                     //bomimportRow.InsertDate
-                    bomimportRow.Factory = row[Constants.XLS_FACTORY].ToString();
-                    bomimportRow.ItemCode = row[Constants.XLS_ITEM_CODE].ToString(); ;
-                    bomimportRow.ComponentCode = row[Constants.XLS_COMPONENT_CODE].ToString(); ;
-                    bomimportRow.BomBreakdown = row[Constants.XLS_BOMBREAKDOWN].ToString(); ;
+                    bomimportRow.Factory = row[Constants.XLS_FACTORY].ToString().Trim();
+                    bomimportRow.ItemCode = row[Constants.XLS_ITEM_CODE].ToString().Trim();
+                    bomimportRow.ComponentCode = row[Constants.XLS_COMPONENT_CODE].ToString().Trim();
+                    bomimportRow.BomBreakdown = row[Constants.XLS_BOMBREAKDOWN].ToString().Trim();
                     bomimportRow.Length = row[Constants.XLS_LENGTH].ObjToDecimal();
                     bomimportRow.Width = row[Constants.XLS_WIDTH].ObjToDecimal();
                     bomimportRow.Height = row[Constants.XLS_HEIGHT].ObjToDecimal();
@@ -392,7 +410,7 @@ namespace BOM.Forms
                     bomimportRow.Coefficient1 = row[Constants.XLS_COEFFICIENT1].ObjToDecimal();
                     bomimportRow.Coefficient2 = row[Constants.XLS_COEFFICIENT2].ObjToDecimal();
                     bomimportRow.Scrap = row[Constants.XLS_SCRAP].ObjToDecimal();
-                    bomimportRow.Quantity = row[Constants.XLS_QUANTITY].ObjToDecimal();
+                    bomimportRow.Quantity = Math.Round(row[Constants.XLS_QUANTITY].ObjToDecimal(), 4);
                     //bomimportRow.Imported
                     //bomimportRow.ImportDate
                     //bomimportRow.ErrorMsg
@@ -453,7 +471,22 @@ namespace BOM.Forms
 
         private void CloseWaitForm()
         {
-            SplashScreenManager.CloseForm();
+            SplashScreenManager.CloseForm(false);
+        }
+
+        private void OpenTemplate()
+        {
+            try
+            {
+                string tmpPath = Path.GetTempFileName();
+                tmpPath = Path.ChangeExtension(tmpPath, ".xlsx");
+                File.WriteAllBytes(tmpPath, Properties.Resources.BOM_Template);
+                System.Diagnostics.Process.Start(tmpPath);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         #endregion
@@ -530,7 +563,7 @@ namespace BOM.Forms
                     isExcelOk = false;
                 }
 
-                //Validamosq que si se han indicado los campos de length, width, etc hay que comprobar que el cálculo coincida con el cantidad indicada
+                //Validamos que si se han indicado los campos de length, width, etc hay que comprobar que el cálculo coincida con el cantidad indicada
                 foreach(BomImportTmp row in _bomImportTmp)
                 {
                     if(row.Length > 0 || row.Width > 0 || row.Height > 0 || row.Density > 0 || row.NumberOfParts > 0 || row.Coefficient1 > 0 || row.Coefficient2 > 0 || row.Scrap > 0)

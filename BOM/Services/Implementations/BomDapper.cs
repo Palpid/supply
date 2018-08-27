@@ -56,9 +56,7 @@ namespace BOM.Services.Implementations
 
                         itemBom = multi.Read<Bom, BomDetail, Bom>((head, line) =>
                             {
-                                Bom bomEntry;
-
-                                if (!bomDictionary.TryGetValue(head.Code, out bomEntry))
+                                if (!bomDictionary.TryGetValue(head.Code, out Bom bomEntry))
                                 {
                                     bomEntry = head;
                                     head.Lines = new List<BomDetail>();

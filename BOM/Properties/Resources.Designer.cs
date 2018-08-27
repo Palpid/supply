@@ -71,6 +71,16 @@ namespace BOM.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] BOM_Template {
+            get {
+                object obj = ResourceManager.GetObject("BOM_Template", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a DELETE  [dbo].[ETN_BOM_LINES]
         ///WHERE [CodeBom] = @codeBom.
         /// </summary>
@@ -393,8 +403,8 @@ namespace BOM.Properties {
         ///FROM OITM T0 WITH (NOLOCK)
         ///LEFT JOIN [@ETN_MODELS] T1 WITH (NOLOCK) ON T1.Code = T0.U_ETN_MODEL	
         ///WHERE 
-        ///	U_OPN_CATSUP = &apos;01&apos;AND 
-        ///	(ItemCode like &apos;%4 BORN%&apos; OR ItemCode like &apos;%MARAIS SUN%&apos; or ItemCode = &apos;5 KYOTO BKRD&apos;)
+        ///	U_OPN_CATSUP = &apos;01&apos;/*AND 
+        ///	(ItemCode like &apos;%4 BORN%&apos; OR ItemCode like &apos;%MARAIS SUN%&apos; or ItemCode = &apos;5 KYOTO BKRD&apos;)*/
         ///ORDER BY T0.ItemName
         ///.
         /// </summary>
@@ -418,7 +428,7 @@ namespace BOM.Properties {
         ///	,T0.U_OPN_CAT
         ///FROM  OITM T0 WITH (NOLOCK)
         ///LEFT JOIN [@ETN_TIPART] T1 WITH (NOLOCK) ON T1.Code = T0.U_ETN_TIPART
-        ///WHERE  T0.ItmsGrpCod in (131,132,133,134)
+        ///WHERE  T0.ItmsGrpCod in (103,131,132,133,134)
         ///ORDER BY T0.ItmsGrpCod, ItemCode.
         /// </summary>
         internal static string QueryPossibleItemsForBom {

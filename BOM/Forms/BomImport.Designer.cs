@@ -32,12 +32,13 @@
             this.grdImport = new DevExpress.XtraGrid.GridControl();
             this.gridViewImport = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnOpenTemplate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnProcesar = new DevExpress.XtraEditors.SimpleButton();
             this.txtPathExcelFile = new DevExpress.XtraEditors.TextEdit();
             this.btnOpenFile = new DevExpress.XtraEditors.SimpleButton();
             this.lblFichero = new DevExpress.XtraEditors.LabelControl();
             this.btnCargar = new DevExpress.XtraEditors.SimpleButton();
             this.btnViewFile = new DevExpress.XtraEditors.SimpleButton();
-            this.btnProcesar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdImport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewImport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -67,6 +68,7 @@
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.btnOpenTemplate);
             this.panelControl1.Controls.Add(this.btnProcesar);
             this.panelControl1.Controls.Add(this.txtPathExcelFile);
             this.panelControl1.Controls.Add(this.btnOpenFile);
@@ -77,6 +79,22 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(982, 55);
             this.panelControl1.TabIndex = 3;
+            // 
+            // btnOpenTemplate
+            // 
+            this.btnOpenTemplate.Location = new System.Drawing.Point(781, 16);
+            this.btnOpenTemplate.Name = "btnOpenTemplate";
+            this.btnOpenTemplate.Size = new System.Drawing.Size(145, 26);
+            this.btnOpenTemplate.TabIndex = 69;
+            this.btnOpenTemplate.Text = "Download Template";
+            // 
+            // btnProcesar
+            // 
+            this.btnProcesar.Location = new System.Drawing.Point(578, 16);
+            this.btnProcesar.Name = "btnProcesar";
+            this.btnProcesar.Size = new System.Drawing.Size(112, 26);
+            this.btnProcesar.TabIndex = 68;
+            this.btnProcesar.Text = "Procesar";
             // 
             // txtPathExcelFile
             // 
@@ -123,14 +141,6 @@
             this.btnViewFile.Size = new System.Drawing.Size(25, 25);
             this.btnViewFile.TabIndex = 67;
             // 
-            // btnProcesar
-            // 
-            this.btnProcesar.Location = new System.Drawing.Point(578, 16);
-            this.btnProcesar.Name = "btnProcesar";
-            this.btnProcesar.Size = new System.Drawing.Size(112, 26);
-            this.btnProcesar.TabIndex = 68;
-            this.btnProcesar.Text = "Procesar";
-            // 
             // BomImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,5 +171,6 @@
         private DevExpress.XtraEditors.SimpleButton btnCargar;
         private DevExpress.XtraEditors.SimpleButton btnViewFile;
         private DevExpress.XtraEditors.SimpleButton btnProcesar;
+        private DevExpress.XtraEditors.SimpleButton btnOpenTemplate;
     }
 }
