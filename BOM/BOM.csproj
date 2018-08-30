@@ -87,6 +87,7 @@
     <Compile Include="Classes\BomDetail.cs" />
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\OitmExt.cs" />
+    <Compile Include="Classes\Supplier.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

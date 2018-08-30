@@ -1,2 +1,2 @@
-SELECT CardCode, CardName, GroupCode FROM OCRD
+SELECT CardCode, CardName, CardFName, GroupCode FROM OCRD
 WHERE CardType = 'S'

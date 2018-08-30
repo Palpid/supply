@@ -39,7 +39,7 @@ namespace BOM.Forms
 
         ActionsStates currentState;
 
-        BindingList<Ocrd> _factoriesList;
+        BindingList<Supplier> _factoriesList;
         BindingList<BomBreakdown> _bomBreakdownList;
         BindingList<OitmExt> _itemsforBomList;
         BindingList<OitmExt> _itemsList;
@@ -795,6 +795,16 @@ namespace BOM.Forms
                 GridColumn colItemCode = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(Bom.ItemCode), Width = 200 };
                 GridColumn colFactory = new GridColumn() { Caption = " ", Visible = true, FieldName = nameof(Bom.Factory), Width = 100 };
 
+                //Repositories
+                RepositoryItemLookUpEdit riFactory = new RepositoryItemLookUpEdit()
+                {
+                    DataSource = _factoriesList,
+                    ValueMember = nameof(Supplier.CardCode),
+                    DisplayMember = nameof(Supplier.Name),
+                    NullText = string.Empty,
+                };
+                colFactory.ColumnEdit = riFactory;
+
                 //Add columns to grid root view
                 gridViewItemBom.Columns.Add(colItemCode);
                 gridViewItemBom.Columns.Add(colFactory);
@@ -824,9 +834,10 @@ namespace BOM.Forms
             try
             {
                 _itemsList = new BindingList<OitmExt>(GlobalSetting.OitmService.GetItems());
-                _factoriesList = new BindingList<Ocrd>(GlobalSetting.OcrdService.GetFactories());
+                _factoriesList = new BindingList<Supplier>(GlobalSetting.OcrdService.GetFactories());
                 _bomBreakdownList = new BindingList<BomBreakdown>(GlobalSetting.BomService.GetBromBreakdown());
                 _itemsforBomList = new BindingList<OitmExt>(GlobalSetting.OitmService.GetPossibleItemsForBom());
+
             }
             catch
             {

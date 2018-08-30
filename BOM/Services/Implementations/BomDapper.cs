@@ -170,7 +170,8 @@ namespace BOM.Services.Implementations
 
                     connection.Execute(sql: sp,
                         param: new { guid = imporGuid, user = GlobalSetting.UserLogged},
-                        commandType: System.Data.CommandType.StoredProcedure);
+                        commandType: System.Data.CommandType.StoredProcedure,
+                        commandTimeout: 360);
 
                 }
 

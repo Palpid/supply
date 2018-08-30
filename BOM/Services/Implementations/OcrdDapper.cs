@@ -13,19 +13,19 @@ namespace BOM.Services.Implementations
 {
     public class OcrdDapper : IOcrdService
     {
-        public List<Ocrd> GetFactories()
+        public List<Supplier> GetFactories()
         {
             try
             {
                 try
                 {
-                    List<Ocrd> factories;
+                    List<Supplier> factories;
 
                     using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
                     {
                         connection.Open();
 
-                        factories = connection.Query<Ocrd>(Properties.Resources.QueryFactories).ToList();
+                        factories = connection.Query<Supplier>(Properties.Resources.QueryFactories).ToList();
                     }
                     return factories;
                 }

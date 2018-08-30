@@ -10,6 +10,7 @@ namespace BOM.Models
     {
         public string CardCode { get; set; }
         public string CardName { get; set; }
+        public string CardFName { get; set; }
         public string GroupCode { get; set; }
     }
 }
