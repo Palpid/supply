@@ -401,7 +401,7 @@ namespace BOM.Forms
                     bomimportRow.Factory = row[Constants.XLS_FACTORY].ToString().Trim();
                     bomimportRow.ItemCode = row[Constants.XLS_ITEM_CODE].ToString().Trim();
                     bomimportRow.ComponentCode = row[Constants.XLS_COMPONENT_CODE].ToString().Trim();
-                    bomimportRow.BomBreakdown = row[Constants.XLS_BOMBREAKDOWN].ToString().Trim();
+                    bomimportRow.BomBreakdown = row[Constants.XLS_BOMBREAKDOWN].ToString().Trim().ToUpper();
                     bomimportRow.Length = row[Constants.XLS_LENGTH].ObjToDecimal();
                     bomimportRow.Width = row[Constants.XLS_WIDTH].ObjToDecimal();
                     bomimportRow.Height = row[Constants.XLS_HEIGHT].ObjToDecimal();
