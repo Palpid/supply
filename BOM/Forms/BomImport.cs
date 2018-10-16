@@ -168,6 +168,19 @@ namespace BOM.Forms
             }
         }
 
+        private void BtnDownloadXls_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DownloadExcel();
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void GridViewImport_RowCellStyle(object sender, RowCellStyleEventArgs e)
         {
             try
@@ -243,6 +256,7 @@ namespace BOM.Forms
                 btnCargar.Click += BtnCargar_Click;
                 btnProcesar.Click += BtnProcesar_Click;
                 btnOpenTemplate.Click += BtnOpenTemplate_Click;
+                btnDownloadXls.Click += BtnDownloadXls_Click;
             }
             catch
             {
@@ -485,6 +499,36 @@ namespace BOM.Forms
             }
             catch
             {
+                throw;
+            }
+        }
+
+        private void DownloadExcel()
+        {
+            try
+            {
+                if(_bomImportTmp != null && _bomImportTmp.Count > 0)
+                {
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+                    saveFileDialog.FilterIndex = 0;
+                    saveFileDialog.RestoreDirectory = true;
+                    saveFileDialog.Title = "Export Grid To";
+                    //saveFileDialog.CreatePrompt = true;
+
+                    saveFileDialog.ShowDialog();
+                    if (saveFileDialog.FileName != "")
+                    {
+                        gridViewImport.ExportToXlsx(saveFileDialog.FileName);
+                        XtraMessageBox.Show("Fichero generado correctamente");
+                    }
+
+
+                }
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }

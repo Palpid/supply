@@ -39,6 +39,7 @@
             this.lblFichero = new DevExpress.XtraEditors.LabelControl();
             this.btnCargar = new DevExpress.XtraEditors.SimpleButton();
             this.btnViewFile = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDownloadXls = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdImport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewImport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -54,7 +55,7 @@
             this.grdImport.Location = new System.Drawing.Point(12, 73);
             this.grdImport.MainView = this.gridViewImport;
             this.grdImport.Name = "grdImport";
-            this.grdImport.Size = new System.Drawing.Size(982, 431);
+            this.grdImport.Size = new System.Drawing.Size(982, 461);
             this.grdImport.TabIndex = 4;
             this.grdImport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewImport});
@@ -141,11 +142,21 @@
             this.btnViewFile.Size = new System.Drawing.Size(25, 25);
             this.btnViewFile.TabIndex = 67;
             // 
+            // btnDownloadXls
+            // 
+            this.btnDownloadXls.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownloadXls.ImageOptions.Image = global::BOM.Properties.Resources.excel_icon;
+            this.btnDownloadXls.Location = new System.Drawing.Point(950, 540);
+            this.btnDownloadXls.Name = "btnDownloadXls";
+            this.btnDownloadXls.Size = new System.Drawing.Size(44, 44);
+            this.btnDownloadXls.TabIndex = 5;
+            // 
             // BomImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 516);
+            this.ClientSize = new System.Drawing.Size(1006, 596);
+            this.Controls.Add(this.btnDownloadXls);
             this.Controls.Add(this.grdImport);
             this.Controls.Add(this.panelControl1);
             this.Name = "BomImport";
@@ -172,5 +183,6 @@
         private DevExpress.XtraEditors.SimpleButton btnViewFile;
         private DevExpress.XtraEditors.SimpleButton btnProcesar;
         private DevExpress.XtraEditors.SimpleButton btnOpenTemplate;
+        private DevExpress.XtraEditors.SimpleButton btnDownloadXls;
     }
 }

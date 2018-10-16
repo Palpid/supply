@@ -6,11 +6,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.DirectoryServices.AccountManagement;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace BOM.Forms
 {
@@ -45,8 +47,17 @@ namespace BOM.Forms
         {
             try
             {
-                MassiveUpdateChangeItem form = new MassiveUpdateChangeItem();
-                form.ShowDialog();
+                if (IsItUser())
+                {
+                    MassiveUpdateChangeItem form = new MassiveUpdateChangeItem();
+                    form.ShowDialog();
+                }
+                else
+                {
+                    XtraMessageBox.Show("No tiene permisos para ejecutar esta opción");
+                }
+                    
+                
             }
             catch (Exception ex)
             {
@@ -158,6 +169,34 @@ namespace BOM.Forms
             }
         }
 
+        #endregion
+
+        #region Aux
+        private bool IsItUser()
+        {
+            try
+            {
+
+
+
+                using (var adContext = new PrincipalContext(ContextType.Domain, Environment.UserDomainName))
+                {
+                    UserPrincipal user = UserPrincipal.Current;
+                    PrincipalSearchResult<Principal> results = user.GetAuthorizationGroups();
+                    foreach (var u in results)
+                    {
+                        if (u.Name == "1006_IT")
+                            return true;
+                    }
+                }
+
+                return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
         #endregion
 
         #endregion

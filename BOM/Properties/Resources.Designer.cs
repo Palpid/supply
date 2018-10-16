@@ -103,6 +103,16 @@ namespace BOM.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap excel_icon {
+            get {
+                object obj = ResourceManager.GetObject("excel_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap excel_import {
             get {
                 object obj = ResourceManager.GetObject("excel_import", resourceCulture);
@@ -316,7 +326,7 @@ namespace BOM.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a SELECT CardCode, CardName, GroupCode FROM OCRD
+        ///   Busca una cadena traducida similar a SELECT CardCode, CardName, CardFName, GroupCode FROM OCRD
         ///WHERE CardType = &apos;S&apos;.
         /// </summary>
         internal static string QueryFactories {
