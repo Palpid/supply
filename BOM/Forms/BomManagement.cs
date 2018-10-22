@@ -270,7 +270,7 @@ namespace BOM.Forms
                         view.Columns[nameof(BomDetail.Scrap)].DisplayFormat.FormatString = "n2";
 
                         view.Columns[nameof(BomDetail.Quantity)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-                        view.Columns[nameof(BomDetail.Quantity)].DisplayFormat.FormatString = "n2";
+                        view.Columns[nameof(BomDetail.Quantity)].DisplayFormat.FormatString = "n6";
 
                         //Orden de las columnas
                         int orderColRm = 0;
