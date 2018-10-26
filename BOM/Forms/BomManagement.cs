@@ -271,6 +271,7 @@ namespace BOM.Forms
 
                         view.Columns[nameof(BomDetail.Quantity)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
                         view.Columns[nameof(BomDetail.Quantity)].DisplayFormat.FormatString = "n6";
+                        
 
                         //Orden de las columnas
                         int orderColRm = 0;
@@ -985,7 +986,7 @@ namespace BOM.Forms
                 view.Columns[nameof(BomDetail.Coefficient1)].ColumnEdit = ritxt6Dec;
                 view.Columns[nameof(BomDetail.Coefficient2)].ColumnEdit = ritxt6Dec;
                 view.Columns[nameof(BomDetail.Scrap)].ColumnEdit = ritxt2Dec;
-                view.Columns[nameof(BomDetail.Quantity)].ColumnEdit = ritxt2Dec;
+                view.Columns[nameof(BomDetail.Quantity)].ColumnEdit = ritxt6Dec;
                 view.Columns[nameof(BomDetail.NumberOfParts)].ColumnEdit = ritxtInt;
 
                 view.Columns[nameof(BomDetail.ItemCode)].ColumnEdit = riItems;
@@ -1009,7 +1010,7 @@ namespace BOM.Forms
                         case nameof(Bom.Lines):
 
                             view.OptionsBehavior.Editable = true;
-
+                            
                             view.Columns[$"{nameof(BomDetail.Item)}.{nameof(OitmExt.ItemName)}"].OptionsColumn.AllowEdit = false;
                             view.Columns[$"{nameof(BomDetail.Item)}.{nameof(OitmExt.TipArtDesc)}"].OptionsColumn.AllowEdit = false;
 
