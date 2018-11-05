@@ -37,12 +37,17 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtOriginalItemName = new DevExpress.XtraEditors.TextEdit();
             this.txtChangeItemName = new DevExpress.XtraEditors.TextEdit();
+            this.grdBom = new DevExpress.XtraGrid.GridControl();
+            this.gridViewBom = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.slueOriginalItem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueChangeItem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOriginalItemName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChangeItemName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdBom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewBom)).BeginInit();
             this.SuspendLayout();
             // 
             // slueOriginalItem
@@ -80,7 +85,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(197, 92);
+            this.btnSave.Location = new System.Drawing.Point(629, 77);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(121, 24);
             this.btnSave.TabIndex = 4;
@@ -121,11 +126,39 @@
             this.txtChangeItemName.Size = new System.Drawing.Size(425, 20);
             this.txtChangeItemName.TabIndex = 7;
             // 
+            // grdBom
+            // 
+            this.grdBom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdBom.Location = new System.Drawing.Point(12, 107);
+            this.grdBom.MainView = this.gridViewBom;
+            this.grdBom.Name = "grdBom";
+            this.grdBom.Size = new System.Drawing.Size(738, 322);
+            this.grdBom.TabIndex = 8;
+            this.grdBom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewBom});
+            // 
+            // gridViewBom
+            // 
+            this.gridViewBom.GridControl = this.grdBom;
+            this.gridViewBom.Name = "gridViewBom";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(502, 77);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(121, 24);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.Text = "Search";
+            // 
             // MassiveUpdateChangeItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(762, 132);
+            this.ClientSize = new System.Drawing.Size(762, 454);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.grdBom);
             this.Controls.Add(this.txtChangeItemName);
             this.Controls.Add(this.txtOriginalItemName);
             this.Controls.Add(this.slueChangeItem);
@@ -141,6 +174,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOriginalItemName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChangeItemName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdBom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewBom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +192,8 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.TextEdit txtOriginalItemName;
         private DevExpress.XtraEditors.TextEdit txtChangeItemName;
+        private DevExpress.XtraGrid.GridControl grdBom;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewBom;
+        private DevExpress.XtraEditors.SimpleButton btnSearch;
     }
 }

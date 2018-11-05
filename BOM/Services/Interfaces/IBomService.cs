@@ -16,5 +16,7 @@ namespace BOM.Services.Interfaces
         bool ImportBom(List<BomImportTmp> bomImportRows);
         List<BomImportTmp> GetImportBomByGuid(string guid);
         int MassiveItemChange(string originalItemCode, string changeItemcode);
+        int MassiveItemChangeFromBomList(string bomCodes, string originalItemCode, string changeItemcode);
+        List<BomHead> GetComponentBom(string itemCodeComponent);
     }
 }

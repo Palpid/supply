@@ -231,6 +231,56 @@ namespace BOM.Services.Implementations
             }
         }
 
+        public int MassiveItemChangeFromBomList(string bomCodes, string originalItemCode, string changeItemcode)
+        {
+            try
+            {
+                int bomsModified = 0;
+
+                using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
+                {
+                    connection.Open();
+
+                    bomsModified = connection
+                        .Query<int>(sql: Properties.Resources.ExecListBomMassiveUpdate
+                        , param: new
+                        {
+                            bomIdList = bomCodes,
+                            originalItem = originalItemCode,
+                            changeTo = changeItemcode,
+                            user = GlobalSetting.UserLogged
+                        })
+                        .FirstOrDefault();
+                }
+
+                return bomsModified;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public List<BomHead> GetComponentBom(string itemCodeComponent)
+        {
+            try
+            {
+                List<BomHead> bomList;
+
+                using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
+                {
+                    connection.Open();
+                    bomList = connection.Query<BomHead>(Properties.Resources.QueryBomComponent, new { itemCode = itemCodeComponent }).ToList();
+                }
+
+                return bomList;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #region Private Methods
 
         private void InsertItemBom(SqlConnection connection, SqlTransaction transaction, Bom bom)
@@ -292,6 +342,8 @@ namespace BOM.Services.Implementations
                 throw;
             }
         }
+
+       
 
         #endregion
     }

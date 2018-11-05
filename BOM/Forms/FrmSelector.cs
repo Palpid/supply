@@ -47,15 +47,18 @@ namespace BOM.Forms
         {
             try
             {
-                if (IsItUser())
-                {
-                    MassiveUpdateChangeItem form = new MassiveUpdateChangeItem();
-                    form.ShowDialog();
-                }
-                else
-                {
-                    XtraMessageBox.Show("No tiene permisos para ejecutar esta opción");
-                }
+                MassiveUpdateChangeItem form = new MassiveUpdateChangeItem();
+                form.ShowDialog();
+
+                //if (IsItUser())
+                //{
+                //    MassiveUpdateChangeItem form = new MassiveUpdateChangeItem();
+                //    form.ShowDialog();
+                //}
+                //else
+                //{
+                //    XtraMessageBox.Show("No tiene permisos para ejecutar esta opción");
+                //}
                     
                 
             }
@@ -172,31 +175,29 @@ namespace BOM.Forms
         #endregion
 
         #region Aux
-        private bool IsItUser()
-        {
-            try
-            {
+        //private bool IsItUser()
+        //{
+        //    try
+        //    {
 
+        //        using (var adContext = new PrincipalContext(ContextType.Domain, Environment.UserDomainName))
+        //        {
+        //            UserPrincipal user = UserPrincipal.Current;
+        //            PrincipalSearchResult<Principal> results = user.GetAuthorizationGroups();
+        //            foreach (var u in results)
+        //            {
+        //                if (u.Name == "1006_IT")
+        //                    return true;
+        //            }
+        //        }
 
-
-                using (var adContext = new PrincipalContext(ContextType.Domain, Environment.UserDomainName))
-                {
-                    UserPrincipal user = UserPrincipal.Current;
-                    PrincipalSearchResult<Principal> results = user.GetAuthorizationGroups();
-                    foreach (var u in results)
-                    {
-                        if (u.Name == "1006_IT")
-                            return true;
-                    }
-                }
-
-                return false;
-            }
-            catch
-            {
-                throw;
-            }
-        }
+        //        return false;
+        //    }
+        //    catch
+        //    {
+        //        throw;
+        //    }
+        //}
         #endregion
 
         #endregion

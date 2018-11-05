@@ -1,6 +1,9 @@
 ﻿using BOM.Classes;
 using BOM.General;
+using BOM.Models;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Base;
 using log4net;
 using System;
 using System.Collections.Generic;
@@ -20,6 +23,7 @@ namespace BOM.Forms
         private static readonly ILog _log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         BindingList<OitmExt> _itemsforBomList;
+        BindingList<BomHead> _componentBom;
         #endregion
 
         #region Constructor
@@ -34,6 +38,7 @@ namespace BOM.Forms
                 SetUpEvents();
                 LoadAuxList();
                 SetUpSlueItems();
+                SetUpGrdBom();
             }
             catch (Exception ex)
             {
@@ -66,6 +71,29 @@ namespace BOM.Forms
             }
         }
 
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (slueOriginalItem.EditValue == null)
+                {
+                    XtraMessageBox.Show($"Select original item", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    slueOriginalItem.Focus();
+                    return;
+                }
+
+                LoadComponentBom();
+                btnSave.Enabled = true;
+
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         private void SlueChangeItem_EditValueChanged(object sender, EventArgs e)
         {
             try
@@ -88,6 +116,8 @@ namespace BOM.Forms
                 txtOriginalItemName.EditValue = null;
                 if (slueOriginalItem.EditValue != null)
                     txtOriginalItemName.EditValue = GetItemFromList((string)slueOriginalItem.EditValue)?.ItemName;
+
+                btnSave.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -106,6 +136,7 @@ namespace BOM.Forms
             try
             {
                 btnSave.Click += BtnSave_Click;
+                btnSearch.Click += BtnSearch_Click;
                 slueOriginalItem.EditValueChanged += SlueOriginalItem_EditValueChanged;
                 slueChangeItem.EditValueChanged += SlueChangeItem_EditValueChanged;
             }
@@ -139,6 +170,42 @@ namespace BOM.Forms
                 throw;
             }
         }
+
+        private void SetUpGrdBom()
+        {
+            try
+            {
+                gridViewBom.OptionsView.ColumnAutoWidth = false;
+                gridViewBom.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //Todo el Grid no editable
+                gridViewBom.OptionsBehavior.Editable = false;
+
+                //multiselección con checkbox
+                gridViewBom.OptionsSelection.MultiSelect = true;
+                gridViewBom.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+
+                //Specific columns
+                GridColumn colFactory = new GridColumn() { Caption = "Factory", Visible = true, FieldName = nameof(BomHead.Factory), Width = 200 };
+                GridColumn colItemCode = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(BomHead.ItemCode), Width = 200 };
+                GridColumn Version = new GridColumn() { Caption = "Version", Visible = true, FieldName = nameof(BomHead.Version), Width = 200 };
+                GridColumn colVersionDate = new GridColumn() { Caption = "Version Date", Visible = true, FieldName = nameof(BomHead.VersionDate), Width = 200 };
+
+                //Display format
+                colVersionDate.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
+
+                gridViewBom.Columns.Add(colFactory);
+                gridViewBom.Columns.Add(colItemCode);
+                gridViewBom.Columns.Add(Version);
+                gridViewBom.Columns.Add(colVersionDate);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #region  CRUD
@@ -154,17 +221,46 @@ namespace BOM.Forms
             }
         }
 
+        private void LoadComponentBom()
+        {
+            try
+            {
+                _componentBom = new BindingList<BomHead>(GlobalSetting.BomService.GetComponentBom((string)slueOriginalItem.EditValue));
+                grdBom.DataSource = null;
+                grdBom.DataSource = _componentBom;
+                gridViewBom.BestFitColumns();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         private bool SaveData()
         {
             try
             {
-                int modifiedBoms = GlobalSetting.BomService.MassiveItemChange((string)slueOriginalItem.EditValue, (string)slueChangeItem.EditValue);
+                string bomCodes = string.Empty;
+                //obtenemos las líneas seleccionadas.
+                for(int i = gridViewBom.SelectedRowsCount -1; i >=0; i--)
+                {
+                    var currentRowIndex = gridViewBom.GetSelectedRows()[i];
+                    BomHead row = gridViewBom.GetRow(currentRowIndex) as BomHead;
+                    bomCodes += $",{row.Code}";
+                }
+
+                int modifiedBoms = GlobalSetting.BomService.MassiveItemChangeFromBomList(bomCodes.Substring(1), (string)slueOriginalItem.EditValue, (string)slueChangeItem.EditValue);
                 XtraMessageBox.Show($"{modifiedBoms.ToString()} BOMs modified.");
                 return true;
             }
             catch
             {
                 throw;
+            }
+            finally
+            {
+                grdBom.DataSource = null;
             }
         }
         #endregion
@@ -174,6 +270,13 @@ namespace BOM.Forms
         {
             try
             {
+
+                if(gridViewBom.SelectedRowsCount == 0)
+                {
+                    XtraMessageBox.Show($"No BOM selected", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
                 if(slueOriginalItem.EditValue == null)
                 {
                     XtraMessageBox.Show($"Select original item", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Warning);

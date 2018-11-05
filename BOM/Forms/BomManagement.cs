@@ -323,6 +323,23 @@ namespace BOM.Forms
 
                 if (e.KeyCode == Keys.F4)
                 {
+                    DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (result != DialogResult.Yes)
+                        return;
+
+                    GridView activeView = grdItemBom.FocusedView as GridView;
+
+                    switch (activeView.LevelName)
+                    {
+                        case nameof(Bom.Lines):
+
+                            BomDetail row = activeView.GetRow(activeView.FocusedRowHandle) as BomDetail;
+                            BaseView parent = activeView.ParentView;
+                            Bom rowParent = parent.GetRow(activeView.SourceRowHandle) as Bom;
+                            rowParent.Lines.Remove(row);
+                            activeView.RefreshData();
+                            break;
+                    }
 
                 }
                 else if (e.KeyCode == Keys.Enter)
@@ -405,7 +422,7 @@ namespace BOM.Forms
                             row.Coefficient1 = null;
                             row.Coefficient2 = null;
                             row.Scrap = null;
-                            row.Quantity = null;
+                            //row.Quantity = null;
                         }
                         else
                         {

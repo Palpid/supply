@@ -217,11 +217,13 @@
     <Content Include="Sql\DeleteBomLines.sql" />
     <Content Include="Sql\ExecBomImport.sql" />
     <Content Include="Sql\ExecBomMassiveUpdate.sql" />
+    <Content Include="Sql\ExecListBomMassiveUpdate.sql" />
     <Content Include="Sql\InsertBomHead.sql" />
     <Content Include="Sql\InsertBomImportTmp.sql" />
     <Content Include="Sql\InsertBomLines.sql" />
     <Content Include="Sql\InsertBomLog.sql" />
     <Content Include="Sql\QueryBomBreakdown.sql" />
+    <Content Include="Sql\QueryBomComponent.sql" />
     <Content Include="Sql\QueryDetailItemsInBom.sql" />
     <Content Include="Sql\QueryFactories.sql" />
     <Content Include="Sql\QueryImportBomTmp.sql" />
