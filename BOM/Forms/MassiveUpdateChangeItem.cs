@@ -23,7 +23,7 @@ namespace BOM.Forms
         private static readonly ILog _log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         BindingList<OitmExt> _itemsforBomList;
-        BindingList<BomHead> _componentBom;
+        BindingList<BomHeadExt> _componentBom;
         #endregion
 
         #region Constructor
@@ -185,19 +185,26 @@ namespace BOM.Forms
                 gridViewBom.OptionsSelection.MultiSelect = true;
                 gridViewBom.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
 
-                //Specific columns
-                GridColumn colFactory = new GridColumn() { Caption = "Factory", Visible = true, FieldName = nameof(BomHead.Factory), Width = 200 };
-                GridColumn colItemCode = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(BomHead.ItemCode), Width = 200 };
-                GridColumn Version = new GridColumn() { Caption = "Version", Visible = true, FieldName = nameof(BomHead.Version), Width = 200 };
-                GridColumn colVersionDate = new GridColumn() { Caption = "Version Date", Visible = true, FieldName = nameof(BomHead.VersionDate), Width = 200 };
+                //Mostrar el navegador en el footer para ver el total de registros
+                grdBom.UseEmbeddedNavigator = true;
+
+                //Columns
+                GridColumn colFactory = new GridColumn() { Caption = "Factory Code", Visible = true, FieldName = nameof(BomHeadExt.Factory), Width = 200 };
+                GridColumn colFactoryName = new GridColumn() { Caption = "Factory Name", Visible = true, FieldName = $"{nameof(BomHeadExt.FactoryDet)}.{nameof(Ocrd.CardFName)}", Width = 200 };
+                GridColumn colItemCode = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(BomHeadExt.ItemCode), Width = 200 };
+                GridColumn Version = new GridColumn() { Caption = "Version", Visible = true, FieldName = nameof(BomHeadExt.Version), Width = 200 };
+                GridColumn colVersionDate = new GridColumn() { Caption = "Version Date", Visible = true, FieldName = nameof(BomHeadExt.VersionDate), Width = 200 };
 
                 //Display format
                 colVersionDate.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
 
                 gridViewBom.Columns.Add(colFactory);
+                gridViewBom.Columns.Add(colFactoryName);
                 gridViewBom.Columns.Add(colItemCode);
                 gridViewBom.Columns.Add(Version);
                 gridViewBom.Columns.Add(colVersionDate);
+
+                
 
             }
             catch
@@ -225,7 +232,7 @@ namespace BOM.Forms
         {
             try
             {
-                _componentBom = new BindingList<BomHead>(GlobalSetting.BomService.GetComponentBom((string)slueOriginalItem.EditValue));
+                _componentBom = new BindingList<BomHeadExt>(GlobalSetting.BomService.GetComponentBom((string)slueOriginalItem.EditValue));
                 grdBom.DataSource = null;
                 grdBom.DataSource = _componentBom;
                 gridViewBom.BestFitColumns();
@@ -246,7 +253,7 @@ namespace BOM.Forms
                 for(int i = gridViewBom.SelectedRowsCount -1; i >=0; i--)
                 {
                     var currentRowIndex = gridViewBom.GetSelectedRows()[i];
-                    BomHead row = gridViewBom.GetRow(currentRowIndex) as BomHead;
+                    BomHead row = gridViewBom.GetRow(currentRowIndex) as BomHeadExt;
                     bomCodes += $",{row.Code}";
                 }
 

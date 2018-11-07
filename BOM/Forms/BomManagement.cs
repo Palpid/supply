@@ -138,6 +138,19 @@ namespace BOM.Forms
             }
         }
 
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                InitForm();
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void BtnAddBomFactory_Click(object sender, EventArgs e)
         {
             try
@@ -711,6 +724,7 @@ namespace BOM.Forms
                 btnAcciones.Click += BtnAcciones_Click;
                 btnAddBomFactory.Click += BtnAddBomFactory_Click;
                 btnCopyBom.Click += BtnCopyBom_Click;
+                btnCancel.Click += BtnCancel_Click;
             }
             catch
             {

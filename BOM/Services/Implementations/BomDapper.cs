@@ -261,16 +261,27 @@ namespace BOM.Services.Implementations
             }
         }
 
-        public List<BomHead> GetComponentBom(string itemCodeComponent)
+        public List<BomHeadExt> GetComponentBom(string itemCodeComponent)
         {
             try
             {
-                List<BomHead> bomList;
+                List<BomHeadExt> bomList;
 
                 using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
                 {
                     connection.Open();
-                    bomList = connection.Query<BomHead>(Properties.Resources.QueryBomComponent, new { itemCode = itemCodeComponent }).ToList();
+
+                    bomList = connection.Query<BomHeadExt, Ocrd, BomHeadExt>(
+                        Properties.Resources.QueryBomComponent, 
+                        map:(bomHeadExt, ocrd) =>
+                        {
+                            bomHeadExt.FactoryDet = ocrd;
+                            return bomHeadExt;
+                        }, 
+                        splitOn: nameof(Ocrd.CardCode),
+                        param: new { itemCode = itemCodeComponent })
+                        .Distinct()
+                        .ToList();
                 }
 
                 return bomList;

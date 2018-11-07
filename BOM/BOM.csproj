@@ -98,6 +98,7 @@
   <ItemGroup>
     <Compile Include="Classes\Bom.cs" />
     <Compile Include="Classes\BomDetail.cs" />
+    <Compile Include="Classes\BomHeadExt.cs" />
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\OitmExt.cs" />
     <Compile Include="Classes\Supplier.cs" />

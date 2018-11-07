@@ -35,7 +35,7 @@
             this.dockManagerItemBom = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanelBom = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnAcciones = new DevExpress.XtraEditors.SimpleButton();
             this.lblCopyBom = new DevExpress.XtraEditors.LabelControl();
             this.btnCopyBom = new DevExpress.XtraEditors.SimpleButton();
@@ -55,6 +55,7 @@
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.lblLegendF4 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerItemBom)).BeginInit();
@@ -112,21 +113,19 @@
             // dockPanelBom
             // 
             this.dockPanelBom.Controls.Add(this.controlContainer1);
-            this.dockPanelBom.Dock = DevExpress.XtraBars.Docking.DockingStyle.Float;
             this.dockPanelBom.DockedAsTabbedDocument = true;
             this.dockPanelBom.FloatLocation = new System.Drawing.Point(722, 457);
             this.dockPanelBom.ID = new System.Guid("63a1ee9e-1e98-4944-ab37-e52c272cf405");
-            this.dockPanelBom.Location = new System.Drawing.Point(0, 0);
             this.dockPanelBom.Name = "dockPanelBom";
             this.dockPanelBom.OriginalSize = new System.Drawing.Size(200, 200);
             this.dockPanelBom.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.dockPanelBom.SavedIndex = 0;
-            this.dockPanelBom.Size = new System.Drawing.Size(950, 628);
             this.dockPanelBom.Text = "BOM";
             // 
             // controlContainer1
             // 
-            this.controlContainer1.Controls.Add(this.btnCancelar);
+            this.controlContainer1.Controls.Add(this.lblLegendF4);
+            this.controlContainer1.Controls.Add(this.btnCancel);
             this.controlContainer1.Controls.Add(this.btnAcciones);
             this.controlContainer1.Controls.Add(this.lblCopyBom);
             this.controlContainer1.Controls.Add(this.btnCopyBom);
@@ -139,14 +138,14 @@
             this.controlContainer1.Size = new System.Drawing.Size(950, 628);
             this.controlContainer1.TabIndex = 0;
             // 
-            // btnCancelar
+            // btnCancel
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancelar.Location = new System.Drawing.Point(96, 586);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 33);
-            this.btnCancelar.TabIndex = 13;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancel.Location = new System.Drawing.Point(96, 586);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 33);
+            this.btnCancel.TabIndex = 13;
+            this.btnCancel.Text = "Cancel";
             // 
             // btnAcciones
             // 
@@ -155,7 +154,7 @@
             this.btnAcciones.Name = "btnAcciones";
             this.btnAcciones.Size = new System.Drawing.Size(75, 33);
             this.btnAcciones.TabIndex = 12;
-            this.btnAcciones.Text = "Editar";
+            this.btnAcciones.Text = "Edit";
             // 
             // lblCopyBom
             // 
@@ -308,6 +307,15 @@
             this.gridView3.GridControl = this.gridControl3;
             this.gridView3.Name = "gridView3";
             // 
+            // lblLegendF4
+            // 
+            this.lblLegendF4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLegendF4.Location = new System.Drawing.Point(823, 606);
+            this.lblLegendF4.Name = "lblLegendF4";
+            this.lblLegendF4.Size = new System.Drawing.Size(82, 13);
+            this.lblLegendF4.TabIndex = 14;
+            this.lblLegendF4.Text = "F4 to delete Row";
+            // 
             // BomManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,6 +374,7 @@
         private DevExpress.XtraEditors.SearchLookUpEdit slueFactory;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private DevExpress.XtraEditors.SimpleButton btnAcciones;
-        private DevExpress.XtraEditors.SimpleButton btnCancelar;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private DevExpress.XtraEditors.LabelControl lblLegendF4;
     }
 }
