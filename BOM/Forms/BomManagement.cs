@@ -181,6 +181,20 @@ namespace BOM.Forms
             }
         }
 
+        private void BtnCopyFromSku_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_itemBoms != null && _itemBoms.Count() > 0)
+                    OpenCloneBomFromSku();
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void GridViewItems_DoubleClick(object sender, EventArgs e)
         {
@@ -349,7 +363,10 @@ namespace BOM.Forms
                             BomDetail row = activeView.GetRow(activeView.FocusedRowHandle) as BomDetail;
                             BaseView parent = activeView.ParentView;
                             Bom rowParent = parent.GetRow(activeView.SourceRowHandle) as Bom;
-                            rowParent.Lines.Remove(row);
+
+                            if (rowParent.Lines.Count > 1) rowParent.Lines.Remove(row);
+                            else XtraMessageBox.Show("Cannot delete last row");
+
                             activeView.RefreshData();
                             break;
                     }
@@ -724,6 +741,7 @@ namespace BOM.Forms
                 btnAcciones.Click += BtnAcciones_Click;
                 btnAddBomFactory.Click += BtnAddBomFactory_Click;
                 btnCopyBom.Click += BtnCopyBom_Click;
+                btnCopyFromSku.Click += BtnCopyFromSku_Click;
                 btnCancel.Click += BtnCancel_Click;
             }
             catch
@@ -1116,6 +1134,28 @@ namespace BOM.Forms
             }
         }
 
+        private void OpenCloneBomFromSku()
+        {
+            try
+            {
+                List<string> factories = _itemBoms.Select(a => a.Factory).ToList();
+                string itemCode = _currentSelectedItem.ItemCode;
+
+                using (DialogForms.SelectBomClone form = new DialogForms.SelectBomClone())
+                {
+                    form.InitData(factories, itemCode);
+                    if(form.ShowDialog() == DialogResult.OK)
+                    {
+
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         private void CopySupplierBom2SupplierBom(string selectedFactorySource, List<string> selectedFactoriesDestination)
         {
             try
@@ -1166,7 +1206,7 @@ namespace BOM.Forms
         {
             try
             {
-                lblFactory.Visible = slueFactory.Visible = btnAddBomFactory.Visible = lblCopyBom.Visible = btnCopyBom.Visible = show;
+                lblFactory.Visible = slueFactory.Visible = btnAddBomFactory.Visible = lblCopyBom.Visible = btnCopyBom.Visible = lblCopyBomFromSku.Visible = btnCopyFromSku.Visible = show;
             }
             catch
             {

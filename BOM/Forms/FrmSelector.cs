@@ -1,4 +1,5 @@
 ﻿using BOM.Forms;
+using BOM.General;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using log4net;
@@ -107,6 +108,8 @@ namespace BOM.Forms
             try
             {
                 BackColor = Color.White;
+                if(GlobalSetting.DbSapName != "ETNIA_HK")
+                    BackColor = Color.Red;
                 ShowIcon = false;
                 Text = string.Empty;
                 FormBorderStyle = FormBorderStyle.FixedSingle;

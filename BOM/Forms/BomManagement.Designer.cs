@@ -35,6 +35,9 @@
             this.dockManagerItemBom = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanelBom = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.lblCopyBomFromSku = new DevExpress.XtraEditors.LabelControl();
+            this.btnCopyFromSku = new DevExpress.XtraEditors.SimpleButton();
+            this.lblLegendF4 = new DevExpress.XtraEditors.LabelControl();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnAcciones = new DevExpress.XtraEditors.SimpleButton();
             this.lblCopyBom = new DevExpress.XtraEditors.LabelControl();
@@ -55,7 +58,7 @@
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.lblLegendF4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerItemBom)).BeginInit();
@@ -124,6 +127,8 @@
             // 
             // controlContainer1
             // 
+            this.controlContainer1.Controls.Add(this.lblCopyBomFromSku);
+            this.controlContainer1.Controls.Add(this.btnCopyFromSku);
             this.controlContainer1.Controls.Add(this.lblLegendF4);
             this.controlContainer1.Controls.Add(this.btnCancel);
             this.controlContainer1.Controls.Add(this.btnAcciones);
@@ -137,6 +142,32 @@
             this.controlContainer1.Name = "controlContainer1";
             this.controlContainer1.Size = new System.Drawing.Size(950, 628);
             this.controlContainer1.TabIndex = 0;
+            // 
+            // lblCopyBomFromSku
+            // 
+            this.lblCopyBomFromSku.Location = new System.Drawing.Point(538, 15);
+            this.lblCopyBomFromSku.Name = "lblCopyBomFromSku";
+            this.lblCopyBomFromSku.Size = new System.Drawing.Size(97, 13);
+            this.lblCopyBomFromSku.TabIndex = 16;
+            this.lblCopyBomFromSku.Text = "Copy BOM from SKU";
+            // 
+            // btnCopyFromSku
+            // 
+            this.btnCopyFromSku.ImageOptions.Image = global::BOM.Properties.Resources.cloning16x16;
+            this.btnCopyFromSku.Location = new System.Drawing.Point(507, 9);
+            this.btnCopyFromSku.Name = "btnCopyFromSku";
+            this.btnCopyFromSku.Size = new System.Drawing.Size(25, 25);
+            this.btnCopyFromSku.TabIndex = 15;
+            this.btnCopyFromSku.Text = "simpleButton1";
+            // 
+            // lblLegendF4
+            // 
+            this.lblLegendF4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLegendF4.Location = new System.Drawing.Point(823, 606);
+            this.lblLegendF4.Name = "lblLegendF4";
+            this.lblLegendF4.Size = new System.Drawing.Size(82, 13);
+            this.lblLegendF4.TabIndex = 14;
+            this.lblLegendF4.Text = "F4 to delete Row";
             // 
             // btnCancel
             // 
@@ -307,14 +338,13 @@
             this.gridView3.GridControl = this.gridControl3;
             this.gridView3.Name = "gridView3";
             // 
-            // lblLegendF4
+            // labelControl1
             // 
-            this.lblLegendF4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLegendF4.Location = new System.Drawing.Point(823, 606);
-            this.lblLegendF4.Name = "lblLegendF4";
-            this.lblLegendF4.Size = new System.Drawing.Size(82, 13);
-            this.lblLegendF4.TabIndex = 14;
-            this.lblLegendF4.Text = "F4 to delete Row";
+            this.labelControl1.Location = new System.Drawing.Point(409, 15);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(63, 13);
+            this.labelControl1.TabIndex = 11;
+            this.labelControl1.Text = "Copy BOM to";
             // 
             // BomManagement
             // 
@@ -376,5 +406,8 @@
         private DevExpress.XtraEditors.SimpleButton btnAcciones;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.LabelControl lblLegendF4;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl lblCopyBomFromSku;
+        private DevExpress.XtraEditors.SimpleButton btnCopyFromSku;
     }
 }

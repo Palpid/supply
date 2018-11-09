@@ -81,6 +81,26 @@ namespace BOM.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cloning16x16 {
+            get {
+                object obj = ResourceManager.GetObject("cloning16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cloning24x24 {
+            get {
+                object obj = ResourceManager.GetObject("cloning24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a DELETE  [dbo].[ETN_BOM_LINES]
         ///WHERE [CodeBom] = @codeBom.
         /// </summary>
@@ -150,11 +170,11 @@ namespace BOM.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a EXECUTE [ETN_sp_BOM_MASSIVE_UPDATE] 
+        ///   Busca una cadena traducida similar a EXECUTE [ETN_sp_LIST_BOM_MASSIVE_UPDATE] 
+        ///	@bomIdList,
         ///	@originalItem,
         ///	@changeTo,
         ///	@user
-        ///
         ///
         ///.
         /// </summary>
@@ -306,6 +326,15 @@ namespace BOM.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        internal static string QueryAllBomHead {
+            get {
+                return ResourceManager.GetString("QueryAllBomHead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a SELECT IdBomBreakdown, Description, SubGroup
         ///FROM ETN_BOM_BREAKDOWN.
         /// </summary>
@@ -317,9 +346,11 @@ namespace BOM.Properties {
         
         /// <summary>
         ///   Busca una cadena traducida similar a SELECT        
-        ///	T0.Code, T0.[Version], T0.Subversion, T0.VersionDate, T0.ItemCode, T0.Factory, T0.CreateDate
+        ///	T0.Code, T0.[Version], T0.Subversion, T0.VersionDate, T0.ItemCode, T0.Factory, T0.CreateDate,
+        ///	T2.CardCode, T2.CardName, T2.CardFName, T2.GroupCode
         ///FROM ETN_BOM_HEAD T0
         ///INNER JOIN ETN_BOM_LINES T1 ON T1.CodeBom = T0.Code
+        ///INNER JOIN OCRD T2 ON T2.CardCode = T0.Factory
         ///WHERE T1.ItemCode = @itemCode.
         /// </summary>
         internal static string QueryBomComponent {

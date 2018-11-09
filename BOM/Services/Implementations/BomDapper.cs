@@ -292,6 +292,37 @@ namespace BOM.Services.Implementations
             }
         }
 
+        public List<BomHeadExt> GetAllBomHead()
+        {
+            try
+            {
+                List<BomHeadExt> bomList;
+
+                using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
+                {
+                    connection.Open();
+
+                    bomList = connection.Query<BomHeadExt, Ocrd, BomHeadExt>(
+                        Properties.Resources.QueryAllBomHead,
+                        map: (bomHeadExt, ocrd) =>
+                        {
+                            bomHeadExt.FactoryDet = ocrd;
+                            return bomHeadExt;
+                        },
+                        splitOn: nameof(Ocrd.CardCode))
+                        .Distinct()
+                        .ToList();
+                }
+
+                return bomList;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         #region Private Methods
 
         private void InsertItemBom(SqlConnection connection, SqlTransaction transaction, Bom bom)
@@ -353,8 +384,6 @@ namespace BOM.Services.Implementations
                 throw;
             }
         }
-
-       
 
         #endregion
     }

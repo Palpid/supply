@@ -120,6 +120,12 @@
     <Compile Include="Forms\BomManagement.Designer.cs">
       <DependentUpon>BomManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DialogForms\SelectBomClone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DialogForms\SelectBomClone.Designer.cs">
+      <DependentUpon>SelectBomClone.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DialogForms\SelectFactories.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     <EmbeddedResource Include="Forms\BomManagement.resx">
       <DependentUpon>BomManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DialogForms\SelectBomClone.resx">
+      <DependentUpon>SelectBomClone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DialogForms\SelectFactories.resx">
       <DependentUpon>SelectFactories.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,12 +214,16 @@
     <None Include="Resources\Templates\BOM_Template.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <Content Include="etnia_icon.ico" />
     <Content Include="Resources\Images\bill_of_materials.png" />
+    <Content Include="Resources\Images\cloning16x16.png" />
+    <Content Include="Resources\Images\cloning24x24.png" />
     <Content Include="Resources\Images\etnia_icon.ico" />
     <None Include="Resources\Images\excel_import.png" />
     <Content Include="Resources\Images\excel_icon.png" />
@@ -223,6 +236,7 @@
     <Content Include="Sql\InsertBomImportTmp.sql" />
     <Content Include="Sql\InsertBomLines.sql" />
     <Content Include="Sql\InsertBomLog.sql" />
+    <Content Include="Sql\QueryAllBomHead.sql" />
     <Content Include="Sql\QueryBomBreakdown.sql" />
     <Content Include="Sql\QueryBomComponent.sql" />
     <Content Include="Sql\QueryDetailItemsInBom.sql" />

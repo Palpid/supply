@@ -18,5 +18,6 @@ namespace BOM.Services.Interfaces
         int MassiveItemChange(string originalItemCode, string changeItemcode);
         int MassiveItemChangeFromBomList(string bomCodes, string originalItemCode, string changeItemcode);
         List<BomHeadExt> GetComponentBom(string itemCodeComponent);
+        List<BomHeadExt> GetAllBomHead();
     }
 }
