@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using BOM.Classes;
+using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,8 @@ namespace BOM.Forms.DialogForms
     public partial class SelectFactories : Form
     {
         #region Private Members
-        List<string> _factories;
+        //List<string> _factories;
+        List<Supplier> _factories;
         #endregion
 
         #region Public Properties
@@ -61,7 +63,7 @@ namespace BOM.Forms.DialogForms
         #endregion
 
         #region Public Methods
-        public void InitData(List<string> factories)
+        public void InitData(List<Supplier> factories)
         {
             try
             {
@@ -85,15 +87,20 @@ namespace BOM.Forms.DialogForms
             {
                 SelectedFactoriesSource = new List<string>();
                 SelectedFactoriesDestination = new List<string>();
+                string factoryCode = string.Empty;
 
                 foreach (var itemChecked in checkedListBoxFactoriesSource.CheckedItems)
                 {
-                    SelectedFactoriesSource.Add(itemChecked.ToString());
+                    factoryCode = ((Supplier)((CheckedListBoxItem)itemChecked).Value).CardCode;
+                    SelectedFactoriesSource.Add(factoryCode);
+                    //SelectedFactoriesSource.Add(itemChecked.ToString());
                 }
 
                 foreach (var itemChecked in checkedListBoxFactoriesDestination.CheckedItems)
                 {
-                    SelectedFactoriesDestination.Add(itemChecked.ToString());
+                    factoryCode = ((Supplier)((CheckedListBoxItem)itemChecked).Value).CardCode;
+                    //SelectedFactoriesDestination.Add(itemChecked.ToString());
+                    SelectedFactoriesDestination.Add(factoryCode);
                 }
 
                 if (ValidateSuppliers())

@@ -769,10 +769,11 @@ namespace BOM.Forms
             {
                 slueFactory.Properties.DataSource = _factoriesList;
 
-                slueFactory.Properties.ValueMember = nameof(Ocrd.CardCode);
-                slueFactory.Properties.DisplayMember = nameof(Ocrd.CardName);
-                slueFactory.Properties.View.Columns.AddField(nameof(Ocrd.CardCode)).Visible = true;
-                slueFactory.Properties.View.Columns.AddField(nameof(Ocrd.CardName)).Visible = true;
+                slueFactory.Properties.ValueMember = nameof(Supplier.CardCode);
+                slueFactory.Properties.DisplayMember = nameof(Supplier.Name);
+                slueFactory.Properties.View.Columns.AddField(nameof(Supplier.CardCode)).Visible = true;
+                slueFactory.Properties.View.Columns.AddField(nameof(Supplier.Name)).Visible = true;
+                //slueFactory.Properties.View.Columns.AddField(nameof(Ocrd.CardName)).Visible = true;
             }
             catch
             {
@@ -1109,13 +1110,19 @@ namespace BOM.Forms
         {
             try
             {
-                List<string> factories = _itemBoms.Select(a => a.Factory).ToList();
+                //List<string> factories = _itemBoms.Select(a => a.Factory).ToList();
+                List<Supplier> factoriesList = new List<Supplier>();
+                foreach (string factory in _itemBoms.Select(a => a.Factory).ToList())
+                {
+                    factoriesList.Add(_factoriesList.Where(a => a.CardCode == factory).FirstOrDefault().DeepCopyByExpressionTree());
+                }
+
                 List<string> selectedFactoriesSource = new List<string>();
                 List<string> selectedFactoriesDestination = new List<string>();
 
                 using (DialogForms.SelectFactories form = new DialogForms.SelectFactories())
                 {
-                    form.InitData(factories);
+                    form.InitData(factoriesList);
 
                     if (form.ShowDialog() == DialogResult.OK)
                     {
@@ -1138,15 +1145,34 @@ namespace BOM.Forms
         {
             try
             {
-                List<string> factories = _itemBoms.Select(a => a.Factory).ToList();
+                
                 string itemCode = _currentSelectedItem.ItemCode;
+
+                List<Supplier> factoriesList = new List<Supplier>();
+                foreach(string factory in _itemBoms.Select(a => a.Factory).ToList())
+                {
+                    factoriesList.Add(_factoriesList.Where(a => a.CardCode == factory).FirstOrDefault().DeepCopyByExpressionTree());
+                }
 
                 using (DialogForms.SelectBomClone form = new DialogForms.SelectBomClone())
                 {
-                    form.InitData(factories, itemCode);
+                    form.InitData(factoriesList, itemCode);
                     if(form.ShowDialog() == DialogResult.OK)
                     {
+                        var bomDestination = _itemBoms.Where(a => a.Factory.Equals(form.Factory)).Single();
+                        bomDestination.Lines = new List<BomDetail>();
 
+                        foreach (var line in form.ItemBom.Lines)
+                        {
+                            var tmp = line.DeepCopyByExpressionTree();
+                            tmp.CodeBom = bomDestination.Code;
+                            bomDestination.Lines.Add(tmp);
+                        }
+
+                        bomDestination.Edited = true;
+
+                        grdItemBom.RefreshDataSource();
+                        ExpandBomDefaultFactory();
                     }
                 }
             }
@@ -1225,6 +1251,7 @@ namespace BOM.Forms
                 gridViewItemBom.BeginUpdate();
                 string defaultFactory = _currentSelectedItem.CardCode;
 
+                gridViewItemBom.CollapseAllGroups();
                 gridViewItemBom.ExpandAllGroups();
 
                 for (int rHandle = 0; rHandle < gridViewItemBom.DataRowCount; rHandle++)

@@ -116,13 +116,16 @@
             // dockPanelBom
             // 
             this.dockPanelBom.Controls.Add(this.controlContainer1);
+            this.dockPanelBom.Dock = DevExpress.XtraBars.Docking.DockingStyle.Float;
             this.dockPanelBom.DockedAsTabbedDocument = true;
             this.dockPanelBom.FloatLocation = new System.Drawing.Point(722, 457);
             this.dockPanelBom.ID = new System.Guid("63a1ee9e-1e98-4944-ab37-e52c272cf405");
+            this.dockPanelBom.Location = new System.Drawing.Point(0, 0);
             this.dockPanelBom.Name = "dockPanelBom";
             this.dockPanelBom.OriginalSize = new System.Drawing.Size(200, 200);
             this.dockPanelBom.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.dockPanelBom.SavedIndex = 0;
+            this.dockPanelBom.Size = new System.Drawing.Size(950, 628);
             this.dockPanelBom.Text = "BOM";
             // 
             // controlContainer1

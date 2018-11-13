@@ -19,5 +19,10 @@ namespace BOM.Classes
                     return CardName;
             }
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

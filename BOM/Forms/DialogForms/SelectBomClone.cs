@@ -22,9 +22,14 @@ namespace BOM.Forms.DialogForms
     {
         #region Private Members
 
-        List<string> _factories;
+        List<Supplier> _factories;
         List<BomHeadExt> _bomHeadList;
-        
+
+        #endregion
+
+        #region Public Properties
+        public Bom ItemBom { get; set; }
+        public string Factory { get; set; }
         #endregion
 
         #region Constructor
@@ -101,10 +106,34 @@ namespace BOM.Forms.DialogForms
             }
         }
 
+        private void SbOk_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(checkedListBoxFactories.CheckedItems.Count == 0)
+                {
+                    XtraMessageBox.Show("Select Factory");
+                    return;
+                }
+
+                if(gridViewBomFactory.SelectedRowsCount == 0)
+                {
+                    XtraMessageBox.Show("Select BOM");
+                    return;
+                }
+
+                GetBomDetail();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Public Methods
-        public void InitData(List<string> factories, string itemCode)
+        public void InitData(List<Supplier> factories, string itemCode)
         {
             try
             {
@@ -135,10 +164,8 @@ namespace BOM.Forms.DialogForms
 
                 sbCancel.Click += (o, e) => { Close(); };
 
-                sbOk.Click += (o, e) =>
-                {
+                sbOk.Click += SbOk_Click;
 
-                };
             }
             catch
             {
@@ -271,6 +298,31 @@ namespace BOM.Forms.DialogForms
             }
         }
 
+        private void GetBomDetail()
+        {
+            try
+            {
+                var selectedRowIndex = gridViewBomFactory.GetSelectedRows()[0]; //Ya controlamos que sólo haya uno seleccionado
+                BomHeadExt selectedBom = gridViewBomFactory.GetRow(selectedRowIndex) as BomHeadExt;
+                ItemBom = GlobalSetting.BomService.GetItemBom(selectedBom.ItemCode).Where(a => a.Code == selectedBom.Code).FirstOrDefault();
+
+                Factory = ((Supplier)((CheckedListBoxItem)checkedListBoxFactories.CheckedItems[0]).Value).CardCode;
+
+                if (ItemBom != null)
+                {
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+                else
+                {
+                    XtraMessageBox.Show("BOM errir");
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         #endregion
 
