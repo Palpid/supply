@@ -25,6 +25,7 @@ namespace BOM.Models
         public decimal Coefficient2 { get; set; }
         public decimal Scrap { get; set; }
         public decimal Quantity { get; set; }
+        public bool  Supplied { get; set; }
         public bool Imported { get; set; }
         public DateTime ImportDate { get; set; }
         public string ErrorMsg { get; set; }

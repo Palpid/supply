@@ -20,5 +20,6 @@ namespace BOM.Models
         public decimal? Coefficient2 { get; set; }
         public decimal? Scrap { get; set; }
         public decimal? Quantity { get; set; }
+        public bool Supplied { get; set; }
     }
 }

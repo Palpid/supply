@@ -35,5 +35,6 @@ namespace BOM.Classes
         public const string XLS_COEFFICIENT2 = "Coefficient2";
         public const string XLS_SCRAP = "Scrap";
         public const string XLS_QUANTITY = "Quantity";
+        public const string XLS_SUPPLIED = "Supplied";
     }
 }

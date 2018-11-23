@@ -16,6 +16,7 @@ INSERT INTO ETN_BOM_LINES_LOG
 	,[Coefficient2]
 	,[Scrap]
 	,[Quantity]
+	,[Supplied]
 	,[User])
 SELECT
 	T1.[CodeBom]
@@ -33,6 +34,7 @@ SELECT
 	,T1.[Coefficient2]
 	,T1.[Scrap]
 	,T1.[Quantity]
+	,T1.[Supplied]
 	,@user
 FROM ETN_BOM_HEAD T0
 INNER JOIN ETN_BOM_LINES T1 ON T1.CodeBom = T0.Code

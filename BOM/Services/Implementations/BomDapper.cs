@@ -151,7 +151,8 @@ namespace BOM.Services.Implementations
                                     coefficient1 = row.Coefficient1,
                                     coefficient2 = row.Coefficient2,
                                     scrap = row.Scrap,
-                                    quantity = row.Quantity
+                                    quantity = row.Quantity,
+                                    supplied = row.Supplied
                                 }, transaction: transaction);
                             }
 
@@ -261,10 +262,11 @@ namespace BOM.Services.Implementations
             }
         }
 
-        public List<BomHeadExt> GetComponentBom(string itemCodeComponent)
+        public List<MassiveUpdateRow> GetComponentBom(string itemCodeComponent)
         {
             try
             {
+                /*
                 List<BomHeadExt> bomList;
 
                 using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
@@ -282,6 +284,15 @@ namespace BOM.Services.Implementations
                         param: new { itemCode = itemCodeComponent })
                         .Distinct()
                         .ToList();
+                }
+                */
+
+                List<MassiveUpdateRow> bomList;
+
+                using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
+                {
+                    connection.Open();
+                    bomList = connection.Query<MassiveUpdateRow>(Properties.Resources.QueryBomComponent, new { itemCode = itemCodeComponent }).Distinct().ToList();
                 }
 
                 return bomList;
@@ -372,7 +383,8 @@ namespace BOM.Services.Implementations
                         coefficient1 = line.Coefficient1,
                         coefficient2 = line.Coefficient2,
                         scrap = line.Scrap,
-                        quantity = line.Quantity
+                        quantity = line.Quantity,
+                        supplied = line.Supplied
                     }, transaction: transaction);
                 }
 

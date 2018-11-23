@@ -17,7 +17,7 @@ namespace BOM.Services.Interfaces
         List<BomImportTmp> GetImportBomByGuid(string guid);
         int MassiveItemChange(string originalItemCode, string changeItemcode);
         int MassiveItemChangeFromBomList(string bomCodes, string originalItemCode, string changeItemcode);
-        List<BomHeadExt> GetComponentBom(string itemCodeComponent);
+        List<MassiveUpdateRow> GetComponentBom(string itemCodeComponent);
         List<BomHeadExt> GetAllBomHead();
     }
 }

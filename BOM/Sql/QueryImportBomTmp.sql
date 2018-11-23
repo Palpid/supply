@@ -15,6 +15,7 @@ SELECT
 	, Coefficient2
 	, Scrap
 	, Quantity
+	, Supplied
 	, Imported
 	, ImportDate
 	, ErrorMsg

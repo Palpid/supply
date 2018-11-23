@@ -23,7 +23,8 @@ namespace BOM.Forms
         private static readonly ILog _log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         BindingList<OitmExt> _itemsforBomList;
-        BindingList<BomHeadExt> _componentBom;
+        //BindingList<BomHeadExt> _componentBom;
+        BindingList<MassiveUpdateRow> _componentBom;
         #endregion
 
         #region Constructor
@@ -189,11 +190,14 @@ namespace BOM.Forms
                 grdBom.UseEmbeddedNavigator = true;
 
                 //Columns
-                GridColumn colFactory = new GridColumn() { Caption = "Factory Code", Visible = true, FieldName = nameof(BomHeadExt.Factory), Width = 200 };
-                GridColumn colFactoryName = new GridColumn() { Caption = "Factory Name", Visible = true, FieldName = $"{nameof(BomHeadExt.FactoryDet)}.{nameof(Ocrd.CardFName)}", Width = 200 };
-                GridColumn colItemCode = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(BomHeadExt.ItemCode), Width = 200 };
-                GridColumn Version = new GridColumn() { Caption = "Version", Visible = true, FieldName = nameof(BomHeadExt.Version), Width = 200 };
-                GridColumn colVersionDate = new GridColumn() { Caption = "Version Date", Visible = true, FieldName = nameof(BomHeadExt.VersionDate), Width = 200 };
+                GridColumn colFactory = new GridColumn() { Caption = "Factory Code", Visible = true, FieldName = nameof(MassiveUpdateRow.Factory), Width = 200 };
+                GridColumn colFactoryName = new GridColumn() { Caption = "Factory Name", Visible = true, FieldName = nameof(MassiveUpdateRow.FactoryName), Width = 200 };
+                GridColumn colItemCode = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(MassiveUpdateRow.ItemCode), Width = 200 };
+                GridColumn Version = new GridColumn() { Caption = "Version", Visible = true, FieldName = nameof(MassiveUpdateRow.Version), Width = 200 };
+                GridColumn colVersionDate = new GridColumn() { Caption = "Version Date", Visible = true, FieldName = nameof(MassiveUpdateRow.VersionDate), Width = 200 };
+                GridColumn colU_ETN_stat = new GridColumn() { Caption = "Item Status", Visible = true, FieldName = nameof(MassiveUpdateRow.U_ETN_stat), Width = 200 };
+                GridColumn colComponentCode = new GridColumn() { Caption = "Component Code", Visible = true, FieldName = nameof(MassiveUpdateRow.ComponentCode), Width = 200 };
+                GridColumn colComponentQuantity = new GridColumn() { Caption = "Component Quantity", Visible = true, FieldName = nameof(MassiveUpdateRow.ComponentQuantity), Width = 200 };
 
                 //Display format
                 colVersionDate.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
@@ -203,8 +207,11 @@ namespace BOM.Forms
                 gridViewBom.Columns.Add(colItemCode);
                 gridViewBom.Columns.Add(Version);
                 gridViewBom.Columns.Add(colVersionDate);
+                gridViewBom.Columns.Add(colU_ETN_stat);
+                gridViewBom.Columns.Add(colComponentCode);
+                gridViewBom.Columns.Add(colComponentQuantity);
 
-                
+
 
             }
             catch
@@ -232,7 +239,7 @@ namespace BOM.Forms
         {
             try
             {
-                _componentBom = new BindingList<BomHeadExt>(GlobalSetting.BomService.GetComponentBom((string)slueOriginalItem.EditValue));
+                _componentBom = new BindingList<MassiveUpdateRow>(GlobalSetting.BomService.GetComponentBom((string)slueOriginalItem.EditValue));
                 grdBom.DataSource = null;
                 grdBom.DataSource = _componentBom;
                 gridViewBom.BestFitColumns();
@@ -253,7 +260,7 @@ namespace BOM.Forms
                 for(int i = gridViewBom.SelectedRowsCount -1; i >=0; i--)
                 {
                     var currentRowIndex = gridViewBom.GetSelectedRows()[i];
-                    BomHead row = gridViewBom.GetRow(currentRowIndex) as BomHeadExt;
+                    MassiveUpdateRow row = gridViewBom.GetRow(currentRowIndex) as MassiveUpdateRow;
                     bomCodes += $",{row.Code}";
                 }
 

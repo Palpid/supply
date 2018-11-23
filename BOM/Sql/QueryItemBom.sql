@@ -18,6 +18,7 @@ SELECT
 	, T1.Coefficient2
 	, T1.Scrap
 	, T1.Quantity
+	, T1.Supplied
 FROM ETN_BOM_HEAD AS T0 WITH (NOLOCK)
 INNER JOIN ETN_BOM_LINES AS T1 WITH (NOLOCK) ON T1.CodeBom = T0.Code
 WHERE        

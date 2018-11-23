@@ -14,6 +14,7 @@ INSERT INTO [dbo].[ETN_BOM_IMPORT_TMP]
 	,[Coefficient2]
 	,[Scrap]
 	,[Quantity]
+	,[Supplied]
 	,[Imported]
 	,[ImportDate]
 	,[ErrorMsg])
@@ -33,6 +34,7 @@ SELECT
 	,@coefficient2
 	,@scrap
 	,@quantity
+	,@supplied
 	,0 AS Imported
 	,NULL AS ImportDate
 	,NULL AS ErrorMsg

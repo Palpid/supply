@@ -10,7 +10,8 @@ INSERT INTO [dbo].[ETN_BOM_LINES]
 	,[Coefficient1]
 	,[Coefficient2]
 	,[Scrap]
-	,[Quantity])
+	,[Quantity]
+	,[Supplied])
 SELECT
 	@codeBom
 	,@itemCode
@@ -24,3 +25,4 @@ SELECT
 	,@coefficient2
 	,@scrap
 	,@quantity
+	,@supplied

@@ -315,6 +315,7 @@ namespace BOM.Forms
                         view.Columns[nameof(BomDetail.Coefficient2)].VisibleIndex = orderColRm++;
                         view.Columns[nameof(BomDetail.Scrap)].VisibleIndex = orderColRm++;
                         view.Columns[nameof(BomDetail.Quantity)].VisibleIndex = orderColRm++;
+                        view.Columns[nameof(BomDetail.Supplied)].VisibleIndex = orderColRm++;
 
                         //EditRepositories
                         SetBomDetailEditRepositories(view);
@@ -1204,6 +1205,7 @@ namespace BOM.Forms
                 }
 
                 grdItemBom.RefreshDataSource();
+                ExpandBomDefaultFactory();
             }
             catch
             {
@@ -1251,11 +1253,12 @@ namespace BOM.Forms
                 gridViewItemBom.BeginUpdate();
                 string defaultFactory = _currentSelectedItem.CardCode;
 
-                gridViewItemBom.CollapseAllGroups();
                 gridViewItemBom.ExpandAllGroups();
 
                 for (int rHandle = 0; rHandle < gridViewItemBom.DataRowCount; rHandle++)
                 {
+                    gridViewItemBom.SetMasterRowExpanded(rHandle, false);
+
                     object factory = gridViewItemBom.GetRowCellValue(rHandle, nameof(Bom.Factory));
                     if (factory != null && factory.ToString() == defaultFactory)
                         gridViewItemBom.SetMasterRowExpanded(rHandle, true);

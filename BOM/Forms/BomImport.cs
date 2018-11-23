@@ -289,6 +289,7 @@ namespace BOM.Forms
                 GridColumn colCoefficient2 = new GridColumn() { Caption = "Coefficient 2", Visible = true, FieldName = nameof(BomImportTmp.Coefficient2), Width = 200 };
                 GridColumn colScrap = new GridColumn() { Caption = "Scrap", Visible = true, FieldName = nameof(BomImportTmp.Scrap), Width = 200 };
                 GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(BomImportTmp.Quantity), Width = 200 };
+                GridColumn colSupplied = new GridColumn() { Caption = "Supplied", Visible = true, FieldName = nameof(BomImportTmp.Supplied), Width = 200 };
                 GridColumn colImported = new GridColumn() { Caption = "Imported", Visible = true, FieldName = nameof(BomImportTmp.Imported), Width = 200 };
                 GridColumn colImportDate = new GridColumn() { Caption = "Import Date", Visible = true, FieldName = nameof(BomImportTmp.ImportDate), Width = 200 };
                 GridColumn colErrorMsg = new GridColumn() { Caption = "Error Msg.", Visible = true, FieldName = nameof(BomImportTmp.ErrorMsg), Width = 200 };
@@ -309,6 +310,7 @@ namespace BOM.Forms
                 gridViewImport.Columns.Add(colCoefficient2);
                 gridViewImport.Columns.Add(colScrap);
                 gridViewImport.Columns.Add(colQuantity);
+                gridViewImport.Columns.Add(colSupplied);
                 gridViewImport.Columns.Add(colImported);
                 gridViewImport.Columns.Add(colImportDate);
                 gridViewImport.Columns.Add(colErrorMsg);
@@ -425,6 +427,7 @@ namespace BOM.Forms
                     bomimportRow.Coefficient2 = row[Constants.XLS_COEFFICIENT2].ObjToDecimal();
                     bomimportRow.Scrap = row[Constants.XLS_SCRAP].ObjToDecimal();
                     bomimportRow.Quantity = Math.Round(row[Constants.XLS_QUANTITY].ObjToDecimal(), 4);
+                    bomimportRow.Supplied = row[Constants.XLS_SUPPLIED].ToString().Trim() == "Y" ? true : false;
                     //bomimportRow.Imported
                     //bomimportRow.ImportDate
                     //bomimportRow.ErrorMsg
