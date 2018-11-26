@@ -123,6 +123,7 @@ namespace BOM.Forms
                         {
                             MessageBox.Show("Save Successfully");
                             InitForm();
+                            ShowAddBomFactoryAndCopyBom(false);
                         }
                     }
 
@@ -937,12 +938,34 @@ namespace BOM.Forms
                 _itemBoms = new BindingList<Bom>(GlobalSetting.BomService.GetItemBom(item.ItemCode));
 
                 grdItemBom.DataSource = null;
-                grdItemBom.DataSource = _itemBoms;
 
+                //if (_itemBoms.Count == 0)
+                //    XtraMessageBox.Show("SKU without BOM ");
+                if (_itemBoms.Count == 0)
+                {
+                    if (string.IsNullOrEmpty(_currentSelectedItem.CardCode))
+                    {
+                        XtraMessageBox.Show("Item without default factory. You must define one first", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    Bom bom = new Bom();
+                    bom.Code = 0;
+                    bom.Version = 0;
+                    bom.Subversion = 0;
+                    bom.VersionDate = DateTime.Now;
+                    bom.ItemCode = _currentSelectedItem.ItemCode;
+                    bom.Factory = _currentSelectedItem.CardCode;
+                    bom.CreateDate = DateTime.Now;
+                    bom.Edited = false;
+
+                    _itemBoms = new BindingList<Bom>();
+                    _itemBoms.Add(bom);
+                }
+
+                grdItemBom.DataSource = _itemBoms;
                 ExpandBomDefaultFactory();
 
-                if (_itemBoms.Count == 0)
-                    XtraMessageBox.Show("SKU without BOM ");
             }
             catch
             {
