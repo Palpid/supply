@@ -1,6 +1,6 @@
 SELECT        
 	T0.Code, T0.[Version], T0.Subversion, T0.VersionDate, T0.ItemCode, T0.Factory, T0.CreateDate,
-	CASE WHEN ISNULL(T2.CardFName,'') = '' THEN T2.CardFName ELSE T2.CardName END AS FactoryName,
+	CASE WHEN ISNULL(T2.CardFName,'') = '' THEN T2.CardName ELSE T2.CardFName END AS FactoryName,
 	T3.U_ETN_stat, T1.ItemCode AS ComponentCode, T1.Quantity AS ComponentQuantity
 FROM ETN_BOM_HEAD T0
 INNER JOIN ETN_BOM_LINES T1 ON T1.CodeBom = T0.Code
