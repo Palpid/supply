@@ -536,6 +536,19 @@ namespace BOM.Forms
             }
         }
 
+        public bool ContainsUnicodeCharacter(string input)
+        {
+            try
+            {
+                const int MaxAnsiCode = 255;
+                return input.Any(c => c > MaxAnsiCode);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #region CRUD
@@ -611,7 +624,11 @@ namespace BOM.Forms
                 }
 
                 //Validamos que si se han indicado los campos de length, width, etc hay que comprobar que el cálculo coincida con el cantidad indicada
-                foreach(BomImportTmp row in _bomImportTmp)
+                //Comprobamos que no haya ningún caracter unicode. Como los excel las envían las fábricas con el Excel en Chino a veces se cuelan caracteres en unicode, como por ejemplo:
+                //810228 (4) --> Correcto
+                //810228 (4）--> Incorrecto
+                //pero realmente es el mismo carácter y la DB se lo come.
+                foreach (BomImportTmp row in _bomImportTmp)
                 {
                     if(row.Length > 0 || row.Width > 0 || row.Height > 0 || row.Density > 0 || row.NumberOfParts > 0 || row.Coefficient1 > 0 || row.Coefficient2 > 0 || row.Scrap > 0)
                     {
@@ -622,6 +639,12 @@ namespace BOM.Forms
                             row.ErrorMsg += "|Cantidad errónea. No coincide con el cálculo";
                             isExcelOk = false;
                         }
+                    }
+
+                    if (ContainsUnicodeCharacter(row.ComponentCode))
+                    {
+                        row.ErrorMsg += "|El componente contiene algún carácter no permitido.";
+                        isExcelOk = false;
                     }
                 }
 
