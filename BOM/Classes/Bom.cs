@@ -12,6 +12,14 @@ namespace BOM.Classes
         public List<BomDetail> Lines { get; set; }
         public bool Edited { get; set; }
 
+        public string FactoryVersion
+        {
+            get
+            {
+                return $"{Factory} v.{Version}.{Subversion}";
+            }
+        }
+
         public Bom()
         {
             Lines = new List<BomDetail>();

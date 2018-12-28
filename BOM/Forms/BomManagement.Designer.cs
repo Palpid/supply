@@ -32,7 +32,16 @@
             DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
+            this.document2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.dockManagerItemBom = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockPanelItems = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.grdItems = new DevExpress.XtraGrid.GridControl();
+            this.gridViewItems = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dockPanelBomLog = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer2 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.grdItemBomLog = new DevExpress.XtraGrid.GridControl();
+            this.gridViewItemBomLog = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.dockPanelBom = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.lblCopyBomFromSku = new DevExpress.XtraEditors.LabelControl();
@@ -48,10 +57,6 @@
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.grdItemBom = new DevExpress.XtraGrid.GridControl();
             this.gridViewItemBom = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.dockPanelItems = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.grdItems = new DevExpress.XtraGrid.GridControl();
-            this.gridViewItems = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.documentManagerBom = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
@@ -61,17 +66,22 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.document2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerItemBom)).BeginInit();
+            this.dockPanelItems.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewItems)).BeginInit();
+            this.dockPanelBomLog.SuspendLayout();
+            this.controlContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdItemBomLog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewItemBomLog)).BeginInit();
             this.dockPanelBom.SuspendLayout();
             this.controlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slueFactory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdItemBom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItemBom)).BeginInit();
-            this.dockPanelItems.SuspendLayout();
-            this.dockPanel1_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdItems)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerBom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
@@ -83,24 +93,36 @@
             // documentGroup1
             // 
             this.documentGroup1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
-            this.document1});
+            this.document1,
+            this.document2});
             // 
             // document1
             // 
             this.document1.Caption = "BOM";
             this.document1.ControlName = "dockPanelBom";
-            this.document1.FloatLocation = new System.Drawing.Point(722, 457);
-            this.document1.FloatSize = new System.Drawing.Size(200, 200);
+            this.document1.FloatLocation = new System.Drawing.Point(387, 175);
+            this.document1.FloatSize = new System.Drawing.Size(950, 628);
             this.document1.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
             this.document1.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
             this.document1.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // document2
+            // 
+            this.document2.Caption = "BOM Log";
+            this.document2.ControlName = "dockPanelBomLog";
+            this.document2.FloatLocation = new System.Drawing.Point(434, 175);
+            this.document2.FloatSize = new System.Drawing.Size(200, 200);
+            this.document2.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
+            this.document2.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
+            this.document2.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
             // 
             // dockManagerItemBom
             // 
             this.dockManagerItemBom.Form = this;
             this.dockManagerItemBom.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.dockPanelBom,
-            this.dockPanelItems});
+            this.dockPanelItems,
+            this.dockPanelBomLog,
+            this.dockPanelBom});
             this.dockManagerItemBom.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -113,18 +135,93 @@
             "DevExpress.XtraBars.Navigation.TileNavPane",
             "DevExpress.XtraBars.TabFormControl"});
             // 
+            // dockPanelItems
+            // 
+            this.dockPanelItems.Controls.Add(this.dockPanel1_Container);
+            this.dockPanelItems.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanelItems.ID = new System.Guid("4389c2a9-78b6-425d-b27a-e50d4cf1a7c6");
+            this.dockPanelItems.Location = new System.Drawing.Point(0, 0);
+            this.dockPanelItems.Name = "dockPanelItems";
+            this.dockPanelItems.OriginalSize = new System.Drawing.Size(305, 200);
+            this.dockPanelItems.Size = new System.Drawing.Size(305, 656);
+            this.dockPanelItems.Text = "Items";
+            // 
+            // dockPanel1_Container
+            // 
+            this.dockPanel1_Container.Controls.Add(this.grdItems);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
+            this.dockPanel1_Container.Name = "dockPanel1_Container";
+            this.dockPanel1_Container.Size = new System.Drawing.Size(296, 629);
+            this.dockPanel1_Container.TabIndex = 0;
+            // 
+            // grdItems
+            // 
+            this.grdItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdItems.Location = new System.Drawing.Point(0, 0);
+            this.grdItems.MainView = this.gridViewItems;
+            this.grdItems.Name = "grdItems";
+            this.grdItems.Size = new System.Drawing.Size(296, 629);
+            this.grdItems.TabIndex = 0;
+            this.grdItems.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewItems});
+            // 
+            // gridViewItems
+            // 
+            this.gridViewItems.GridControl = this.grdItems;
+            this.gridViewItems.Name = "gridViewItems";
+            // 
+            // dockPanelBomLog
+            // 
+            this.dockPanelBomLog.Controls.Add(this.controlContainer2);
+            this.dockPanelBomLog.Dock = DevExpress.XtraBars.Docking.DockingStyle.Float;
+            this.dockPanelBomLog.DockedAsTabbedDocument = true;
+            this.dockPanelBomLog.FloatLocation = new System.Drawing.Point(434, 175);
+            this.dockPanelBomLog.ID = new System.Guid("8c361b25-7520-4506-b732-b08146e379a8");
+            this.dockPanelBomLog.Location = new System.Drawing.Point(0, 0);
+            this.dockPanelBomLog.Name = "dockPanelBomLog";
+            this.dockPanelBomLog.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanelBomLog.Size = new System.Drawing.Size(950, 628);
+            this.dockPanelBomLog.Text = "BOM Log";
+            // 
+            // controlContainer2
+            // 
+            this.controlContainer2.Controls.Add(this.grdItemBomLog);
+            this.controlContainer2.Location = new System.Drawing.Point(0, 0);
+            this.controlContainer2.Name = "controlContainer2";
+            this.controlContainer2.Size = new System.Drawing.Size(950, 628);
+            this.controlContainer2.TabIndex = 0;
+            // 
+            // grdItemBomLog
+            // 
+            this.grdItemBomLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdItemBomLog.Location = new System.Drawing.Point(12, 15);
+            this.grdItemBomLog.MainView = this.gridViewItemBomLog;
+            this.grdItemBomLog.Name = "grdItemBomLog";
+            this.grdItemBomLog.Size = new System.Drawing.Size(929, 594);
+            this.grdItemBomLog.TabIndex = 0;
+            this.grdItemBomLog.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewItemBomLog});
+            // 
+            // gridViewItemBomLog
+            // 
+            this.gridViewItemBomLog.GridControl = this.grdItemBomLog;
+            this.gridViewItemBomLog.Name = "gridViewItemBomLog";
+            // 
             // dockPanelBom
             // 
             this.dockPanelBom.Controls.Add(this.controlContainer1);
             this.dockPanelBom.Dock = DevExpress.XtraBars.Docking.DockingStyle.Float;
             this.dockPanelBom.DockedAsTabbedDocument = true;
-            this.dockPanelBom.FloatLocation = new System.Drawing.Point(722, 457);
+            this.dockPanelBom.FloatLocation = new System.Drawing.Point(387, 175);
+            this.dockPanelBom.FloatSize = new System.Drawing.Size(950, 628);
             this.dockPanelBom.ID = new System.Guid("63a1ee9e-1e98-4944-ab37-e52c272cf405");
             this.dockPanelBom.Location = new System.Drawing.Point(0, 0);
             this.dockPanelBom.Name = "dockPanelBom";
             this.dockPanelBom.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanelBom.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
-            this.dockPanelBom.SavedIndex = 0;
+            this.dockPanelBom.SavedIndex = 2;
+            this.dockPanelBom.SavedMdiDocument = true;
             this.dockPanelBom.Size = new System.Drawing.Size(950, 628);
             this.dockPanelBom.Text = "BOM";
             // 
@@ -259,41 +356,6 @@
             this.gridViewItemBom.GridControl = this.grdItemBom;
             this.gridViewItemBom.Name = "gridViewItemBom";
             // 
-            // dockPanelItems
-            // 
-            this.dockPanelItems.Controls.Add(this.dockPanel1_Container);
-            this.dockPanelItems.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.dockPanelItems.ID = new System.Guid("4389c2a9-78b6-425d-b27a-e50d4cf1a7c6");
-            this.dockPanelItems.Location = new System.Drawing.Point(0, 0);
-            this.dockPanelItems.Name = "dockPanelItems";
-            this.dockPanelItems.OriginalSize = new System.Drawing.Size(305, 200);
-            this.dockPanelItems.Size = new System.Drawing.Size(305, 656);
-            this.dockPanelItems.Text = "Items";
-            // 
-            // dockPanel1_Container
-            // 
-            this.dockPanel1_Container.Controls.Add(this.grdItems);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
-            this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(296, 629);
-            this.dockPanel1_Container.TabIndex = 0;
-            // 
-            // grdItems
-            // 
-            this.grdItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdItems.Location = new System.Drawing.Point(0, 0);
-            this.grdItems.MainView = this.gridViewItems;
-            this.grdItems.Name = "grdItems";
-            this.grdItems.Size = new System.Drawing.Size(296, 629);
-            this.grdItems.TabIndex = 0;
-            this.grdItems.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewItems});
-            // 
-            // gridViewItems
-            // 
-            this.gridViewItems.GridControl = this.grdItems;
-            this.gridViewItems.Name = "gridViewItems";
-            // 
             // documentManagerBom
             // 
             this.documentManagerBom.ContainerControl = this;
@@ -306,6 +368,7 @@
             this.tabbedView1.DocumentGroups.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup[] {
             this.documentGroup1});
             this.tabbedView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
+            this.document2,
             this.document1});
             dockingContainer1.Element = this.documentGroup1;
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
@@ -359,7 +422,16 @@
             this.Text = "BomManagement";
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.document2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerItemBom)).EndInit();
+            this.dockPanelItems.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewItems)).EndInit();
+            this.dockPanelBomLog.ResumeLayout(false);
+            this.controlContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdItemBomLog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewItemBomLog)).EndInit();
             this.dockPanelBom.ResumeLayout(false);
             this.controlContainer1.ResumeLayout(false);
             this.controlContainer1.PerformLayout();
@@ -367,10 +439,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdItemBom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItemBom)).EndInit();
-            this.dockPanelItems.ResumeLayout(false);
-            this.dockPanel1_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdItems)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerBom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
@@ -399,7 +467,6 @@
         private DevExpress.XtraGrid.GridControl gridControl3;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup1;
-        private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document1;
         private DevExpress.XtraEditors.LabelControl lblCopyBom;
         private DevExpress.XtraEditors.SimpleButton btnCopyBom;
         private DevExpress.XtraEditors.SimpleButton btnAddBomFactory;
@@ -412,5 +479,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl lblCopyBomFromSku;
         private DevExpress.XtraEditors.SimpleButton btnCopyFromSku;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document2;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanelBomLog;
+        private DevExpress.XtraBars.Docking.ControlContainer controlContainer2;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document1;
+        private DevExpress.XtraGrid.GridControl grdItemBomLog;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewItemBomLog;
     }
 }

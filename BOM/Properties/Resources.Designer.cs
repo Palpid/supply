@@ -141,6 +141,16 @@ namespace BOM.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap excel_xport {
+            get {
+                object obj = ResourceManager.GetObject("excel_xport", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a EXECUTE [dbo].[ETN_sp_BOM_IMPORT] 
         ///   @guid
         ///  ,@user
@@ -225,6 +235,7 @@ namespace BOM.Properties {
         ///	,[Coefficient2]
         ///	,[Scrap]
         ///	,[Quantity]
+        ///	,[Supplied]
         ///	,[Imported]
         ///	,[ImportDate]
         ///	,[ErrorMsg])
@@ -241,7 +252,7 @@ namespace BOM.Properties {
         ///	,@density
         ///	,@numberOfParts
         ///	,@coefficient1
-        ///	,@coefficient [resto de la cadena truncado]&quot;;.
+        /// [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string InsertBomImportTmp {
             get {
@@ -262,7 +273,8 @@ namespace BOM.Properties {
         ///	,[Coefficient1]
         ///	,[Coefficient2]
         ///	,[Scrap]
-        ///	,[Quantity])
+        ///	,[Quantity]
+        ///	,[Supplied])
         ///SELECT
         ///	@codeBom
         ///	,@itemCode
@@ -275,7 +287,8 @@ namespace BOM.Properties {
         ///	,@coefficient1
         ///	,@coefficient2
         ///	,@scrap
-        ///	,@quantity.
+        ///	,@quantity
+        ///	,@supplied.
         /// </summary>
         internal static string InsertBomLines {
             get {
@@ -302,6 +315,7 @@ namespace BOM.Properties {
         ///	,[Coefficient2]
         ///	,[Scrap]
         ///	,[Quantity]
+        ///	,[Supplied]
         ///	,[User])
         ///SELECT
         ///	T1.[CodeBom]
@@ -316,8 +330,7 @@ namespace BOM.Properties {
         ///	,T1.[Density]
         ///	,T1.[NumberOfParts]
         ///	,T1.[Coefficient1]
-        ///	,T1.[Coefficient2]
-        ///	,T1.[S [resto de la cadena truncado]&quot;;.
+        ///	,T1.[Coeffici [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string InsertBomLog {
             get {
@@ -326,7 +339,11 @@ namespace BOM.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a .
+        ///   Busca una cadena traducida similar a SELECT        
+        ///	T0.Code, T0.[Version], T0.Subversion, T0.VersionDate, T0.ItemCode, T0.Factory, T0.CreateDate,
+        ///	T1.CardCode, T1.CardName, T1.CardFName, T1.GroupCode
+        ///FROM ETN_BOM_HEAD T0
+        ///INNER JOIN OCRD T1 ON T1.CardCode = T0.Factory.
         /// </summary>
         internal static string QueryAllBomHead {
             get {
@@ -347,11 +364,16 @@ namespace BOM.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a SELECT        
         ///	T0.Code, T0.[Version], T0.Subversion, T0.VersionDate, T0.ItemCode, T0.Factory, T0.CreateDate,
-        ///	T2.CardCode, T2.CardName, T2.CardFName, T2.GroupCode
+        ///	CASE WHEN ISNULL(T2.CardFName,&apos;&apos;) = &apos;&apos; THEN T2.CardName ELSE T2.CardFName END AS FactoryName,
+        ///	T3.U_ETN_stat, T1.ItemCode AS ComponentCode, T1.Quantity AS ComponentQuantity
         ///FROM ETN_BOM_HEAD T0
         ///INNER JOIN ETN_BOM_LINES T1 ON T1.CodeBom = T0.Code
         ///INNER JOIN OCRD T2 ON T2.CardCode = T0.Factory
-        ///WHERE T1.ItemCode = @itemCode.
+        ///INNER JOIN OITM T3 ON  T3.ItemCode = T0.ItemCode
+        ///WHERE T1.ItemCode = @itemCode
+        ///
+        ////*
+        ///SELECT         [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string QueryBomComponent {
             get {
@@ -375,7 +397,7 @@ namespace BOM.Properties {
         ///INNER JOIN OITM T2 WITH (NOLOCK) ON T2.ItemCode = T1.ItemCode
         ///LEFT JOIN [@ETN_TIPART] T3 WITH (NOLOCK) ON T3.Code = T2.U_ETN_TIPART
         ///WHERE        
-        ///	T0.ItemCode = @item
+        ///	T0.ItemCode = @item OR @item = &apos;&apos;
         ///.
         /// </summary>
         internal static string QueryDetailItemsInBom {
@@ -412,6 +434,7 @@ namespace BOM.Properties {
         ///	, Coefficient2
         ///	, Scrap
         ///	, Quantity
+        ///	, Supplied
         ///	, Imported
         ///	, ImportDate
         ///	, ErrorMsg
@@ -445,14 +468,48 @@ namespace BOM.Properties {
         ///	, T1.Coefficient2
         ///	, T1.Scrap
         ///	, T1.Quantity
+        ///	, T1.Supplied
         ///FROM ETN_BOM_HEAD AS T0 WITH (NOLOCK)
         ///INNER JOIN ETN_BOM_LINES AS T1 WITH (NOLOCK) ON T1.CodeBom = T0.Code
         ///WHERE        
-        ///	T0.ItemCode = @item --&apos;4 BORN BLSL&apos;.
+        ///	T0.ItemCode = @item OR @item = &apos;&apos;.
         /// </summary>
         internal static string QueryItemBom {
             get {
                 return ResourceManager.GetString("QueryItemBom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a SELECT        
+        ///	T0.Code
+        ///	, T0.Version
+        ///	, T0.Subversion
+        ///	, T0.VersionDate
+        ///	, T0.ItemCode
+        ///	, T0.Factory
+        ///	, T0.CreateDate
+        ///	, T1.CodeBom
+        ///	, T1.ItemCode AS ItemCode
+        ///	, T1.BomBreakdown
+        ///	, T1.Length
+        ///	, T1.Width
+        ///	, T1.Height
+        ///	, T1.Density
+        ///	, T1.NumberOfParts
+        ///	, T1.Coefficient1
+        ///	, T1.Coefficient2
+        ///	, T1.Scrap
+        ///	, T1.Quantity
+        ///	, T1.Supplied
+        ///FROM ETN_BOM_HEAD AS T0 WITH (NOLOCK)
+        ///INNER JOIN ETN_BOM_LINES AS T1 WITH (NOLOCK) ON T1.CodeBom = T0.Code
+        ///WHERE        
+        ///	T0.ItemCode = @item OR @item = &apos;&apos;.
+        /// </summary>
+        internal static string QueryItemBomLog {
+            get {
+                return ResourceManager.GetString("QueryItemBomLog", resourceCulture);
             }
         }
         

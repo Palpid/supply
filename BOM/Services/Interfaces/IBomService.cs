@@ -11,6 +11,7 @@ namespace BOM.Services.Interfaces
     public interface IBomService
     {
         List<Bom> GetItemBom(string itemCode);
+        List<Bom> GetItemBomLog(string itemCode);
         List<BomBreakdown> GetBromBreakdown();
         bool EditBom(List<Bom> itemBoms);
         bool ImportBom(List<BomImportTmp> bomImportRows);

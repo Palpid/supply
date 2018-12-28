@@ -34,6 +34,11 @@ namespace BOM.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Devuelve el detalle de los BOM asociados a un SKU. Si el SKU está en blanco los devolverá todos.
+        /// </summary>
+        /// <param name="itemCode"></param>
+        /// <returns></returns>
         public List<Bom> GetItemBom(string itemCode)
         {
             try
@@ -69,6 +74,57 @@ namespace BOM.Services.Implementations
                                 bomEntry.Lines.Add(line);
                                 return bomEntry;
                             }, splitOn: nameof(BomLine.CodeBom))
+                            .Distinct()
+                            .ToList();
+                    }
+
+                }
+                return itemBom;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public List<Bom> GetItemBomLog(string itemCode)
+        {
+            try
+            {
+                List<Bom> itemBom;
+
+                using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
+                {
+                    connection.Open();
+
+                    //Nos vale la misma query sólo cambiando la tabla por la de log
+                    string queryItemsInBomLog = Properties.Resources.QueryDetailItemsInBom.Replace("ETN_BOM_LINES", "ETN_BOM_LINES_LOG");
+
+                    string sql = $"{Properties.Resources.QueryBomBreakdown};{queryItemsInBomLog};{Properties.Resources.QueryItemBomLog}";
+
+                    //IEnumerable<Bom> bom = null;
+                    var bomDictionary = new Dictionary<string, Bom>();
+
+                    using (var multi = connection.QueryMultiple(sql, new { item = itemCode }))
+                    {
+                        var breakdown = multi.Read<BomBreakdown>().ToList();
+                        var detailItemList = multi.Read<OitmExt>().ToList();
+
+                        itemBom = multi.Read<Bom, BomDetail, Bom>((head, line) =>
+                        {
+                            if (!bomDictionary.TryGetValue($"{head.Code}.{head.FactoryVersion}", out Bom bomEntry))
+                            {
+                                bomEntry = head;
+                                head.Lines = new List<BomDetail>();
+                                bomDictionary.Add($"{head.Code}.{head.FactoryVersion}", bomEntry);
+                            }
+
+                            line.Breakdown = breakdown.Where(b => b.IdBomBreakdown == line.BomBreakdown).FirstOrDefault();
+                            line.Item = detailItemList.Where(i => i.ItemCode == line.ItemCode).FirstOrDefault();
+
+                            bomEntry.Lines.Add(line);
+                            return bomEntry;
+                        }, splitOn: "FactoryVersion")
                             .Distinct()
                             .ToList();
                     }

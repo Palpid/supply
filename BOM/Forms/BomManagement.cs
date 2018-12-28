@@ -44,6 +44,7 @@ namespace BOM.Forms
         BindingList<OitmExt> _itemsforBomList;
         BindingList<OitmExt> _itemsList;
         BindingList<Bom> _itemBoms;
+        BindingList<Bom> _itemBomsLog;
 
         OitmExt _currentSelectedItem;
 
@@ -233,7 +234,8 @@ namespace BOM.Forms
                     case nameof(Bom.Lines):
 
                         GridView view = e.View as GridView;
-
+                        SetDetalBomGridViewColumns(view);
+                        /*
                         //Ocultamos las columnas que no nos interesan
                         view.Columns[nameof(BomDetail.CodeBom)].Visible = false;
                         view.Columns[nameof(BomDetail.Breakdown)].Visible = false;
@@ -317,6 +319,7 @@ namespace BOM.Forms
                         view.Columns[nameof(BomDetail.Scrap)].VisibleIndex = orderColRm++;
                         view.Columns[nameof(BomDetail.Quantity)].VisibleIndex = orderColRm++;
                         view.Columns[nameof(BomDetail.Supplied)].VisibleIndex = orderColRm++;
+                        */
 
                         //EditRepositories
                         SetBomDetailEditRepositories(view);
@@ -727,6 +730,126 @@ namespace BOM.Forms
             }
         }
 
+        private void GrdItemBomLog_ViewRegistered(object sender, DevExpress.XtraGrid.ViewOperationEventArgs e)
+        {
+            try
+            {
+                switch (e.View.LevelName)
+                {
+                    case nameof(Bom.Lines):
+                        GridView view = e.View as GridView;
+                        //Columnas comunes en los dos grid
+                        SetDetalBomGridViewColumns(view, true);
+
+                        //Ajustamos las columnas
+                        view.BestFitColumns();
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SetDetalBomGridViewColumns(GridView view, bool isLogView = false)
+        {
+            try
+            {
+                //Ocultamos las columnas que no nos interesan
+                view.Columns[nameof(BomDetail.CodeBom)].Visible = false;
+                view.Columns[nameof(BomDetail.Breakdown)].Visible = false;
+                view.Columns[nameof(BomDetail.Item)].Visible = false;
+                view.Columns[nameof(BomDetail.BomBreakdown)].Visible = false;
+
+                view.Columns[nameof(BomDetail.User)].Visible = isLogView;
+                view.Columns[nameof(BomDetail.VersionDate)].Visible = isLogView;
+
+                //Columnas que no queremos que aparezan en el Column Chooser
+                view.Columns[nameof(BomDetail.CodeBom)].OptionsColumn.ShowInCustomizationForm = false;
+                view.Columns[nameof(BomDetail.Breakdown)].OptionsColumn.ShowInCustomizationForm = false;
+                view.Columns[nameof(BomDetail.Item)].OptionsColumn.ShowInCustomizationForm = false;
+                view.Columns[nameof(BomDetail.BomBreakdown)].OptionsColumn.ShowInCustomizationForm = false;
+
+                //Captions
+                view.Columns[nameof(BomDetail.Length)].Caption = "Length (mm)";
+                view.Columns[nameof(BomDetail.Width)].Caption = "Width (mm)";
+                view.Columns[nameof(BomDetail.Height)].Caption = "Height (mm)";
+                view.Columns[nameof(BomDetail.BomBreakdown)].Caption = "Breakdown";
+
+                //agregamos algunas columnas extras 
+                GridColumn colItemDescription = new GridColumn()
+                {
+                    Caption = "Description",
+                    Visible = true,
+                    FieldName = $"{nameof(BomDetail.Item)}.{nameof(OitmExt.ItemName)}",
+                    Width = 300
+                };
+
+                GridColumn colItemTipArt = new GridColumn()
+                {
+                    Caption = "Item Type",
+                    Visible = true,
+                    FieldName = $"{nameof(BomDetail.Item)}.{nameof(OitmExt.TipArtDesc)}",
+                    Width = 50
+                };
+
+                view.Columns.Add(colItemDescription);
+                view.Columns.Add(colItemTipArt);
+
+                //Formatos
+                view.Columns[nameof(BomDetail.Length)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                view.Columns[nameof(BomDetail.Length)].DisplayFormat.FormatString = "n2";
+
+                view.Columns[nameof(BomDetail.Width)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                view.Columns[nameof(BomDetail.Width)].DisplayFormat.FormatString = "n2";
+
+                view.Columns[nameof(BomDetail.Height)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                view.Columns[nameof(BomDetail.Height)].DisplayFormat.FormatString = "n2";
+
+                view.Columns[nameof(BomDetail.Density)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                view.Columns[nameof(BomDetail.Density)].DisplayFormat.FormatString = "n2";
+
+                view.Columns[nameof(BomDetail.NumberOfParts)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                view.Columns[nameof(BomDetail.NumberOfParts)].DisplayFormat.FormatString = "n0";
+
+                view.Columns[nameof(BomDetail.Coefficient1)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                view.Columns[nameof(BomDetail.Coefficient1)].DisplayFormat.FormatString = "n6";
+                view.Columns[nameof(BomDetail.Coefficient2)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                view.Columns[nameof(BomDetail.Coefficient2)].DisplayFormat.FormatString = "n6";
+
+
+                view.Columns[nameof(BomDetail.Scrap)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                view.Columns[nameof(BomDetail.Scrap)].DisplayFormat.FormatString = "n2";
+
+                view.Columns[nameof(BomDetail.Quantity)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                view.Columns[nameof(BomDetail.Quantity)].DisplayFormat.FormatString = "n6";
+
+
+                //Orden de las columnas
+                int orderColRm = 0;
+                view.Columns[nameof(BomDetail.ItemCode)].VisibleIndex = orderColRm++;
+                view.Columns[$"{nameof(BomDetail.Item)}.{nameof(OitmExt.ItemName)}"].VisibleIndex = orderColRm++;
+                view.Columns[$"{nameof(BomDetail.Item)}.{nameof(OitmExt.TipArtDesc)}"].VisibleIndex = orderColRm++;
+                view.Columns[nameof(BomDetail.BomBreakdown)].VisibleIndex = orderColRm++;
+                view.Columns[nameof(BomDetail.Length)].VisibleIndex = orderColRm++;
+                view.Columns[nameof(BomDetail.Width)].VisibleIndex = orderColRm++;
+                view.Columns[nameof(BomDetail.Height)].VisibleIndex = orderColRm++;
+                view.Columns[nameof(BomDetail.Density)].VisibleIndex = orderColRm++;
+                view.Columns[nameof(BomDetail.NumberOfParts)].VisibleIndex = orderColRm++;
+                view.Columns[nameof(BomDetail.Coefficient1)].VisibleIndex = orderColRm++;
+                view.Columns[nameof(BomDetail.Coefficient2)].VisibleIndex = orderColRm++;
+                view.Columns[nameof(BomDetail.Scrap)].VisibleIndex = orderColRm++;
+                view.Columns[nameof(BomDetail.Quantity)].VisibleIndex = orderColRm++;
+                view.Columns[nameof(BomDetail.Supplied)].VisibleIndex = orderColRm++;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #endregion
@@ -758,6 +881,7 @@ namespace BOM.Forms
             {
                 dockPanelItems.Options.ShowCloseButton = false;
                 dockPanelBom.Options.ShowCloseButton = false;
+                dockPanelBomLog.Options.ShowCloseButton = false;
             }
             catch
             {
@@ -789,6 +913,7 @@ namespace BOM.Forms
             {
                 SetUpGrdItems();
                 SetUpGrdItemBom();
+                SetUpGrdItemBomLog();
             }
             catch
             {
@@ -871,6 +996,54 @@ namespace BOM.Forms
                 gridViewItemBom.OptionsView.ShowGroupPanel = false;
 
                 gridViewItemBom.Columns[nameof(Bom.ItemCode)].GroupIndex = 0;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetUpGrdItemBomLog()
+        {
+            try
+            {
+                //Ocultamos el nombre de las columnas agrupadas
+                gridViewItemBomLog.GroupFormat = "[#image]{1} {2}";
+
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                gridViewItemBomLog.OptionsView.ColumnAutoWidth = false;
+                gridViewItemBomLog.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //Hacer todo el grid no editable
+                gridViewItemBomLog.OptionsBehavior.Editable = false;
+
+                //Columns Definition
+                GridColumn colItemCode = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(Bom.ItemCode), Width = 200 };
+                GridColumn colFactoryVersion = new GridColumn() { Caption = " ", Visible = true, FieldName = nameof(Bom.FactoryVersion), Width = 100 };
+
+                //Repositories
+                //RepositoryItemLookUpEdit riFactory = new RepositoryItemLookUpEdit()
+                //{
+                //    DataSource = _factoriesList,
+                //    ValueMember = nameof(Supplier.CardCode),
+                //    DisplayMember = nameof(Supplier.Name),
+                //    NullText = string.Empty,
+                //};
+                //colFactory.ColumnEdit = riFactory;
+
+                //Add columns to grid root view
+                gridViewItemBomLog.Columns.Add(colItemCode);
+                gridViewItemBomLog.Columns.Add(colFactoryVersion);
+
+                //Events
+                grdItemBomLog.ViewRegistered += GrdItemBomLog_ViewRegistered;
+
+                //Hide group panel
+                gridViewItemBomLog.OptionsView.ShowGroupPanel = false;
+
+                gridViewItemBomLog.Columns[nameof(Bom.ItemCode)].GroupIndex = 0;
+
+
             }
             catch
             {
@@ -965,6 +1138,12 @@ namespace BOM.Forms
 
                 grdItemBom.DataSource = _itemBoms;
                 ExpandBomDefaultFactory();
+
+                //Cargamos el log con todas las versiones
+                _itemBomsLog = new BindingList<Bom>(GlobalSetting.BomService.GetItemBomLog(item.ItemCode));
+                grdItemBomLog.DataSource = null;
+                grdItemBomLog.DataSource = _itemBomsLog;
+
 
             }
             catch

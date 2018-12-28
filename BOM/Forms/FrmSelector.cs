@@ -2,6 +2,7 @@
 using BOM.General;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraSplashScreen;
 using log4net;
 using System;
 using System.Collections.Generic;
@@ -97,6 +98,43 @@ namespace BOM.Forms
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void PeExport2Excel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+
+                saveFileDialog.FilterIndex = 0;
+                saveFileDialog.RestoreDirectory = true;
+                saveFileDialog.CreatePrompt = true;
+                saveFileDialog.FileName = null;
+                saveFileDialog.Title = "Save path of the file to be exported";
+                saveFileDialog.CheckPathExists = true;
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    OpenWaitForm("");
+                    var boms = GlobalSetting.BomService.GetItemBom("");
+                    Helpers.ExportHelper.ExportBomExcel(boms, saveFileDialog.FileName);
+                    XtraMessageBox.Show("File exported");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                CloseWaitForm();
+            }
+        }
+
+
         #endregion
 
         #region Private Members
@@ -140,6 +178,11 @@ namespace BOM.Forms
                 peMassiveUpdate.Properties.SizeMode = PictureSizeMode.Zoom;
                 peMassiveUpdate.Properties.ShowMenu = false;
                 peMassiveUpdate.BorderStyle = BorderStyles.NoBorder;
+
+                peExport2Excel.Image = Properties.Resources.excel_xport;
+                peExport2Excel.Properties.SizeMode = PictureSizeMode.Zoom;
+                peExport2Excel.Properties.ShowMenu = false;
+                peExport2Excel.BorderStyle = BorderStyles.NoBorder;
             }
             catch
             {
@@ -154,6 +197,7 @@ namespace BOM.Forms
                 peBomManagement.Click += PeBomManagement_Click;
                 peImportExcel.Click += PeImportExcel_Click;
                 peMassiveUpdate.Click += PeMassiveUpdate_Click;
+                peExport2Excel.Click += PeExport2Excel_Click;
             }
             catch
             {
@@ -201,6 +245,27 @@ namespace BOM.Forms
         //        throw;
         //    }
         //}
+
+        private void OpenWaitForm(string msg)
+        {
+            try
+            {
+                SplashScreenManager.ShowForm(typeof(WaitForm1));
+                SplashScreenManager.Default.SetWaitFormCaption(msg);
+                SplashScreenManager.Default.SetWaitFormDescription("Por Favor Espere");
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void CloseWaitForm()
+        {
+            SplashScreenManager.CloseForm(false);
+        }
+
+
         #endregion
 
         #endregion

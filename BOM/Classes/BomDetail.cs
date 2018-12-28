@@ -11,5 +11,8 @@ namespace BOM.Classes
     {
         public BomBreakdown Breakdown { get; set; }
         public OitmExt Item { get; set; }
+
+        public string User { get; set; }
+        public DateTime VersionDate { get; set; }
     }
 }

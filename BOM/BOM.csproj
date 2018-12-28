@@ -154,6 +154,7 @@
     <Compile Include="General\GlobalSetting.cs" />
     <Compile Include="Helpers\CustomExtensions.cs" />
     <Compile Include="Helpers\DeepCopyByExpressionTrees.cs" />
+    <Compile Include="Helpers\ExportHelper.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\BomHead.cs" />
     <Compile Include="Models\BomImportTmp.cs" />
@@ -227,6 +228,7 @@
     <Content Include="Resources\Images\cloning24x24.png" />
     <Content Include="Resources\Images\etnia_icon.ico" />
     <None Include="Resources\Images\excel_import.png" />
+    <Content Include="Resources\Images\excel-xport.png" />
     <Content Include="Resources\Images\excel_icon.png" />
     <Content Include="Resources\Images\update.png" />
     <Content Include="Sql\DeleteBomLines.sql" />
@@ -244,6 +246,7 @@
     <Content Include="Sql\QueryFactories.sql" />
     <Content Include="Sql\QueryImportBomTmp.sql" />
     <Content Include="Sql\QueryItemBom.sql" />
+    <Content Include="Sql\QueryItemBomLog.sql" />
     <Content Include="Sql\QueryItems.sql" />
     <Content Include="Sql\QueryPossibleItemsForBom.sql" />
     <Content Include="Sql\UpdateBomHead.sql" />

@@ -33,9 +33,11 @@
             this.peImportExcel = new DevExpress.XtraEditors.PictureEdit();
             this.peMassiveUpdate = new DevExpress.XtraEditors.PictureEdit();
             this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
+            this.peExport2Excel = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.peBomManagement.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peImportExcel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peMassiveUpdate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peExport2Excel.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // peBomManagement
@@ -65,11 +67,21 @@
             this.peMassiveUpdate.Size = new System.Drawing.Size(209, 209);
             this.peMassiveUpdate.TabIndex = 2;
             // 
+            // peExport2Excel
+            // 
+            this.peExport2Excel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.peExport2Excel.Location = new System.Drawing.Point(776, 123);
+            this.peExport2Excel.Name = "peExport2Excel";
+            this.peExport2Excel.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.peExport2Excel.Size = new System.Drawing.Size(209, 209);
+            this.peExport2Excel.TabIndex = 3;
+            // 
             // FrmSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 469);
+            this.ClientSize = new System.Drawing.Size(1040, 469);
+            this.Controls.Add(this.peExport2Excel);
             this.Controls.Add(this.peMassiveUpdate);
             this.Controls.Add(this.peImportExcel);
             this.Controls.Add(this.peBomManagement);
@@ -78,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.peBomManagement.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peImportExcel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peMassiveUpdate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peExport2Excel.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -88,5 +101,6 @@
         private DevExpress.XtraEditors.PictureEdit peImportExcel;
         private DevExpress.XtraEditors.PictureEdit peMassiveUpdate;
         private DevExpress.Utils.ToolTipController toolTipController1;
+        private DevExpress.XtraEditors.PictureEdit peExport2Excel;
     }
 }

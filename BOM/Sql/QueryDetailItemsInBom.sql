@@ -13,4 +13,4 @@ INNER JOIN ETN_BOM_LINES AS T1 WITH (NOLOCK) ON T1.CodeBom = T0.Code
 INNER JOIN OITM T2 WITH (NOLOCK) ON T2.ItemCode = T1.ItemCode
 LEFT JOIN [@ETN_TIPART] T3 WITH (NOLOCK) ON T3.Code = T2.U_ETN_TIPART
 WHERE        
-	T0.ItemCode = @item
+	T0.ItemCode = @item OR @item = ''
