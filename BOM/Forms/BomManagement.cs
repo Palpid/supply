@@ -108,6 +108,16 @@ namespace BOM.Forms
                         XtraMessageBox.Show("No data selected");
                         return;
                     }
+                    else 
+                    {
+                        //Sólo se puede editar las DEM de las SUN
+                        var itemTmp = _itemBoms.First();
+                        if (itemTmp.Item.U_OPN_CAT == Constants.CAT_SUN && itemTmp.Item.U_ETN_DEM != "Y")
+                        {
+                            XtraMessageBox.Show("Can not edit SUN BOM");
+                            return;
+                        }
+                    }
                     currentState = ActionsStates.Edit;
                     ConfigFormToEdit();
                 }

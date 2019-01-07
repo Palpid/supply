@@ -9,6 +9,7 @@ namespace BOM.Classes
 {
     public class Bom : BomHead
     {
+        public OitmExt Item { get; set; }
         public List<BomDetail> Lines { get; set; }
         public bool Edited { get; set; }
 

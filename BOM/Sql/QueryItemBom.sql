@@ -19,7 +19,12 @@ SELECT
 	, T1.Scrap
 	, T1.Quantity
 	, T1.Supplied
+
+	, T2.ItemCode AS ItemHead
+	, T2.U_ETN_DEM 
+	, T2.U_OPN_CAT
 FROM ETN_BOM_HEAD AS T0 WITH (NOLOCK)
 INNER JOIN ETN_BOM_LINES AS T1 WITH (NOLOCK) ON T1.CodeBom = T0.Code
+INNER JOIN OITM T2 ON T2.ItemCode = T0.ItemCode
 WHERE        
 	T0.ItemCode = @item OR @item = ''

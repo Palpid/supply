@@ -18,5 +18,6 @@ namespace BOM.Models
         public string U_OPN_CAT { get; set; }
         public string CardCode { get; set; }
         public string U_ETN_stat { get; set; }
+        public string U_ETN_DEM { get; set; }
     }
 }

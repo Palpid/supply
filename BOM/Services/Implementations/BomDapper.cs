@@ -43,6 +43,44 @@ namespace BOM.Services.Implementations
         {
             try
             {
+                //List<Bom> itemBom;
+
+                //using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
+                //{
+                //    connection.Open();
+
+                //    string sql = $"{Properties.Resources.QueryBomBreakdown};{Properties.Resources.QueryDetailItemsInBom};{Properties.Resources.QueryItemBom}";
+
+                //    //IEnumerable<Bom> bom = null;
+                //    var bomDictionary = new Dictionary<Int64, Bom>();
+
+                //    using (var multi = connection.QueryMultiple(sql, new { item = itemCode }))
+                //    {
+                //        var breakdown = multi.Read<BomBreakdown>().ToList();
+                //        var detailItemList = multi.Read<OitmExt>().ToList();
+
+                //        itemBom = multi.Read<Bom, BomDetail, Bom>((head, line) =>
+                //            {
+                //                if (!bomDictionary.TryGetValue(head.Code, out Bom bomEntry))
+                //                {
+                //                    bomEntry = head;
+                //                    head.Lines = new List<BomDetail>();
+                //                    bomDictionary.Add(head.Code, bomEntry);
+                //                }
+
+                //                line.Breakdown = breakdown.Where(b => b.IdBomBreakdown == line.BomBreakdown).FirstOrDefault();
+                //                line.Item = detailItemList.Where(i => i.ItemCode == line.ItemCode).FirstOrDefault();
+
+                //                bomEntry.Lines.Add(line);
+                //                return bomEntry;
+                //            }, splitOn: nameof(BomLine.CodeBom))
+                //            .Distinct()
+                //            .ToList();
+                //    }
+
+                //}
+                //return itemBom;
+
                 List<Bom> itemBom;
 
                 using (var connection = new SqlConnection(GlobalSetting.ConnectionString))
@@ -51,7 +89,6 @@ namespace BOM.Services.Implementations
 
                     string sql = $"{Properties.Resources.QueryBomBreakdown};{Properties.Resources.QueryDetailItemsInBom};{Properties.Resources.QueryItemBom}";
 
-                    //IEnumerable<Bom> bom = null;
                     var bomDictionary = new Dictionary<Int64, Bom>();
 
                     using (var multi = connection.QueryMultiple(sql, new { item = itemCode }))
@@ -59,21 +96,22 @@ namespace BOM.Services.Implementations
                         var breakdown = multi.Read<BomBreakdown>().ToList();
                         var detailItemList = multi.Read<OitmExt>().ToList();
 
-                        itemBom = multi.Read<Bom, BomDetail, Bom>((head, line) =>
+                        itemBom = multi.Read<Bom, BomDetail, OitmExt, Bom>((head, line, item) =>
+                        {
+                            if (!bomDictionary.TryGetValue(head.Code, out Bom bomEntry))
                             {
-                                if (!bomDictionary.TryGetValue(head.Code, out Bom bomEntry))
-                                {
-                                    bomEntry = head;
-                                    head.Lines = new List<BomDetail>();
-                                    bomDictionary.Add(head.Code, bomEntry);
-                                }
+                                bomEntry = head;
+                                bomEntry.Item = item;
+                                head.Lines = new List<BomDetail>();
+                                bomDictionary.Add(head.Code, bomEntry);
+                            }
 
-                                line.Breakdown = breakdown.Where(b => b.IdBomBreakdown == line.BomBreakdown).FirstOrDefault();
-                                line.Item = detailItemList.Where(i => i.ItemCode == line.ItemCode).FirstOrDefault();
+                            line.Breakdown = breakdown.Where(b => b.IdBomBreakdown == line.BomBreakdown).FirstOrDefault();
+                            line.Item = detailItemList.Where(i => i.ItemCode == line.ItemCode).FirstOrDefault();
 
-                                bomEntry.Lines.Add(line);
-                                return bomEntry;
-                            }, splitOn: nameof(BomLine.CodeBom))
+                            bomEntry.Lines.Add(line);
+                            return bomEntry;
+                        }, splitOn: $"{nameof(BomLine.CodeBom)}, ItemHead")
                             .Distinct()
                             .ToList();
                     }

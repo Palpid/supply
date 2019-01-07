@@ -19,6 +19,9 @@ namespace BOM.Classes
         public const string TIPART_LENSES_HK = "133";       //681 en BCN
         public const string TIPART_RAWMATERIAL_HK = "134";  //1204 en BCN
 
+        //---- U_OPN_CAT ----//
+        public const string CAT_SUN = "02";
+
         //---- Excel Import Columns ----//
 
         public const string XLS_FACTORY = "Factory";
